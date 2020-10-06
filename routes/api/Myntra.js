@@ -9,7 +9,7 @@ const uri = db;
 
 router.get("/", (req, res) => {
     console.log('starting to scrap...');
-    myntraScrapper.tshirtScraper(MyntraURL, (data, response) => {
+    myntraScrapper.scraper(MyntraURL, (data, response) => {
         if (response) {
 
             const client = new MongoClient(uri, { useUnifiedTopology: true, useNewUrlParser: true, });

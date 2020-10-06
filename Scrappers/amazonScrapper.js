@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-module.exports.tshirtScraper = async (url, callBack) => {
+module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({ headless: false });
 	const page = await browser.newPage();
 

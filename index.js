@@ -17,10 +17,20 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Middlewares
 app.use(cors());
 
-const MyntraScrapper = require("./routes/api/Myntra.js");
+const myntraScrapper = require("./routes/api/Myntra");
+const flipkartScrapper = require("./routes/api/Flipkart");
+const bewakoofScrapper = require("./routes/api/Bewakoof");
+const ajioScrapper = require("./routes/api/Ajio");
+const tataScrapper = require("./routes/api/Tata");
+const fyndScrapper = require("./routes/api/Fynd");
 
 // Api's
-app.use("/api/myntra", MyntraScrapper);
+app.use("/api/myntra", myntraScrapper);
+app.use("/api/flipkart", flipkartScrapper);
+app.use("/api/bewakoof", bewakoofScrapper);
+app.use("/api/ajio", ajioScrapper);
+app.use("/api/tata", tataScrapper);
+app.use("/api/fynd", fyndScrapper);
 
 // Connect to MongoDB
 mongoose
