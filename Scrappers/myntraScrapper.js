@@ -14,7 +14,7 @@ module.exports.scraper = async (url, callBack) => {
 		return new Promise((resolve) => setTimeout(() => resolve(), ms));
 	}
 
-	for (var i = 1; i <= 5; i++) {
+	for (var i = 1; i <= 10; i++) {
 		await page.goto(`${url}/men-tshirts?p=${i}`, {
 			waitUntil: "networkidle0",
 		});

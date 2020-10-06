@@ -30,7 +30,7 @@ module.exports.scraper = async (url, callBack) => {
 		await page.evaluate((_viewportHeight) => {
 			window.scrollBy(0, _viewportHeight);
 		}, viewportHeight);
-		await wait(1600);
+		await wait(1500);
 		viewportIncr = viewportIncr + viewportHeight;
 	}
 

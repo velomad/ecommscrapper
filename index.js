@@ -23,6 +23,7 @@ const bewakoofScrapper = require("./routes/api/Bewakoof");
 const ajioScrapper = require("./routes/api/Ajio");
 const tataScrapper = require("./routes/api/Tata");
 const fyndScrapper = require("./routes/api/Fynd");
+const amazonScrapper = require("./routes/api/Amazon");
 
 // Api's
 app.use("/api/myntra", myntraScrapper);
@@ -31,6 +32,7 @@ app.use("/api/bewakoof", bewakoofScrapper);
 app.use("/api/ajio", ajioScrapper);
 app.use("/api/tata", tataScrapper);
 app.use("/api/fynd", fyndScrapper);
+app.use("/api/amazon", amazonScrapper);
 
 // Connect to MongoDB
 mongoose
