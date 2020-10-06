@@ -37,7 +37,6 @@ module.exports.tshirtScraper = async (url, callBack) => {
 
 		let data = await page.evaluate(() => {
 			window.scrollTo(0, 0);
-
 			let products = [];
 			let productElements = document.querySelectorAll(".product-base");
 
