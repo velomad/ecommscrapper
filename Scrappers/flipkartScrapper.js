@@ -46,10 +46,12 @@ module.exports.scraper = async (url, callBack) => {
 		productElements.forEach((productElement) => {
 			let productJson = {};
 			try {
-
 				productJson.brandName = productElement.querySelector(
 					"._2B_pmu",
 				).innerText;
+				productJson.productLink = productElement.querySelector(
+					"._3dqZjq",
+				).href;
 				productJson.imageUrl = productElement.querySelector(
 					"img._3togXc",
 				).src;

@@ -33,10 +33,12 @@ module.exports.scraper = (url, callBack) => {
 			.then((resp) => {
 				const rawData = resp.data.items;
 				console.log(resp.data.page.next_page_id);
+				console.log(rawData);
 				for (let i = 0; i < rawData.length; i++) {
 					data.push({
 						productName: rawData[i].name,
 						brandName: rawData[i].brand.name,
+						productLink: `${url}/product/${rawData[i].slug}`,
 						imageUrl: rawData[i].images[0].secure_url,
 						discount: rawData[i].discount === "" ? null : rawData[i].discount,
 						price: rawData[i].price.marked.min,
