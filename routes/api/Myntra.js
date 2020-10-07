@@ -9,8 +9,7 @@ const uri = db;
 
 router.get("/", (req, res) => {
 	console.log("starting to scrap...");
-	myntraScrapper.scraper(MyntraURL, (data, response, end) => {
-		console.log(end);
+	myntraScrapper.scraper(MyntraURL, (data, response, end, categoryCollection) => {
 		if (response) {
 			const client = new MongoClient(uri, {
 				useUnifiedTopology: true,
@@ -22,7 +21,7 @@ router.get("/", (req, res) => {
 					await client.connect();
 
 					const database = client.db("ScrappedData");
-					const collection = database.collection("Myntra");
+					const collection = database.collection(categoryCollection);
 
 					// this option prevents additional documents from being inserted if one fails
 					const options = { ordered: true };
@@ -41,7 +40,7 @@ router.get("/", (req, res) => {
 			}
 			run().catch(console.dir);
 
-			// console.log(data);
+			console.log(data);
 		}
 	});
 });
