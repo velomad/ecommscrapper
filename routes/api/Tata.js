@@ -1,6 +1,6 @@
 const express = require("express");
 // const { MongoClient } = require("mongodb");
-const router = express.Router();
+const router = express.Router();	
 const tataScrapper = require("../../Scrappers/tataScrapper");
 // const db = require("../../config/keys").mongoURI;
 

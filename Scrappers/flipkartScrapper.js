@@ -14,9 +14,9 @@ module.exports.scraper = async (url, callBack) => {
 		return new Promise((resolve) => setTimeout(() => resolve(), ms));
 	}
 
-	for (var i = 1; i <= 5; i++) {
+	for (var i = 1; i <= 3; i++) {
 	await page.goto(
-		`${url}/clothing-and-accessories/topwear/tshirt/men-tshirt/pr?sid=clo%2Cash%2Cank%2Cedy&otracker=categorytree&otracker=nmenu_sub_Men_0_T-Shirts&page=${i}`,
+		`${url}/bags-wallets-belts/wallets-clutches/wallets/pr?sid=reh%2Ccca%2Ch76&marketplace=FLIPKART&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.serviceability%5B%5D%3Dtrue&otracker=nmenu_sub_Men_0_Wallets&page=${i}`,
 		{
 			waitUntil: "networkidle0",
 		},

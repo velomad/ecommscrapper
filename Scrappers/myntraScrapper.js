@@ -53,6 +53,9 @@ module.exports.scraper = async (url, callBack) => {
 					productJson.productPrice = productElement.querySelector(
 						".product-discountedPrice",
 					).innerText;
+					productJson.productLink = productElement.querySelector(
+						".product-base > a",
+					).href;
 					productJson.brandName = productElement.querySelector(
 						".product-brand",
 					).innerText;

@@ -32,6 +32,7 @@ router.get("/", (req, res) => {
 			// }
 			// run().catch(console.dir);
 			console.log(data);
+			console.log(data.length);
 		}
 	});
 });

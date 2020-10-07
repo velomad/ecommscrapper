@@ -1,0 +1,1688 @@
+[
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "4A90E2",
+			"pattern": "Printed",
+			"product_fit": "Slim",
+			"sleeve_length": "Short",
+			"neck_type": "Crew Neck",
+			"primary_material": "Cotton",
+			"primary_color": "Blue"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Ajar Printed Round Neck Blue T-Shirt",
+		"slug": "gas-men-s-ajar-printed-round-neck-blue-t-shirt-901249-ee4498",
+		"uid": 901249,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "GAS",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/996_33b44c4e15b643499d95d5d72490a6b7.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/996_33b44c4e15b643499d95d5d72490a6b7.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=gas",
+				"query": { "brand": ["gas"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/gas-men-s-ajar-printed-round-neck-blue-t-shirt-901249-ee4498/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/1_1584020332795.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/1_1584020332795.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/2_1584020332795.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/2_1584020332795.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/3_1584020332795.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/3_1584020332795.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/4_1584020332795.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/4_1584020332795.jpg"
+			}
+		],
+		"discount": "40% OFF",
+		"price": {
+			"marked": {
+				"min": 3990,
+				"max": 3990,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 2394,
+				"max": 2394,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"description": "One small step for man can lead to one huge leap for mankind's wardrobe. So why not take the small step and join forces with Captain America with this iconic shield t-shirt. Crafted from soft cotton, Ajar Cobweb slim fit tee features round neck, printed front and a washed-out look. This jersey knit round neck t-shirt is lightweight, breathable and is built for everyday comfort. Unleash the marvel fan inside you.",
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/1_1584020332795.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/1_1584020332795.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/2_1584020332795.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/2_1584020332795.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/3_1584020332795.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/3_1584020332795.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/4_1584020332795.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/223_99143A222/4_1584020332795.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "000000",
+			"pattern": "Printed",
+			"sleeve_length": "Long",
+			"neck_type": "Round Neck",
+			"primary_material": "Rayon",
+			"primary_color": "Black"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Black Printed Round Neck T-Shirt",
+		"slug": "globus-black-printed-round-neck-t-shirt-915251-7a0e1c",
+		"uid": 915251,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "globus",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=globus",
+				"query": { "brand": ["globus"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/globus-black-printed-round-neck-t-shirt-915251-7a0e1c/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/1_1557493682513.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/1_1557493682513.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/2_1557493682513.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/2_1557493682513.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/3_1557493682513.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/3_1557493682513.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/4_1557493682513.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/4_1557493682513.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/5_1557493682513.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/5_1557493682513.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 899,
+				"max": 899,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 899,
+				"max": 899,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/1_1557493682513.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/1_1557493682513.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/2_1557493682513.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/2_1557493682513.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/3_1557493682513.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/3_1557493682513.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/4_1557493682513.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/4_1557493682513.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/5_1557493682513.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W18CXMT627BLACK/5_1557493682513.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "4A90E2",
+			"pattern": "Melange",
+			"product_fit": "Slim",
+			"sleeve_length": "Short",
+			"neck_type": "Henley Neck",
+			"primary_material": "Others",
+			"primary_color": "Teal"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Spykar Teal Melange Slim Fit T-Shirt",
+		"slug": "spykar-spykar-teal-melange-slim-fit-t-shirt-1183678-e2f3de",
+		"uid": 1183678,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "spykar",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/2141_37b920f991fb44dfa87c65df10863c4e.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/2141_37b920f991fb44dfa87c65df10863c4e.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=spykar",
+				"query": { "brand": ["spykar"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/spykar-spykar-teal-melange-slim-fit-t-shirt-1183678-e2f3de/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/1_1582526431289.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/1_1582526431289.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/2_1582526431289.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/2_1582526431289.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/3_1582526431289.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/3_1582526431289.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/4_1582526431289.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/4_1582526431289.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/5_1582526431289.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/5_1582526431289.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 999,
+				"max": 999,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 699,
+				"max": 999,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/1_1582526431289.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/1_1582526431289.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/2_1582526431289.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/2_1582526431289.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/3_1582526431289.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/3_1582526431289.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/4_1582526431289.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/4_1582526431289.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/5_1582526431289.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/56_MKT01BJ051TEALBLUE/5_1582526431289.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "FFFFFF",
+			"pattern": "Striped",
+			"product_fit": "Regular",
+			"sleeve_length": "Short",
+			"neck_type": "Polo Collar",
+			"primary_material": "Polyester",
+			"primary_color": "White"
+		},
+		"categories": [
+			{
+				"id": 465,
+				"uid": 465,
+				"name": "Polos",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=polos",
+					"query": { "category": ["polos"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "White Striped Polo T-Shirt",
+		"slug": "sg-white-striped-polo-t-shirt-1290981-8ed351",
+		"uid": 1290981,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "SG",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/brands/pictures/square-logo/100x0/pfa2fV5C1-sg_logo-01.jpg",
+				"secure_url": "https://hdn-1.fynd.com/brands/pictures/square-logo/100x0/pfa2fV5C1-sg_logo-01.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=sg",
+				"query": { "brand": ["sg"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/sg-white-striped-polo-t-shirt-1290981-8ed351/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/1_1594224810138.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/1_1594224810138.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/2_1594224810138.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/2_1594224810138.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/3_1594224810138.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/3_1594224810138.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/4_1594224810138.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/4_1594224810138.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/5_1594224810138.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/5_1594224810138.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 749,
+				"max": 749,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 749,
+				"max": 749,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/1_1594224810138.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/1_1594224810138.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/2_1594224810138.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/2_1594224810138.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/3_1594224810138.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/3_1594224810138.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/4_1594224810138.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/4_1594224810138.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/5_1594224810138.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1614_POLO3315WHITE/5_1594224810138.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "4A90E2",
+			"pattern": "Printed",
+			"product_fit": "Regular",
+			"sleeve_length": "Short",
+			"neck_type": "Crew Neck",
+			"primary_material": "Cotton",
+			"primary_color": "Blue"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Blue Printed T-Shirt",
+		"slug": "globus-blue-printed-t-shirt-1185902-c824f4",
+		"uid": 1185902,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "globus",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=globus",
+				"query": { "brand": ["globus"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/globus-blue-printed-t-shirt-1185902-c824f4/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/1_1579937618392.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/1_1579937618392.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/2_1579937618392.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/2_1579937618392.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/3_1579937618392.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/3_1579937618392.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/4_1579937618392.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/4_1579937618392.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/5_1579937618392.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/5_1579937618392.jpg"
+			}
+		],
+		"discount": "15% OFF",
+		"price": {
+			"marked": {
+				"min": 499,
+				"max": 499,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 425,
+				"max": 425,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/1_1579937618392.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/1_1579937618392.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/2_1579937618392.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/2_1579937618392.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/3_1579937618392.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/3_1579937618392.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/4_1579937618392.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/4_1579937618392.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/5_1579937618392.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19URCMT75NAVY/5_1579937618392.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "000000",
+			"pattern": "Printed",
+			"product_fit": "Regular",
+			"sleeve_length": "Short",
+			"neck_type": "Crew Neck",
+			"primary_material": "Cotton",
+			"primary_color": "Black"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Black Printed T-Shirt",
+		"slug": "globus-black-printed-t-shirt-1185927-2242c7",
+		"uid": 1185927,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "globus",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=globus",
+				"query": { "brand": ["globus"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/globus-black-printed-t-shirt-1185927-2242c7/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/1_1579937618379.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/1_1579937618379.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/2_1579937618379.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/2_1579937618379.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/3_1579937618379.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/3_1579937618379.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/4_1579937618379.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/4_1579937618379.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/5_1579937618379.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/5_1579937618379.jpg"
+			}
+		],
+		"discount": "15% OFF",
+		"price": {
+			"marked": {
+				"min": 499,
+				"max": 499,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 425,
+				"max": 425,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/1_1579937618379.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/1_1579937618379.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/2_1579937618379.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/2_1579937618379.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/3_1579937618379.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/3_1579937618379.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/4_1579937618379.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/4_1579937618379.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/5_1579937618379.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_W19RBCMT40BLACK/5_1579937618379.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "4A90E2",
+			"pattern": "Solid",
+			"product_fit": "Regular",
+			"sleeve_length": "Long",
+			"neck_type": "Henley Neck",
+			"primary_material": "Cotton",
+			"primary_color": "Turquoise"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Turquoise Solid T-Shirt",
+		"slug": "basics-turquoise-solid-t-shirt-1001959-92f60c",
+		"uid": 1001959,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "Basics",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/2716_e54b0ab9da4244a28bfac90f57844537.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/2716_e54b0ab9da4244a28bfac90f57844537.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=basics",
+				"query": { "brand": ["basics"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/basics-turquoise-solid-t-shirt-1001959-92f60c/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/1_1563874133344.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/1_1563874133344.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/2_1563874133344.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/2_1563874133344.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/3_1563874133344.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/3_1563874133344.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/4_1563874133344.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/4_1563874133344.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/5_1563874133344.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/5_1563874133344.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 1199,
+				"max": 1199,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 1199,
+				"max": 1199,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/1_1563874133344.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/1_1563874133344.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/2_1563874133344.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/2_1563874133344.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/3_1563874133344.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/3_1563874133344.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/4_1563874133344.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/4_1563874133344.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/5_1563874133344.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/633_19BTS42586LONGSLEEVES/5_1563874133344.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "2BD892",
+			"primary_material": "Others",
+			"primary_color": "military melange"
+		},
+		"categories": [
+			{
+				"id": 465,
+				"uid": 465,
+				"name": "Polos",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=polos",
+					"query": { "category": ["polos"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Classic Pique Polo",
+		"slug": "scotch-soda-classic-pique-polo-711495-875f24",
+		"uid": 711495,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "Scotch & Soda",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/2496_56bef2f988b0472399b61eca4f96fc70.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/2496_56bef2f988b0472399b61eca4f96fc70.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=scotch-soda",
+				"query": { "brand": ["scotch-soda"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/scotch-soda-classic-pique-polo-711495-875f24/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/1_1571735661627.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/1_1571735661627.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/2_1571735661627.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/2_1571735661627.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/3_1571735661627.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/3_1571735661627.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 3990,
+				"max": 3990,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 3990,
+				"max": 3990,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/1_1571735661627.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/1_1571735661627.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/2_1571735661627.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/2_1571735661627.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/3_1571735661627.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/586_132771650/3_1571735661627.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "D0021B",
+			"topwear_length": "Midi",
+			"pattern": "Solid",
+			"product_fit": "Slim",
+			"sleeve_length": "Short",
+			"neck_type": "Polo Collar",
+			"primary_material": "Cotton",
+			"primary_color": " DEEP RED      "
+		},
+		"categories": [
+			{
+				"id": 465,
+				"uid": 465,
+				"name": "Polos",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=polos",
+					"query": { "category": ["polos"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Ralph Basic Red Polo",
+		"slug": "mens-ralph-basic-red-polo-edpysc76l7",
+		"uid": 7527639,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "GAS",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/996_33b44c4e15b643499d95d5d72490a6b7.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/996_33b44c4e15b643499d95d5d72490a6b7.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=gas",
+				"query": { "brand": ["gas"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/mens-ralph-basic-red-polo-edpysc76l7/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/_Kn20VEEQO-1.jpg",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/_Kn20VEEQO-1.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/pI4M0WvaF-2.jpg",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/pI4M0WvaF-2.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/ooMOCldAFP-23-0203.jpg",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/ooMOCldAFP-23-0203.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/A83kYo8M4Q-3.jpg",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/A83kYo8M4Q-3.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/PO4zDyuvxm-4.jpg",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/PO4zDyuvxm-4.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/nC7DzmAsOo-5.jpg",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/nC7DzmAsOo-5.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/frSs_qDP39-6.JPG",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/frSs_qDP39-6.JPG"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/MTKO-CbfL-SWATCH-copy.JPG",
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/MTKO-CbfL-SWATCH-copy.JPG"
+			}
+		],
+		"discount": "30% OFF",
+		"price": {
+			"marked": {
+				"min": 2299,
+				"max": 2299,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 1610,
+				"max": 1610,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"description": "A timeless classic style. Perfect to combine with pretty much every look, this classic polo t-shirt is crafted from premium cotton pique which is light weight and gives an elevated feel. Featuring a 3 button placket, contrast tipping on collar and sleeve, this solid t-shirt comes in a slim fit. This staple style, Ralph is detailed with discreet branding on the chest, making it an essential in any modern man's closet.",
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/_Kn20VEEQO-1.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/_Kn20VEEQO-1.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/pI4M0WvaF-2.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/pI4M0WvaF-2.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/ooMOCldAFP-23-0203.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/ooMOCldAFP-23-0203.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/A83kYo8M4Q-3.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/A83kYo8M4Q-3.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/PO4zDyuvxm-4.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/PO4zDyuvxm-4.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/nC7DzmAsOo-5.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/nC7DzmAsOo-5.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/frSs_qDP39-6.JPG",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/frSs_qDP39-6.JPG"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/MTKO-CbfL-SWATCH-copy.JPG",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/products/pictures/item/free/360x0/410272617012/MTKO-CbfL-SWATCH-copy.JPG"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "000000",
+			"pattern": "Printed",
+			"product_fit": "Regular",
+			"sleeve_length": "Long",
+			"neck_type": "Round Neck",
+			"primary_material": "Rayon",
+			"primary_color": "Black"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Black Printed T-Shirt",
+		"slug": "globus-black-printed-t-shirt-969674-60d33d",
+		"uid": 969674,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "globus",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/826_2b9533447b7444deb66eb271bae9da59.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=globus",
+				"query": { "brand": ["globus"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/globus-black-printed-t-shirt-969674-60d33d/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/1_1561718310546.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/1_1561718310546.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/2_1561718310546.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/2_1561718310546.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/3_1561718310546.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/3_1561718310546.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/4_1561718310546.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/4_1561718310546.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/5_1561718310546.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/5_1561718310546.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 899,
+				"max": 899,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 899,
+				"max": 899,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/1_1561718310546.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/1_1561718310546.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/2_1561718310546.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/2_1561718310546.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/3_1561718310546.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/3_1561718310546.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/4_1561718310546.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/4_1561718310546.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/5_1561718310546.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/53_S19CXMT636BLACK/5_1561718310546.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "8B572A",
+			"pattern": "Printed",
+			"sleeve_length": "Short",
+			"neck_type": "Crew Neck",
+			"primary_material": "Cotton",
+			"primary_color": "Rust"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Rust Denim Goods Co Print T-Shirt",
+		"slug": "superdry-rust-denim-goods-co-print-t-shirt-1196834-59a527",
+		"uid": 1196834,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "Superdry",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/media/logo/brand/100x0/1008_238113b8e11448f792e9bf860aac30f2.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/logo/brand/100x0/1008_238113b8e11448f792e9bf860aac30f2.jpg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=superdry",
+				"query": { "brand": ["superdry"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/superdry-rust-denim-goods-co-print-t-shirt-1196834-59a527/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/1_1583484212217.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/1_1583484212217.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/2_1583484212217.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/2_1583484212217.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 2999,
+				"max": 2999,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 2400,
+				"max": 2999,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/1_1583484212217.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/1_1583484212217.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/2_1583484212217.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/235_M1010056A9SN/2_1583484212217.jpg"
+			}
+		]
+	},
+	{
+		"type": "product",
+		"attributes": {
+			"primary_color_hex": "D0021B",
+			"pattern": "Striped",
+			"product_fit": "Slim",
+			"sleeve_length": "Short",
+			"neck_type": "Crew Neck",
+			"primary_material": "Others",
+			"primary_color": "Maroon"
+		},
+		"categories": [
+			{
+				"id": 192,
+				"uid": 192,
+				"name": "T-Shirts",
+				"logo": {
+					"aspect_ratio": "1:1",
+					"aspect_ratio_f": 1,
+					"url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg",
+					"secure_url": "https://hdn-1.fynd.com/media/banner_portrait/brand/50x0/540_ecba3a1af141467da8abc20500f983db.jpg"
+				},
+				"action": {
+					"type": "category",
+					"url": "https://api.fynd.com/platform/content/v1/products/?category=t-shirts",
+					"query": { "category": ["t-shirts"] }
+				},
+				"_custom_json": {}
+			}
+		],
+		"sellable": true,
+		"name": "Maroon Striped T-Shirt",
+		"slug": "the-bear-house-maroon-striped-t-shirt-1230901-93e78e",
+		"uid": 1230901,
+		"is_set": false,
+		"brand": {
+			"type": "brand",
+			"name": "The Bear House",
+			"logo": {
+				"aspect_ratio": "1:1",
+				"aspect_ratio_f": 1,
+				"url": "https://hdn-1.fynd.com/brands/pictures/square-logo/100x0/sFTP0y4Q6-Logo.jpeg",
+				"secure_url": "https://hdn-1.fynd.com/brands/pictures/square-logo/100x0/sFTP0y4Q6-Logo.jpeg"
+			},
+			"action": {
+				"type": "brand",
+				"url": "https://api.fynd.com/platform/content/v1/products/?brand=the-bear-house",
+				"query": { "brand": ["the-bear-house"] }
+			},
+			"_custom_json": {}
+		},
+		"action": {
+			"query": {},
+			"type": "product",
+			"url": "https://api.fynd.com/platform/content/v1/products/the-bear-house-maroon-striped-t-shirt-1230901-93e78e/"
+		},
+		"images": [
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/1_1589878701996.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/1_1589878701996.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/2_1589878701996.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/2_1589878701996.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/3_1589878701996.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/3_1589878701996.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/4_1589878701996.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/4_1589878701996.jpg"
+			},
+			{
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/5_1589878701996.jpg",
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/5_1589878701996.jpg"
+			}
+		],
+		"discount": "",
+		"price": {
+			"marked": {
+				"min": 1895,
+				"max": 1895,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			},
+			"effective": {
+				"min": 1895,
+				"max": 1895,
+				"currency_code": "INR",
+				"currency_symbol": "₹"
+			}
+		},
+		"is_tryout": false,
+		"promo_meta": { "title": "", "subtitle": "" },
+		"country_of_origin": "India",
+		"media": [
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/1_1589878701996.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/1_1589878701996.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/2_1589878701996.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/2_1589878701996.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/3_1589878701996.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/3_1589878701996.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/4_1589878701996.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/4_1589878701996.jpg"
+			},
+			{
+				"url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/5_1589878701996.jpg",
+				"type": "image",
+				"aspect_ratio": "16:25",
+				"aspect_ratio_f": 0.64,
+				"secure_url": "https://hdn-1.fynd.com/media/pictures/tagged_items/360x0/1517_TBHTAILORMR/5_1589878701996.jpg"
+			}
+		]
+	}
+]

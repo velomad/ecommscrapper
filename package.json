@@ -10,14 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
     "express": "^4.17.1",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.8",
+    "node-cron": "^2.0.3",
     "nodemon": "^2.0.4",
     "puppeteer": "^5.3.1",
-    "puppeteer-autoscroll-down": "^0.1.6"
+    "puppeteer-autoscroll-down": "^0.1.6",
+    "puppeteer-infinite-scroll": "^1.0.1"
   }
 }
