@@ -15,7 +15,7 @@ module.exports.scraper = async (url, callBack) => {
 	}
 
 	for (var i = 1; i <= 10; i++) {
-		await page.goto(`${url}/men-tshirts?p=${i}`, {
+		await page.goto(`${url}/bra?p=${i}`, {
 			waitUntil: "networkidle0",
 		});
 
@@ -87,7 +87,7 @@ module.exports.scraper = async (url, callBack) => {
 			return products;
 		});
 		await wait(100);
-		callBack(data, true);
+		callBack(data, true, i);
 	}
 	await browser.close();
 };

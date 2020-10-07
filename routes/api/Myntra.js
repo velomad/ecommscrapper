@@ -9,7 +9,8 @@ const uri = db;
 
 router.get("/", (req, res) => {
 	console.log("starting to scrap...");
-	myntraScrapper.scraper(MyntraURL, (data, response) => {
+	myntraScrapper.scraper(MyntraURL, (data, response, end) => {
+		console.log(end);
 		if (response) {
 			const client = new MongoClient(uri, {
 				useUnifiedTopology: true,
@@ -27,13 +28,20 @@ router.get("/", (req, res) => {
 					const options = { ordered: true };
 
 					const result = await collection.insertMany(data, options);
+					if (end === 10) {
+						res.status(201).json({
+							message: "Data Insrted.",
+							result: data,
+						});
+					}
 					console.log(`${result.insertedCount} documents were inserted`);
 				} finally {
 					await client.close();
 				}
 			}
 			run().catch(console.dir);
-			console.log(data);
+
+			// console.log(data);
 		}
 	});
 });
