@@ -1,7 +1,7 @@
 const express = require("express");
 // const { MongoClient } = require("mongodb");
 const router = express.Router();
-const flipkartScrapper = require("../../Scrappers/flipkartScrapper");
+const flipkartScrapper = require("../../Scrappers/flipkart/scraper");
 // const db = require("../../config/keys").mongoURI;
 
 const { flipkartBaseUrl } = require("../../config/keys");

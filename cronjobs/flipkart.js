@@ -1,6 +1,6 @@
 const cron = require("node-cron");
-const flipkartScraper = require("../Scrappers/flipkartScrapper");
-const myntraScraper = require("../Scrappers/myntraScrapper");
+const flipkartScraper = require("../Scrappers/flipkart/scraper");
+const myntraScraper = require("../Scrappers/myntra/scraper");
 const { flipkartBaseUrl, myntraBaseUrl } = require("../config/keys");
 
 cron.schedule("0 1 * * *", async () => {

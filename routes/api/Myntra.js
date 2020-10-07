@@ -2,7 +2,7 @@ const express = require("express");
 const { MongoClient } = require("mongodb");
 const router = express.Router();
 const MyntraURL = require("../../config/keys").myntraBaseUrl;
-const myntraScrapper = require("../../Scrappers/myntraScrapper");
+const myntraScrapper = require("../../Scrappers/myntra/scraper");
 const db = require("../../config/keys").mongoURI;
 
 const uri = db;
