@@ -4,7 +4,7 @@ const categories = ["men-topwear", "men-tshirts"];
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({
-		args: ["--no-sandbox", "--disable-setuid-sandbox"],
+		ignoreDefaultArgs: ["--disable-extensions"],
 	});
 	const page = await browser.newPage();
 
