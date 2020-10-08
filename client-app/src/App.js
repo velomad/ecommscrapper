@@ -4,7 +4,7 @@ import axios from "axios";
 function App() {
 	const handleMyntraScraping = () => {
 		axios
-			.get("http://localhost:5000/api/myntra")
+			.get("/api/myntra")
 			.then((resp) => {
 				console.log(resp);
 			})

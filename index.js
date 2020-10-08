@@ -35,6 +35,13 @@ app.use("/api/fynd", fyndScrapper);
 // app.use("/api/amazon", amazonScrapper);
 // app.use("/api/bewakoof", bewakoofScrapper);
 
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(path.join(__dirname, "client-app/build")));
+	app.get("/*", (req, res) => {
+		res.sendFile(path.join(__dirname, "client-app/build", "index.html"));
+	});
+}
+
 // Connect to MongoDB
 mongoose
 	.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })

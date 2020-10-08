@@ -1,6 +1,9 @@
 const puppeteer = require("puppeteer");
 
-const categories = ["bra", "men-jackets","men-sunglasses"];
+const categories = [
+	"men-topwear",
+	"men-tshirts"
+];
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({ headless: false });
@@ -17,7 +20,7 @@ module.exports.scraper = async (url, callBack) => {
 	}
 
 	for (var j = 0; j < categories.length; j++) {
-		for (var i = 1; i <= 2; i++) {
+		for (var i = 1; i <= 5; i++) {
 			await page.goto(`${url}/${categories[j]}?p=${i}`, {
 				waitUntil: "networkidle0",
 			});
