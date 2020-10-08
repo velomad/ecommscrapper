@@ -3,6 +3,7 @@ const puppeteer = require("puppeteer");
 const categories = [
 	"men-topwear",
 	"men-tshirts"
+	
 ];
 
 module.exports.scraper = async (url, callBack) => {
