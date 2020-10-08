@@ -5,18 +5,54 @@ const categories = [
 		"mens-footwear":
 			"mens-footwear/pr?sid=osp,cil&otracker=nmenu_sub_Men_0_Footwear",
 	},
-	{"Sports Shoes":"mens-footwear/casual-shoes/pr?sid=osp,cil,e1f&otracker=nmenu_sub_Men_0_Casual%20Shoes"},
-	{"Casual Shoes":"mens-footwear/sports-shoes/pr?sid=osp,cil,1cu&otracker=nmenu_sub_Men_0_Sports%20Shoes"},
-	{"Formal Shoes":"mens-footwear/formal-shoes/pr?sid=osp,cil,ssb&otracker=nmenu_sub_Men_0_Formal%20Shoes"},
-	{"Sandals Floaters":"mens-footwear/sandals-floaters/pr?sid=osp,cil,e83&otracker=nmenu_sub_Men_0_Sandals%20%26%20Floaters"},
-	{"Flip Flops":"mens-footwear/slippers-flip-flops/pr?sid=osp,cil,e1r&otracker=nmenu_sub_Men_0_Flip-%20Flops"},
-	{"Loafers":"mens-footwear/casual-shoes/loafers~type/pr?sid=osp%2Ccil%2Ce1f&otracker=nmenu_sub_Men_0_Loafers"},
-	{"Boots":"mens-footwear/casual-shoes/boots~type/pr?sid=osp%2Ccil%2Ce1f&otracker=nmenu_sub_Men_0_Boots"},
-	{"Running Shoes":"mens-footwear/sports-shoes/running-shoes~type/pr?sid=osp,cil,1cu&otracker=nmenu_sub_Men_0_Running%20Shoes"},
-	{"Sneakers":"mens-footwear/casual-shoes/sneakers~type/pr?sid=osp%2Ccil%2Ce1f&otracker=nmenu_sub_Men_0_Sneakers"},
-	{"Men's Grooming":"mens-grooming-store?otracker=nmenu_sub_Men_0_Men%27s%20Grooming"},
-	{"Deodorants":"beauty-and-grooming/fragrances/deodorants/pr?sid=g9b%2C0yh%2Cvp1&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.serviceability%5B%5D%3Dtrue&otracker=nmenu_sub_Men_0_Deodorants"},
-	{"Perfumes":"beauty-and-grooming/fragrances/perfume/pr?sid=g9b,0yh,jhz&p[]=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&p[]=facets.ideal_for%255B%255D%3DMen&p[]=facets.serviceability%5B%5D%3Dtrue&otracker=categorytree&otracker=nmenu_sub_Men_0_Perfumes"},
+	// {
+	// 	"Sports Shoes":
+	// 		"mens-footwear/casual-shoes/pr?sid=osp,cil,e1f&otracker=nmenu_sub_Men_0_Casual%20Shoes",
+	// },
+	// {
+	// 	"Casual Shoes":
+	// 		"mens-footwear/sports-shoes/pr?sid=osp,cil,1cu&otracker=nmenu_sub_Men_0_Sports%20Shoes",
+	// },
+	// {
+	// 	"Formal Shoes":
+	// 		"mens-footwear/formal-shoes/pr?sid=osp,cil,ssb&otracker=nmenu_sub_Men_0_Formal%20Shoes",
+	// },
+	// {
+	// 	"Sandals Floaters":
+	// 		"mens-footwear/sandals-floaters/pr?sid=osp,cil,e83&otracker=nmenu_sub_Men_0_Sandals%20%26%20Floaters",
+	// },
+	// {
+	// 	"Flip Flops":
+	// 		"mens-footwear/slippers-flip-flops/pr?sid=osp,cil,e1r&otracker=nmenu_sub_Men_0_Flip-%20Flops",
+	// },
+	// {
+	// 	"Loafers":
+	// 		"mens-footwear/casual-shoes/loafers~type/pr?sid=osp%2Ccil%2Ce1f&otracker=nmenu_sub_Men_0_Loafers",
+	// },
+	// {
+	// 	"Boots":
+	// 		"mens-footwear/casual-shoes/boots~type/pr?sid=osp%2Ccil%2Ce1f&otracker=nmenu_sub_Men_0_Boots",
+	// },
+	// {
+	// 	"Running Shoes":
+	// 		"mens-footwear/sports-shoes/running-shoes~type/pr?sid=osp,cil,1cu&otracker=nmenu_sub_Men_0_Running%20Shoes",
+	// },
+	// {
+	// 	"Sneakers":
+	// 		"mens-footwear/casual-shoes/sneakers~type/pr?sid=osp%2Ccil%2Ce1f&otracker=nmenu_sub_Men_0_Sneakers",
+	// },
+	// {
+	// 	"Men's Grooming":
+	// 		"mens-grooming-store?otracker=nmenu_sub_Men_0_Men%27s%20Grooming",
+	// },
+	{
+		"Deodorants":
+			"beauty-and-grooming/fragrances/deodorants/pr?sid=g9b%2C0yh%2Cvp1&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.serviceability%5B%5D%3Dtrue&otracker=nmenu_sub_Men_0_Deodorants",
+	},
+	{
+		"Perfumes":
+			"beauty-and-grooming/fragrances/perfume/pr?sid=g9b,0yh,jhz&p[]=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&p[]=facets.ideal_for%255B%255D%3DMen&p[]=facets.serviceability%5B%5D%3Dtrue&otracker=categorytree&otracker=nmenu_sub_Men_0_Perfumes",
+	},
 	// "Beard Care & Grooming":"beauty-and-grooming/pr?sid=g9b&p%5B%5D=facets.brand%255B%255D%3DBeardo&p%5B%5D=facets.brand%255B%255D%3DUstraa&p%5B%5D=facets.brand%255B%255D%3DThe%2BMan%2BCompany&p%5B%5D=facets.brand%255B%255D%3DSpruce%2BShave%2BClub&p%5B%5D=facets.brand%255B%255D%3DMan%2BArden&p%5B%5D=facets.brand%255B%255D%3DMeralite&p%5B%5D=facets.brand%255B%255D%3DBrylcreem&p%5B%5D=facets.brand%255B%255D%3DUrbanMooch&p%5B%5D=facets.brand%255B%255D%3DVihado&p%5B%5D=facets.serviceability%5B%5D%3Dtrue&otracker=nmenu_sub_Men_0_Beard%20Care%20%26%20Grooming",
 	// "Shaving & Aftershave":"beauty-and-grooming/~shaving-aftershave/pr?sid=g9b&otracker=nmenu_sub_Men_0_Shaving%20%26%20Aftershave",
 	// "Sexual Wellness":"beauty-and-grooming/sexual-wellness/pr?sid=g9b,alu&p[]=facets.serviceability%5B%5D%3Dtrue&otracker=categorytree&otracker=nmenu_sub_Men_0_Sexual%20Wellness",
@@ -88,10 +124,9 @@ const categories = [
 	// "Nike":"mens-footwear/nike~brand/pr?sid=osp,cil&otracker=nmenu_sub_Men",
 ];
 
-for(var i of categories){
-console.log(Object.keys(i))
+for (var i of categories) {
+	console.log(Object.keys(i));
 }
-
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({ headless: false });
@@ -112,6 +147,7 @@ module.exports.scraper = async (url, callBack) => {
 				waitUntil: "networkidle0",
 			});
 
+
 			// Get the height of the rendered page
 			const bodyHandle = await page.$("body");
 			const { height } = await bodyHandle.boundingBox();
@@ -129,10 +165,11 @@ module.exports.scraper = async (url, callBack) => {
 			}
 
 			let data = await page.evaluate(() => {
+	
+				
 				window.scrollTo(0, 0);
 				let products = [];
 				let productElements = document.querySelectorAll("._3O0U0u");
-
 				productElements.forEach((productElement) => {
 					let productJson = {};
 					try {
@@ -167,3 +204,7 @@ module.exports.scraper = async (url, callBack) => {
 	}
 	await browser.close();
 };
+
+
+// deo = _3liAhj
+

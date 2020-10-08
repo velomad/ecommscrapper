@@ -1,6 +1,54 @@
 const puppeteer = require("puppeteer");
 
-const categories = ["men-topwear", "men-tshirts", "men-formal-shirts"];
+const categories = [
+	"men-topwear",
+	"men-tshirts",
+	"men-casual-shirts",
+	// "men-formal-shirts",
+	// "men-sweatshirts",
+	// "men-sweaters",
+	// "men-jackets",
+	// "men-blazers",
+	// "men-suits",
+	// "rain-jacket",
+	// "men-jeans",
+	// "men-casual-trousers",
+	// "men-formal-trousers",
+	// "mens-shorts",
+	// "men-trackpants",
+	// "men-innerwear",
+	// "men-briefs-and-trunks",
+	// "men-boxers",
+	// "men-innerwear-vests",
+	// "men-nightwear",
+	// "men-thermals",
+	// "men-casual-shoes",
+	// "men-sports-shoes",
+	// "men-formal-shoes",
+	// "men-sneakers",
+	// "men-sandals",
+	// "men-flip-flops",
+	// "men-socks",
+	// "men-personal-care",
+	// "men-sunglasses",
+	// "mens-watches",
+	// "men-sports-wear",
+	// "men-sports-shoes",
+	// "men-sports-sandals",
+	// "men-sports-wear-tshirts",
+	// "men-trackpants-shorts",
+	// "men-tracksuits",
+	// "men-sports-jackets",
+	// "men-sports-accessories",
+	// "men-wallets",
+	// "men-belts",
+	// "perfumes",
+	// "trimmer",
+	// "deodorant",
+	// "men-belts-ties",
+	// "men-accessory-gift-set",
+	// "men-caps",
+];
 
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({
@@ -24,6 +72,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 			await page.goto(`${url}/${categories[j]}?p=${i}`, {
 				waitUntil: "networkidle0",
 			});
+
 			// Get the height of the rendered page
 			const bodyHandle = await page.$("body");
 			const { height } = await bodyHandle.boundingBox();
@@ -53,7 +102,6 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 						.replace("Sizes:", "")
 						.trim()
 						.split(",");
-
 					try {
 						productJson.productPrice = productElement.querySelector(
 							".product-discountedPrice",
