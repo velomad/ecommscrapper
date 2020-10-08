@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"server": "nodemon index.js",
+		"start": "node index.js",
 		"client-app": "npm start --prefix client-app",
 		"dev": "concurrently \"npm run server\" \"npm run client-app\"",
 		"heroku-postbuild": "cd client-app && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
@@ -22,8 +23,6 @@
 		"mongoose": "^5.10.8",
 		"node-cron": "^2.0.3",
 		"nodemon": "^2.0.4",
-		"puppeteer": "^5.3.1",
-		"puppeteer-autoscroll-down": "^0.1.6",
-		"puppeteer-infinite-scroll": "^1.0.1"
+		"puppeteer": "^5.3.1"
 	}
 }
