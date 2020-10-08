@@ -39,7 +39,9 @@ router.get("/", (req, res) => {
 				}
 			}
 			run().catch(console.dir);
-
+			
+			console.log(end);
+			console.log(categoryCollection);
 			console.log(data);
 		}
 	});
