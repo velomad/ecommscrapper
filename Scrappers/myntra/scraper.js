@@ -1,29 +1,29 @@
 const puppeteer = require("puppeteer");
 
-const categories = ["men-topwear", "men-tshirts"];
+const categories = ["men-topwear", "men-tshirts", "men-formal-shirts"];
 
-module.exports.scraper = async (url, callBack) => {
+module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({
-		args: ["--no-sandbox", "--disable-setuid-sandbox"],
+		headless: false,
+		// args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
 
-	// await page.setUserAgent(
-	// 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-	// );
+	await page.setUserAgent(
+		"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+	);
 
-	// await page.setViewport({ width: 1200, height: 768 });
+	await page.setViewport({ width: 1200, height: 768 });
 
 	function wait(ms) {
 		return new Promise((resolve) => setTimeout(() => resolve(), ms));
 	}
 
 	for (var j = 0; j < categories.length; j++) {
-		for (var i = 1; i <= 5; i++) {
+		for (var i = 1; i <= pagesToScrape; i++) {
 			await page.goto(`${url}/${categories[j]}?p=${i}`, {
 				waitUntil: "networkidle0",
 			});
-
 			// Get the height of the rendered page
 			const bodyHandle = await page.$("body");
 			const { height } = await bodyHandle.boundingBox();
@@ -89,10 +89,11 @@ module.exports.scraper = async (url, callBack) => {
 					}
 					products.push(productJson);
 				});
+
 				return products;
 			});
 			await wait(100);
-			callBack(data, true, i, categories[j]);
+			callBack(data, true, i, j, categories.length - 1, categories[j]);
 		}
 	}
 	await browser.close();
