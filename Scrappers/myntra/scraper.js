@@ -1,13 +1,12 @@
 const puppeteer = require("puppeteer");
 
-const categories = [
-	"men-topwear",
-	"men-tshirts"
-	
-];
+const categories = ["men-topwear", "men-tshirts"];
 
 module.exports.scraper = async (url, callBack) => {
-	const browser = await puppeteer.launch({ headless: false });
+	const browser = await puppeteer.launch({
+		headless: false,
+		args: ["--no-sandbox"],
+	});
 	const page = await browser.newPage();
 
 	await page.setUserAgent(
