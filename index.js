@@ -22,17 +22,22 @@ app.use(cors());
 const myntraScrapper = require("./routes/api/Myntra");
 const flipkartScrapper = require("./routes/api/Flipkart");
 const ajioScrapper = require("./routes/api/Ajio");
-const fyndScrapper = require("./routes/api/Fynd");
+const tataScrapper = require("./routes/api/Tata");
+const snapdealScrapper = require("./routes/api/Snapdeal");
+
+
+// const fyndScrapper = require("./routes/api/Fynd");
 // const bewakoofScrapper = require("./routes/api/Bewakoof");
-// const tataScrapper = require("./routes/api/Tata");
 // const amazonScrapper = require("./routes/api/Amazon");
 
 // Api's
 app.use("/api/myntra", myntraScrapper);
 app.use("/api/flipkart", flipkartScrapper);
 app.use("/api/ajio", ajioScrapper);
-app.use("/api/fynd", fyndScrapper);
-// app.use("/api/tata", tataScrapper);
+// app.use("/api/fynd", fyndScrapper);
+app.use("/api/tata", tataScrapper);
+app.use("/api/snapndeal", snapdealScrapper);
+
 // app.use("/api/amazon", amazonScrapper);
 // app.use("/api/bewakoof", bewakoofScrapper);
 

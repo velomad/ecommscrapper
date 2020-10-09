@@ -8,4 +8,5 @@ module.exports = {
   ajioBaseUrl: "https://www.ajio.com",
   tataBaseUrl: "https://www.tatacliq.com",
   fyndBaseUrl: "https://www.fynd.com",
+  snapdealBaseUrl: "https://www.snapdeal.com/"
 };
