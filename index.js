@@ -31,6 +31,7 @@ const snapdealScrapper = require("./routes/api/Snapdeal");
 // const amazonScrapper = require("./routes/api/Amazon");
 
 // Api's
+
 app.use("/api/myntra", myntraScrapper);
 app.use("/api/flipkart", flipkartScrapper);
 app.use("/api/ajio", ajioScrapper);
