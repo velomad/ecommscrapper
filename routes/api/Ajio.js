@@ -9,7 +9,7 @@ const { ajioBaseUrl } = require("../../config/keys");
 const uri = db;
 
 router.get("/", (req, res) => {
-	var pagesToScrape = 2;
+	var pagesToScrape = 1;
 	console.log("starting to scrap...");
 	ajioScrapper.scraper(
 		ajioBaseUrl,

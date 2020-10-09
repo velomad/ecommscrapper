@@ -9,7 +9,9 @@ const { flipkartBaseUrl } = require("../../config/keys");
 const uri = db;
 
 router.get("/", (req, res) => {
-	const pagesToScrape  = 	1
+	
+	const pagesToScrape  = 	3
+
 	console.log("starting to scrape...");
 	flipkartScrapper.scraper(
 		flipkartBaseUrl,
@@ -34,7 +36,7 @@ router.get("/", (req, res) => {
 
 						const database = client.db("flipkart");
 						const collection = database.collection(
-							JSON.stringify(Object.keys(categoryCollection)).slice(2,-2).replace(/\s/g, ''),
+							JSON.stringify(categoryCollection).slice(2,-2).replace(/\s/g, ''),
 						);
 
 						// this option prevents additional documents from being inserted if one fails

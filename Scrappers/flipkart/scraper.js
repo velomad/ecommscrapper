@@ -81,22 +81,22 @@ const categories = [
 	// 	"Track pants":
 	// 		"clothing-and-accessories/bottomwear/track-pants/men-track-pants/pr?sid=clo,vua,jlk,6ql&otracker=categorytree&otracker=nmenu_sub_Men_0_Track%20pants",
 	// },
-	// {
-	// 	Shorts:
-	// 		"clothing-and-accessories/bottomwear/shorts/men-shorts/pr?sid=clo,vua,e8g,kc7&otracker=categorytree&otracker=nmenu_sub_Men_0_Shorts",
-	// },
-	// {
-	// 	Cargos:
-	// 		"clothing-and-accessories/bottomwear/cargo/men-cargo/pr?sid=clo,vua,rqy,nli&otracker=categorytree&otracker=nmenu_sub_Men_0_Cargos",
-	// },
-	// {
-	// 	"Three Fourths":
-	// 		"clothing-and-accessories/bottomwear/threefourths/men-threefourths/pr?sid=clo,vua,eum,4qq&otracker=categorytree&otracker=nmenu_sub_Men_0_Three%20Fourths",
-	// },
-	// {
-	// 	"Suits, Blazers & Waistcoats":
-	// 		"clothing-and-accessories/blazers-suits-waistcoat-coat/pr?sid=clo%2Cupk&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&otracker=nmenu_sub_Men_0_Suits%2C%20Blazers%20%26%20Waistcoats",
-	// },
+	{
+		Shorts:
+			"clothing-and-accessories/bottomwear/shorts/men-shorts/pr?sid=clo,vua,e8g,kc7&otracker=categorytree&otracker=nmenu_sub_Men_0_Shorts",
+	},
+	{
+		Cargos:
+			"clothing-and-accessories/bottomwear/cargo/men-cargo/pr?sid=clo,vua,rqy,nli&otracker=categorytree&otracker=nmenu_sub_Men_0_Cargos",
+	},
+	{
+		"Three Fourths":
+			"clothing-and-accessories/bottomwear/threefourths/men-threefourths/pr?sid=clo,vua,eum,4qq&otracker=categorytree&otracker=nmenu_sub_Men_0_Three%20Fourths",
+	},
+	{
+		"Suits, Blazers & Waistcoats":
+			"clothing-and-accessories/blazers-suits-waistcoat-coat/pr?sid=clo%2Cupk&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&otracker=nmenu_sub_Men_0_Suits%2C%20Blazers%20%26%20Waistcoats",
+	},
 	// {
 	// 	"Ties, Socks, Caps & More":
 	// 		"clothing-and-accessories/clothing-accessories/pr?sid=clo,qd8&p[]=facets.ideal_for%255B%255D%3DMen&p[]=facets.ideal_for%255B%255D%3Dmen&p[]=facets.ideal_for%255B%255D%3Dmen&otracker=categorytree&otracker=nmenu_sub_Men_0_Ties%2C%20Socks%2C%20Caps%20%26%20More",
@@ -223,14 +223,6 @@ const categories = [
 	// 		"health-personal-care-appliances/personal-care-appliances/grooming-kit/pr?sid=zlw,79s,bi7&otracker=nmenu_sub_Men_0_Grooming%20Kits",
 	// },
 	// {
-	// 	"Footwear Club":
-	// 		"men-exclusive-store?otracker=nmenu_sub_Men_0_Footwear%20Club",
-	// },
-	// {
-	// 	"Bags & Wallet":
-	// 		"mens-bags-wallet-store?otracker=nmenu_sub_Men_0_Bags%20%26%20Wallet",
-	// },
-	// {
 	// {
 	// 	Adidas:
 	// 		"mens-footwear/pr?sid=osp%2Ccil&otracker=nmenu_sub_Men_0_Footwear&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DADIDAS%2BNEO&p%5B%5D=facets.brand%255B%255D%3DADIDAS%2BORIGINALS&otracker=nmenu_sub_Men_0_Adidas",
@@ -268,7 +260,8 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	function wait(ms) {
 		return new Promise((resolve) => setTimeout(() => resolve(), ms));
 	}
-	for (var j = 0; j <= categories.length; j++) {
+
+	for (var j = 0; j < categories.length; j++) {
 		for (var i = 1; i <= pagesToScrape; i++) {
 			await page.goto(`${url}/${Object.values(categories[j])}&page=${i}`, {
 				waitUntil: "networkidle0",
