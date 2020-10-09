@@ -31,40 +31,50 @@ const categories = [
 	// "Watches"
 ];
 
-module.exports.scraper = (url, pagesToScrape, callBack) => {
-	console.log("hello");
-	for (var j = 0; i < categories.length; i++) {
-		console.log(j)
+module.exports.scraper = async (url, pagesToScrape, callBack) => {
+	for (var j = 0; j < categories.length; j++) {
 		for (var i = 0; i < pagesToScrape; i++) {
-			let data = [];
-			var URL = `${url}api/category/${Object.values(
+			var URL = `${url}/api/category/${Object.values(
 				categories[j],
 			)}?fields=SITE&currentPage=${i}&pageSize=45&format=json&query=%3Arelevance&sortBy=relevance&gridColumns=3&advfilter=true`;
-			console.log(URL);
-			Axios.get(URL)
-				.then((resp) => {
-					console.log(resp);
-					var rawData = resp.data.products;
-					console.log(rawData);
-					rawData.forEach((el) => {
-						data.push({
-							productName: el.name,
-							brandName: el.fnlColorVariantData.brandName,
-							imageUrl: el.fnlColorVariantData.outfitPictureURL,
-							discountPercent: el.discountPercent,
-							couponStatus: el.couponStatus,
-							price: el.price.displayformattedValue,
-							priceStrike: el.wasPriceData.displayformattedValue,
-							productLink: `https://ajio.com${el.url}`,
-							size: el.productSizeData ? el.productSizeData.sizeVariants : null,
-						});
-					});
+			let data = [];
 
-					callBack(data, i, j, categories.length - 1, true);
-				})
-				.catch((err) => {
-					console.log(err);
+			try {
+				let fetchApi = await Axios.get(URL);
+				let rawData = fetchApi.data.products;
+				rawData.forEach((el) => {
+					data.push({
+						productName: el.name ? el.name : null,
+						brandName: el.fnlColorVariantData.brandName
+							? el.fnlColorVariantData.brandName
+							: null,
+						imageUrl: el.fnlColorVariantData.outfitPictureURL
+							? el.fnlColorVariantData.outfitPictureURL
+							: null,
+						discountPercent: el.discountPercent ? el.discountPercent : null,
+						couponStatus: el.couponStatus ? el.couponStatus : null,
+						price: el.price.displayformattedValue
+							? el.price.displayformattedValue
+							: null,
+						priceStrike: el.wasPriceData.displayformattedValue
+							? el.wasPriceData.displayformattedValue
+							: null,
+						productLink: `https://ajio.com${el.url}`,
+						size: el.productSizeData ? el.productSizeData.sizeVariants : null,
+					});
 				});
+			}
+			catch(e){
+				console.log(e)
+			}
+			callBack(
+				data,
+				true,
+				i,
+				j,
+				categories.length - 1,
+				Object.keys(categories[j]),
+			);
 		}
 	}
 };

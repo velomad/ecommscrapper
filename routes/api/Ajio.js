@@ -27,18 +27,16 @@ router.get("/", (req, res) => {
 					useUnifiedTopology: true,
 					useNewUrlParser: true,
 				});
-
 				async function run() {
 					try {
 						await client.connect();
 
 						const database = client.db("ajio");
 						const collection = database.collection(
-							JSON.stringify(Object.keys(categoryCollection))
+							JSON.stringify(categoryCollection)
 								.slice(2, -2)
 								.replace(/\s/g, ""),
 						);
-
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
 

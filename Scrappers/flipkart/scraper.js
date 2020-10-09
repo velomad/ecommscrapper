@@ -250,10 +250,10 @@ const categories = [
 	// { Nike: "mens-footwear/nike~brand/pr?sid=osp,cil&otracker=nmenu_sub_Men" },
 ];
 
-for (var i of categories) {
-	// console.log(JSON.stringify(Object.keys(i)).slice(2, -2).replace(/\s/g, ""));
-	console.log(JSON.stringify(Object.values(i)).slice(2, -2));
-}
+// for (var i of categories) {
+// 	// console.log(JSON.stringify(Object.keys(i)).slice(2, -2).replace(/\s/g, ""));
+// 	console.log(JSON.stringify(Object.values(i)).slice(2, -2));
+// }
 
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({ headless: false });
