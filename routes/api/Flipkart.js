@@ -9,10 +9,19 @@ const { flipkartBaseUrl } = require("../../config/keys");
 const uri = db;
 
 router.get("/", (req, res) => {
+	const pagesToScrape  = 	1
 	console.log("starting to scrape...");
 	flipkartScrapper.scraper(
 		flipkartBaseUrl,
-		(data, response, end, categoryCollection) => {
+		pagesToScrape,
+		(
+			data,
+			response,
+			pageLoop,
+			categoryLoop,
+			categoriesToScrape,
+			categoryCollection,
+		) => {
 			if (response) {
 				const client = new MongoClient(uri, {
 					useUnifiedTopology: true,
@@ -25,13 +34,16 @@ router.get("/", (req, res) => {
 
 						const database = client.db("flipkart");
 						const collection = database.collection(
-							JSON.stringify(categoryCollection).slice(2, -2).replace(" ", "-"),
+							JSON.stringify(Object.keys(categoryCollection)).slice(2,-2).replace(/\s/g, ''),
 						);
 
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
 						const result = await collection.insertMany(data, options);
-						if (end === 2) {
+						if (
+							pageLoop === pagesToScrape &&
+							categoryLoop === categoriesToScrape
+						) {
 							res.status(201).json({
 								message: "Data Insrted.",
 								result: data,

@@ -33,9 +33,9 @@ const categories = [
 	// "men-sunglasses",
 	// "mens-watches",
 	// "men-sports-wear",
-	// "men-sports-shoes",
-	// "men-sports-sandals",
-	// "men-sports-wear-tshirts",
+	"men-sports-shoes",
+	"men-sports-sandals",
+	"men-sports-wear-tshirts",
 	// "men-trackpants-shorts",
 	// "men-tracksuits",
 	// "men-sports-jackets",
@@ -103,19 +103,27 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 						.trim()
 						.split(",");
 					try {
-						productJson.productPrice = productElement.querySelector(
+						productJson.productPrice =  productElement.querySelector(
 							".product-discountedPrice",
-						).innerText;
+						) ? productElement.querySelector(
+							".product-discountedPrice",
+						).innerText : null
 						productJson.productLink = productElement.querySelector(
 							".product-base > a",
-						).href;
-						productJson.brandName = productElement.querySelector(
+						) ? productElement.querySelector(
+							".product-base > a",
+						).href : null
+						productJson.brandName =  productElement.querySelector(
 							".product-brand",
-						).innerText;
-						productJson.productName = productElement.querySelector(
+						) ? productElement.querySelector(
+							".product-brand",
+						).innerText : null
+						productJson.productName =  productElement.querySelector(
 							".product-product",
-						).innerText;
-						productJson.productSizes = productSizeArr;
+						) ?  productElement.querySelector(
+							".product-product",
+						).innerText : null
+						productJson.productSizes =productSizeArr ? productSizeArr : null;
 						productJson.imageUrl = productElement.querySelector(
 							"picture .img-responsive",
 						)

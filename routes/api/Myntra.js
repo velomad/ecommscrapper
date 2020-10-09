@@ -8,7 +8,7 @@ const db = require("../../config/keys").mongoURI;
 const uri = db;
 
 router.get("/", (req, res) => {
-	const pagesToScrape = 2;
+	const pagesToScrape = 1;
 	console.log("starting to scrap...");
 	myntraScrapper.scraper(
 		MyntraURL,
@@ -31,7 +31,7 @@ router.get("/", (req, res) => {
 					try {
 						await client.connect();
 
-						const database = client.db("ScrappedData");
+						const database = client.db("myntra");
 						const collection = database.collection(categoryCollection);
 
 						// this option prevents additional documents from being inserted if one fails
@@ -53,7 +53,6 @@ router.get("/", (req, res) => {
 					}
 				}
 				run().catch(console.dir);
-
 				console.log(data);
 				console.log("Done.");
 			}

@@ -1,40 +1,68 @@
 const express = require("express");
-// const { MongoClient } = require("mongodb");
+const { MongoClient } = require("mongodb");
 const router = express.Router();
-const ajioScrapper = require("../../Scrappers/ajioScrapper");
-// const db = require("../../config/keys").mongoURI;
+const ajioScrapper = require("../../Scrappers/ajio/scraper");
+const db = require("../../config/keys").mongoURI;
 
 const { ajioBaseUrl } = require("../../config/keys");
 
-// const uri = db;
+const uri = db;
 
 router.get("/", (req, res) => {
+	var pagesToScrape = 2;
 	console.log("starting to scrap...");
-	ajioScrapper.scraper(ajioBaseUrl, (data, response) => {
-		if (response) {
-			// const client = new MongoClient(uri, { useUnifiedTopology: true, useNewUrlParser: true, });
+	ajioScrapper.scraper(
+		ajioBaseUrl,
+		pagesToScrape,
+		(
+			data,
+			response,
+			pageLoop,
+			categoryLoop,
+			categoriesToScrape,
+			categoryCollection,
+		) => {
+			if (response) {
+				const client = new MongoClient(uri, {
+					useUnifiedTopology: true,
+					useNewUrlParser: true,
+				});
 
-			// async function run() {
-			//     try {
-			//         await client.connect();
+				async function run() {
+					try {
+						await client.connect();
 
-			//         const database = client.db("ScrappedData");
-			//         const collection = database.collection("Myntra");
+						const database = client.db("ajio");
+						const collection = database.collection(
+							JSON.stringify(Object.keys(categoryCollection))
+								.slice(2, -2)
+								.replace(/\s/g, ""),
+						);
 
-			//         // this option prevents additional documents from being inserted if one fails
-			//         const options = { ordered: true };
+						// this option prevents additional documents from being inserted if one fails
+						const options = { ordered: true };
 
-			//         const result = await collection.insertMany(data, options);
-			//         console.log(`${result.insertedCount} documents were inserted`);
-			//     } finally {
-			//         await client.close();
-			//     }
-			// }
-			// run().catch(console.dir);
-			console.log(data);
-			console.log(data.length);
-		}
-	});
+						const result = await collection.insertMany(data, options);
+						if (
+							pageLoop === pagesToScrape &&
+							categoryLoop === categoriesToScrape
+						) {
+							res.status(201).json({
+								message: "Data Insrted.",
+								result: data,
+							});
+						}
+						console.log(`${result.insertedCount} documents were inserted`);
+					} finally {
+						await client.close();
+					}
+				}
+				run().catch(console.dir);
+				console.log(data);
+				console.log(data.length);
+			}
+		},
+	);
 });
 
 module.exports = router;
