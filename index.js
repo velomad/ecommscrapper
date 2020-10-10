@@ -37,7 +37,7 @@ app.use("/api/flipkart", flipkartScrapper);
 app.use("/api/ajio", ajioScrapper);
 // app.use("/api/fynd", fyndScrapper);
 app.use("/api/tata", tataScrapper);
-app.use("/api/snapndeal", snapdealScrapper);
+app.use("/api/snapdeal", snapdealScrapper);
 
 // app.use("/api/amazon", amazonScrapper);
 // app.use("/api/bewakoof", bewakoofScrapper);
