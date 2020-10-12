@@ -1,12 +1,17 @@
 const puppeteer = require("puppeteer");
+const userAgent = require('user-agents');
+var catgories = require('./categories.js');
 
 module.exports.scraper = async (url, callBack) => {
-	const browser = await puppeteer.launch({ headless: false });
+	const browser = await puppeteer.launch({ 
+		args: [`--proxy-server=http=194.67.37.90:3128`],
+		headless: false 
+	});
 	const page = await browser.newPage();
-
-	await page.setUserAgent(
-		"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-	);
+	await page.setUserAgent(userAgent.toString());
+	// await page.setUserAgent(
+	// 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+	// );
 
 	await page.setViewport({ width: 1200, height: 768 });
 
@@ -27,34 +32,31 @@ module.exports.scraper = async (url, callBack) => {
 					// let scrollHeight = document.body.scrollHeight;
 					window.scrollBy(0, distance);
 					// totalHeight += distance;
+					let getText = document.querySelector("#searchMessageContainer > div > span:nth-child(1)").textContent;
 					if (
-						document.querySelectorAll("#products > section > div").length > 50
+						document.querySelectorAll("#products > section > div").length > Number((getText.match(/(\d+)/)[0]/100*1).toFixed(0))
 					) {
+						getText = '';
 						window.scrollTo(0, 0);
 						clearInterval(timer);
 						resolve();
 					}
-				}, 50);
+				}, 300);
 			});
 		});
 	}
 
-	// Get the height of the rendered page
-	// const bodyHandle = await page.$("body");
-	// const { height } = await bodyHandle.boundingBox();
-	// await bodyHandle.dispose();
-
-	const test = [
-		{
-			men: ["socks", "jacket"],
-			women: ["shirt", "pant"],
-		},
-	];
+	// const test = [
+	// 	{
+	// 		men: ["socks", "jacket"],
+	// 		women: ["shirt", "pant"],
+	// 	},
+	// ];
 
 	var loopArry;
-	for (var t of test) {
+	for (var t of catgories) {
 		loopArry = [t.men, t.women];
-	}
+	}	
 	for (var i = 0; i < loopArry.length; i++) {
 		for (var text = 0; text < loopArry[i].length; text++) {
 			const input = await page.$("#inputValEnter");
@@ -77,26 +79,18 @@ module.exports.scraper = async (url, callBack) => {
 				productElements.forEach((el) => {
 					let productJson = {};
 					try {
-						// productJson.productDiscription =
-						// 	productElement.childNodes[5].childNodes[1].childNodes[1].childNodes[1].innerText;
 						productJson.productName = el.querySelector(".product-title")
 							? el.querySelector(".product-title").innerText
 							: null;
-						// productJson.productImageUrl =
-						// 	productElement.childNodes[3].childNodes[1].childNodes[3].childNodes[1].srcset;
 						productJson.imageUrl = el.querySelector(".product-image")
 							? el.querySelector(".product-image").srcset
 							: null;
-						// productJson.productPrice =
-						// 	productElement.childNodes[5].childNodes[1].childNodes[1].childNodes[3].childNodes[1].innerText;
 						productJson.productPrice = el.querySelector(".lfloat.product-price")
 							? el.querySelector(".lfloat.product-price").innerText
 							: null;
-						// productJson.productDiscount =
-						// 	productElement.childNodes[5].childNodes[1].childNodes[1].childNodes[3].childNodes[3].innerText;
 						productJson.discountedPrice = el.querySelector(
 							".lfloat.product-desc-price.strike",
-						)
+						)	
 							? el.querySelector(".lfloat.product-desc-price.strike").innerText
 							: null;
 						productJson.discountPercentage = el.querySelector(
@@ -112,7 +106,7 @@ module.exports.scraper = async (url, callBack) => {
 				return products;
 			});
 			await wait(1000);
-			callBack(data, true);
+			callBack(data, true,loopArry[i][text]);
 		}
 	}
 
