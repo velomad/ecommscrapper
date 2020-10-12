@@ -1,7 +1,7 @@
 const express = require("express");
 // const { MongoClient } = require("mongodb");
 const router = express.Router();	
-const snapdealScrapper = require("../../Scrappers/snapdeal/snapdealScrapper");
+const snapdealScrapper = require("../../Scrappers/snapdeal/scraper");
 // const db = require("../../config/keys").mongoURI;
 
 const { snapdealBaseUrl } = require("../../config/keys");

@@ -10,30 +10,34 @@ const { bewakoofBaseUrl } = require("../../config/keys");
 
 router.get("/", (req, res) => {
 	console.log("starting to scrap...");
-	bewakoofScrapper.scraper(bewakoofBaseUrl, (data, response) => {
-		if (response) {
-			// const client = new MongoClient(uri, { useUnifiedTopology: true, useNewUrlParser: true, });
+	bewakoofScrapper.scraper(
+		bewakoofBaseUrl,
+		(data, response, numberOfProdcts) => {
+			if (response) {
+				// const client = new MongoClient(uri, { useUnifiedTopology: true, useNewUrlParser: true, });
 
-			// async function run() {
-			//     try {
-			//         await client.connect();
+				// async function run() {
+				//     try {
+				//         await client.connect();
 
-			//         const database = client.db("ScrappedData");
-			//         const collection = database.collection("Myntra");
+				//         const database = client.db("ScrappedData");
+				//         const collection = database.collection("Myntra");
 
-			//         // this option prevents additional documents from being inserted if one fails
-			//         const options = { ordered: true };
+				//         // this option prevents additional documents from being inserted if one fails
+				//         const options = { ordered: true };
 
-			//         const result = await collection.insertMany(data, options);
-			//         console.log(`${result.insertedCount} documents were inserted`);
-			//     } finally {
-			//         await client.close();
-			//     }
-			// }
-			// run().catch(console.dir);
-			console.log(data);
-		}
-	});
+				//         const result = await collection.insertMany(data, options);
+				//         console.log(`${result.insertedCount} documents were inserted`);
+				//     } finally {
+				//         await client.close();
+				//     }
+				// }
+				// run().catch(console.dir);
+				console.log(data);
+				console.log(data.length);
+			}
+		},
+	);
 });
 
 module.exports = router;

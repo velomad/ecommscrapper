@@ -242,10 +242,69 @@ const categories = [
 	// { Nike: "mens-footwear/nike~brand/pr?sid=osp,cil&otracker=nmenu_sub_Men" },
 ];
 
-// for (var i of categories) {
-// 	// console.log(JSON.stringify(Object.keys(i)).slice(2, -2).replace(/\s/g, ""));
-// 	console.log(JSON.stringify(Object.values(i)).slice(2, -2));
-// }
+const test = [
+	{
+		men: [
+			{
+				footwear: [
+					{
+						"Sports Shoes":
+							"mens-footwear/casual-shoes/pr?sid=osp,cil,e1f&otracker=nmenu_sub_Men_0_Casual%20Shoes",
+					},
+					{
+						"Casual Shoes":
+							"mens-footwear/sports-shoes/pr?sid=osp,cil,1cu&otracker=nmenu_sub_Men_0_Sports%20Shoes",
+					},
+				],
+			},
+			{
+				towear: [
+					{
+						"T-Shirts":
+							"clothing-and-accessories/topwear/tshirt/men-tshirt/pr?sid=clo,ash,ank,edy&otracker=categorytree&otracker=nmenu_sub_Men_0_T-Shirts",
+					},
+					{
+						"Formal Shirts":
+							"clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts",
+					},
+				],
+			},
+		],
+	},
+	{
+		women: [
+			{
+				footwear: [
+					{
+						"Sports Shoes":
+							"mens-footwear/casual-shoes/pr?sid=osp,cil,e1f&otracker=nmenu_sub_Men_0_Casual%20Shoes",
+					},
+					{
+						"Casual Shoes":
+							"mens-footwear/sports-shoes/pr?sid=osp,cil,1cu&otracker=nmenu_sub_Men_0_Sports%20Shoes",
+					},
+					{
+						"Formal Shoes":
+							"mens-footwear/formal-shoes/pr?sid=osp,cil,ssb&otracker=nmenu_sub_Men_0_Formal%20Shoes",
+					},
+				],
+			},
+			{
+				towear: [
+					{
+						"T-Shirts":
+							"clothing-and-accessories/topwear/tshirt/men-tshirt/pr?sid=clo,ash,ank,edy&otracker=categorytree&otracker=nmenu_sub_Men_0_T-Shirts",
+					},
+					{
+						"Formal Shirts":
+							"clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts",
+					},
+				],
+			},
+		],
+	},
+];
+
 
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({ headless: false });

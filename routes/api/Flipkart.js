@@ -10,7 +10,7 @@ const uri = db;
 
 router.get("/", (req, res) => {
 	
-	const pagesToScrape  = 	3
+	const pagesToScrape  = 	2
 
 	console.log("starting to scrape...");
 	flipkartScrapper.scraper(
