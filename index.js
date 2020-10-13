@@ -24,6 +24,7 @@ const flipkartScrapper = require("./routes/api/Flipkart");
 const ajioScrapper = require("./routes/api/Ajio");
 const tataScrapper = require("./routes/api/Tata");
 const snapdealScrapper = require("./routes/api/Snapdeal");
+const snapdealCategory = require("./Scrappers/snapdeal/MongoCategories");
 
 
 // const fyndScrapper = require("./routes/api/Fynd");
@@ -38,6 +39,11 @@ app.use("/api/ajio", ajioScrapper);
 // app.use("/api/fynd", fyndScrapper);
 app.use("/api/tata", tataScrapper);
 app.use("/api/snapdeal", snapdealScrapper);
+
+
+app.use("/api/snapdeal", snapdealCategory);
+
+
 
 // app.use("/api/amazon", amazonScrapper);
 app.use("/api/bewakoof", bewakoofScrapper);
