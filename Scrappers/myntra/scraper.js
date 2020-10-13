@@ -11,7 +11,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 
 	await page.setUserAgent(userAgent.toString());
 
-	await page.setViewport({ width: 1200, height: 768 });
+// 	await page.setViewport({ width: 1200, height: 768 });
 
 	function wait(ms) {
 		return new Promise((resolve) => setTimeout(() => resolve(), ms));

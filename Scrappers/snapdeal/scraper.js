@@ -4,12 +4,19 @@ var catgories = require('./categories.js');
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({ 
-		args: [`--proxy-server=http=194.67.37.90:3128`],
-		headless: false 
+		args: [
+		`--proxy-server=http=194.67.37.90:3128`,
+		'--no-sandbox',
+		'--disable-setuid-sandbox'
+		],
+		headless: true 
 	});
 	const page = await browser.newPage();
 	await page.setUserAgent(userAgent.toString());
-	
+	// await page.setUserAgent(
+	// 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+	// );
+
 	await page.setViewport({ width: 1200, height: 768 });
 
 	function wait(ms) {
@@ -42,7 +49,6 @@ module.exports.scraper = async (url, callBack) => {
 			});
 		});
 	}
-
 
 	var loopArry;
 	for (var t of catgories) {
