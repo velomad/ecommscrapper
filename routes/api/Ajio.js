@@ -9,7 +9,10 @@ const { ajioBaseUrl } = require("../../config/keys");
 const uri = db;
 
 router.get("/", (req, res) => {
+
 	var pagesToScrape = 1;
+	var totalProdctsInserted = 0;
+
 	console.log("starting to scrap...");
 	ajioScrapper.scraper(
 		ajioBaseUrl,
@@ -17,9 +20,11 @@ router.get("/", (req, res) => {
 		(
 			data,
 			response,
-			pageLoop,
-			categoryLoop,
-			categoriesToScrape,
+			currentLoop,
+			totalLoops,
+			currentCategory,
+			totalCategory,
+			currentPage,
 			categoryCollection,
 		) => {
 			if (response) {
@@ -42,12 +47,13 @@ router.get("/", (req, res) => {
 
 						const result = await collection.insertMany(data, options);
 						if (
-							pageLoop === pagesToScrape &&
-							categoryLoop === categoriesToScrape
-						) {
+							currentLoop === totalLoops &&
+							currentCategory === totalCategory &&
+							currentPage === pagesToScrape
+						)  {
 							res.status(201).json({
 								message: "Data Insrted.",
-								result: data,
+								results: totalProdctsInserted,
 							});
 						}
 						console.log(`${result.insertedCount} documents were inserted`);

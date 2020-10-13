@@ -10,7 +10,10 @@ const uri = db;
 
 router.get("/", (req, res) => {
 	
-	const pagesToScrape  = 	2
+
+	const pagesToScrape  = 	1
+	var totalProdctsInserted = 0;
+
 
 	console.log("starting to scrape...");
 	flipkartScrapper.scraper(
@@ -19,9 +22,11 @@ router.get("/", (req, res) => {
 		(
 			data,
 			response,
-			pageLoop,
-			categoryLoop,
-			categoriesToScrape,
+			currentLoop,
+			totalLoops,
+			currentCategory,
+			totalCategory,
+			currentPage,
 			categoryCollection,
 		) => {
 			if (response) {
@@ -42,13 +47,17 @@ router.get("/", (req, res) => {
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
 						const result = await collection.insertMany(data, options);
+
+						totalProdctsInserted += data.length;
+
 						if (
-							pageLoop === pagesToScrape &&
-							categoryLoop === categoriesToScrape
-						) {
+							currentLoop === totalLoops &&
+							currentCategory === totalCategory &&
+							currentPage === pagesToScrape
+						)  {
 							res.status(201).json({
 								message: "Data Insrted.",
-								result: data,
+								results: totalProdctsInserted,
 							});
 						}
 						console.log(`${result.insertedCount} documents were inserted`);

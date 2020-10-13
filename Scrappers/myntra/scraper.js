@@ -1,176 +1,130 @@
-// const puppeteer = require("puppeteer");
-// const categories = require("./categories");
+const puppeteer = require("puppeteer");
+const categories = require("./categories");
+const userAgent = require("user-agents");
 
-// var gender = ["men", "women"];
-// var category = [
-// 	"topwear",
-// 	"bottomwear",
-// 	"footwear",
-// 	"sportswear",
-// 	"accessories",
-// 	"indianwear",
-// 	"westernwear",
-// 	"footwear",
-// 	"sportswear",
-// 	"innerwear",
-// 	"accessories",
-// ];
+module.exports.scraper = async (url, pagesToScrape, callBack) => {
+	const browser = await puppeteer.launch({
+		args: [`--proxy-server=http=194.67.37.90:3128`],
+		headless: false,
+	});
+	const page = await browser.newPage();
 
-// // for (var i = 0; i < categories.length; i++) {
-// // 	for (var g = 0; g < gender.length; g++) {
-// // 		for (j = 0; j < categories[i][gender[g]].length; j++) {
-// // 			for (var c = 0; c < category.length; c++) {
-// // 				console.log("=======category========", category[c]);
-// // 				for (k = 0; k < categories[i][gender[g]][j][category[c]].length; k++) {
-// // 					console.log(categories[i][gender[g]][j][category[c]][k]);
-// // 				}
-// // 			}
-// // 		}
-// // 	}
-// // }
+	await page.setUserAgent(userAgent.toString());
 
+	await page.setViewport({ width: 1200, height: 768 });
 
-// for (var i = 0; i < categories.length; i++) {
-// 	for (var g = 0; g < gender.length; g++) {
-// 	  if (categories[i][gender[g]]) {
-// 		for (j = 0; j < categories[i][gender[g]].length; j++) {
-// 		  for (var c = 0; c < category.length; c++) {
-// 			console.log("=======category========", category[c]);
-// 			for (k = 0; k < categories[i][gender[g]][j][category[c]].length; k++) {
-// 			  console.log(categories[i][gender[g]][j][category[c]][k]);
-// 			}
-// 		  }
-// 		}
-// 	  }
-// 	}
-//   }
-  
+	function wait(ms) {
+		return new Promise((resolve) => setTimeout(() => resolve(), ms));
+	}
 
+	var loopArry;
+	for (var t of categories) {
+		loopArry = [t.men, t.women];
+	}
+	for (var i = 0; i < loopArry.length; i++) {
+		for (var j = 0; j < loopArry[i].length; j++) {
+			for (var p = 1; p <= pagesToScrape; p++) {
+				await page.goto(`${url}/${loopArry[i][j]}?p=${p}`, {
+					waitUntil: "networkidle0",
+				});
 
-// module.exports.scraper = async (url, pagesToScrape, callBack) => {
-// 	const browser = await puppeteer.launch({
-// 		headless: false,
-// 		// args: ["--no-sandbox", "--disable-setuid-sandbox"],
-// 	});
-// 	const page = await browser.newPage();
+				// Get the height of the rendered page
+				const bodyHandle = await page.$("body");
+				const { height } = await bodyHandle.boundingBox();
+				await bodyHandle.dispose();
 
-// 	await page.setUserAgent(
-// 		"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-// 	);
+				// Scroll one viewport at a time, pausing to let content load
+				const viewportHeight = page.viewport().height;
+				let viewportIncr = 0;
+				while (viewportIncr + viewportHeight < height) {
+					await page.evaluate((_viewportHeight) => {
+						window.scrollBy(0, _viewportHeight);
+					}, viewportHeight);
+					await wait(100);
+					viewportIncr = viewportIncr + viewportHeight;
+				}
 
-// 	await page.setViewport({ width: 1200, height: 768 });
+				let data = await page.evaluate(() => {
+					window.scrollTo(0, 0);
+					let products = [];
+					let productElements = document.querySelectorAll(".product-base");
 
-// 	function wait(ms) {
-// 		return new Promise((resolve) => setTimeout(() => resolve(), ms));
-// 	}
-// 	for (var i = 0; i < categories.length; i++) {
-// 		for (var g = 0; g < gender.length; g++) {
-// 			for (j = 0; j < categories[i][gender[g]].length; j++) {
-// 				for (var c = 0; c < category.length; c++) {
-// 					// console.log("========epic code==========",categories[i+1][gender[g+1]][j][category[c+1]])
-// 					for (
-// 						k = 0;
-// 						k < categories[i][gender[g]][j][category[c]].length;
-// 						k++
-// 					) {
-// 						// for (var j = 0; j < categories.length; j++) {
-// 						// 	for (var i = 1; i <= pagesToScrape; i++) {
-// 						// await page.goto(`${url}/${categories[j]}?p=${i}`, {
-// 						// 	waitUntil: "networkidle0",
-// 						// });
-// 						await page.goto(
-// 							`${url}/${categories[i][gender[g]][j][category[c]][k]}?p=${1}`,
-// 							{
-// 								waitUntil: "networkidle0",
-// 							},
-// 						);
+					productElements.forEach((productElement) => {
+						let productJson = {};
+						let productSizeText = document.querySelector(".product-sizes")
+							.innerText;
+						let productSizeArr = productSizeText
+							.replace("Sizes:", "")
+							.trim()
+							.split(",");
+						try {
+							productJson.imageUrl = productElement.querySelector(
+								"picture .img-responsive",
+							)
+								? productElement.querySelector("picture .img-responsive").src
+								: null;
+							productJson.productPrice = productElement.querySelector(
+								".product-discountedPrice",
+							)
+								? productElement.querySelector(".product-discountedPrice")
+										.innerText
+								: null;
+							productJson.productStrike = productElement.querySelector(
+								".product-strike",
+							)
+								? productElement.querySelector(".product-strike").innerText
+								: null;
+							productJson.productDiscount = productElement.querySelector(
+								".product-discountPercentage",
+							)
+								? productElement.querySelector(".product-discountPercentage")
+										.innerText
+								: null;
+							productJson.productLink = productElement.querySelector(
+								".product-base > a",
+							)
+								? productElement.querySelector(".product-base > a").href
+								: null;
+							productJson.brandName = productElement.querySelector(
+								".product-brand",
+							)
+								? productElement.querySelector(".product-brand").innerText
+								: null;
+							productJson.productName = productElement.querySelector(
+								".product-product",
+							)
+								? productElement.querySelector(".product-product").innerText
+								: null;
+							productJson.productSizes = productSizeArr ? productSizeArr : null;
+						} catch (e) {
+							console.log(e);
+						}
+						products.push(productJson);
+					});
 
-// 						// Get the height of the rendered page
-// 						const bodyHandle = await page.$("body");
-// 						const { height } = await bodyHandle.boundingBox();
-// 						await bodyHandle.dispose();
+					return products;
+				});
+				await wait(100);
 
-// 						// Scroll one viewport at a time, pausing to let content load
-// 						const viewportHeight = page.viewport().height;
-// 						let viewportIncr = 0;
-// 						while (viewportIncr + viewportHeight < height) {
-// 							await page.evaluate((_viewportHeight) => {
-// 								window.scrollBy(0, _viewportHeight);
-// 							}, viewportHeight);
-// 							await wait(100);
-// 							viewportIncr = viewportIncr + viewportHeight;
-// 						}
+				// i = current index of  outermost loop
+				// loopArry.length - 1 : arrays within the array of loop and - 1 coz loop starts from index 0
+				// j : current index of categories loop
+				// loopArry[i].length - 1 : categories within the array and - 1 coz loop starts from index 0
+				// p : current page in the loop
+				// loopArry[i][j] : category name too be added in collection
 
-// 						let data = await page.evaluate(() => {
-// 							window.scrollTo(0, 0);
-// 							let products = [];
-// 							let productElements = document.querySelectorAll(".product-base");
-
-// 							productElements.forEach((productElement) => {
-// 								let productJson = {};
-// 								let productSizeText = document.querySelector(".product-sizes")
-// 									.innerText;
-// 								let productSizeArr = productSizeText
-// 									.replace("Sizes:", "")
-// 									.trim()
-// 									.split(",");
-// 								try {
-// 									productJson.productPrice = productElement.querySelector(
-// 										".product-discountedPrice",
-// 									)
-// 										? productElement.querySelector(".product-discountedPrice")
-// 												.innerText
-// 										: null;
-// 									productJson.productLink = productElement.querySelector(
-// 										".product-base > a",
-// 									)
-// 										? productElement.querySelector(".product-base > a").href
-// 										: null;
-// 									productJson.brandName = productElement.querySelector(
-// 										".product-brand",
-// 									)
-// 										? productElement.querySelector(".product-brand").innerText
-// 										: null;
-// 									productJson.productName = productElement.querySelector(
-// 										".product-product",
-// 									)
-// 										? productElement.querySelector(".product-product").innerText
-// 										: null;
-// 									productJson.productSizes = productSizeArr
-// 										? productSizeArr
-// 										: null;
-// 									productJson.imageUrl = productElement.querySelector(
-// 										"picture .img-responsive",
-// 									)
-// 										? productElement.querySelector("picture .img-responsive")
-// 												.src
-// 										: null;
-// 									productJson.productStrike = productElement.querySelector(
-// 										".product-strike",
-// 									)
-// 										? productElement.querySelector(".product-strike").innerText
-// 										: null;
-// 									productJson.productDiscount = productElement.querySelector(
-// 										".product-discountPercentage",
-// 									)
-// 										? productElement.querySelector(
-// 												".product-discountPercentage",
-// 										  ).innerText
-// 										: null;
-// 								} catch (e) {
-// 									console.log(e);
-// 								}
-// 								products.push(productJson);
-// 							});
-
-// 							return products;
-// 						});
-// 						await wait(100);
-// 						callBack(data, true, i, j, categories.length - 1, categories[j]);
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	await browser.close();
-// };
+				callBack(
+					data,
+					true,
+					i,
+					loopArry.length - 1,
+					j,
+					loopArry[i].length - 1,
+					p,
+					loopArry[i][j],
+				);
+			}
+		}
+	}
+	await browser.close();
+};

@@ -9,6 +9,8 @@ const uri = db;
 
 router.get("/", (req, res) => {
 	const pagesToScrape = 1;
+	var totalProdctsInserted = 0;
+
 	console.log("starting to scrap...");
 	myntraScrapper.scraper(
 		MyntraURL,
@@ -16,9 +18,11 @@ router.get("/", (req, res) => {
 		(
 			data,
 			response,
-			pageLoop,
-			categoryLoop,
-			categoriesToScrape,
+			currentLoop,
+			totalLoops,
+			currentCategory,
+			totalCategory,
+			currentPage,
 			categoryCollection,
 		) => {
 			if (response) {
@@ -37,14 +41,25 @@ router.get("/", (req, res) => {
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
 
+						// if (
+						// 	currentLoop === 0 &&
+						// 	currentCategory === 0 &&
+						// 	currentPage === 1
+						// ) {
+						// 	await collection.deleteMany();
+						// }
 						const result = await collection.insertMany(data, options);
+
+						totalProdctsInserted += data.length;
+
 						if (
-							pageLoop === pagesToScrape &&
-							categoryLoop === categoriesToScrape
+							currentLoop === totalLoops &&
+							currentCategory === totalCategory &&
+							currentPage === pagesToScrape
 						) {
 							res.status(201).json({
-								message: "Data Insrted.",
-								result: data,
+								message: "Data Inserted.",
+								results: totalProdctsInserted,
 							});
 						}
 						console.log(`${result.insertedCount} documents were inserted`);
@@ -54,6 +69,10 @@ router.get("/", (req, res) => {
 				}
 				run().catch(console.dir);
 				console.log(data);
+				console.log(currentLoop);
+				console.log(currentCategory);
+				console.log(currentPage);
+
 				console.log("Done.");
 			}
 		},
