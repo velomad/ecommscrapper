@@ -43,7 +43,7 @@ app.use("/api/snapdeal", snapdealScrapper);
 app.use("/api/bewakoof", bewakoofScrapper);
 
 app.get("/", (req, res) => {
-	res.send('Scrapping Started...');
+	res.render('index', {});
 });
 
 // if (process.env.NODE_ENV === "production") {
