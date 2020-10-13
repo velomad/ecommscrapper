@@ -14,7 +14,7 @@ module.exports.scraper = async (url, callBack) => {
 		return new Promise((resolve) => setTimeout(() => resolve(), ms));
 	}
 
-	await page.goto(`${url}/men-t-shirts`, {
+	await page.goto(`${url}/men-pajamas`, {
 		waitUntil: "networkidle0",
 	});
 
@@ -31,7 +31,7 @@ module.exports.scraper = async (url, callBack) => {
 					window.scrollBy(0, distance);
 					// totalHeight += distance;
 					if (
-						productsLength > 100
+						productsLength > 5
 						// parseInt(
 						// 	document
 						// 		.querySelector(".headingInner>span")
