@@ -4,8 +4,12 @@ var catgories = require('./categories.js');
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({ 
-		args: [`--proxy-server=http=194.67.37.90:3128`],
-		headless: false 
+		args: [
+		`--proxy-server=http=194.67.37.90:3128`,
+		'--no-sandbox',
+		'--disable-setuid-sandbox'
+		],
+		headless: true 
 	});
 	const page = await browser.newPage();
 	await page.setUserAgent(userAgent.toString());
