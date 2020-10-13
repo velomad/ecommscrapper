@@ -50,13 +50,6 @@ module.exports.scraper = async (url, callBack) => {
 		});
 	}
 
-	// const test = [
-	// 	{
-	// 		men: ["socks", "jacket"],
-	// 		women: ["shirt", "pant"],
-	// 	},
-	// ];
-
 	var loopArry;
 	for (var t of catgories) {
 		loopArry = [t.men, t.women];
