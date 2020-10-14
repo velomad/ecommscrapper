@@ -126,5 +126,6 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 			}
 		}
 	}
+
 	await browser.close();
 };

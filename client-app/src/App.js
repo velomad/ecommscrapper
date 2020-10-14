@@ -9,7 +9,7 @@ function App() {
 		setMyntraLoading(true);
 
 		axios
-			.get("http://localhost:5000/api/myntra")
+			.get("/api/myntra")
 			.then((resp) => {
 				console.log(resp);
 				setMyntraLoading(false);
@@ -23,7 +23,7 @@ function App() {
 	const handleFlipkartScraping = () => {
 		setFlipkartLoading(true);
 		axios
-			.get("http://localhost:5000/api/flipkart")
+			.get("/api/flipkart")
 			.then((resp) => {
 				console.log(resp);
 				setFlipkartLoading(false);
@@ -33,7 +33,7 @@ function App() {
 	
 	const handleAjioScraping = () => {
 		axios
-			.get("http://localhost:5000/api/ajio")
+			.get("/api/ajio")
 			.then((resp) => {
 				console.log(resp);
 			})

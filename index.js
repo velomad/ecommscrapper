@@ -42,16 +42,14 @@ app.use("/api/snapdeal", snapdealScrapper);
 // app.use("/api/amazon", amazonScrapper);
 app.use("/api/bewakoof", bewakoofScrapper);
 
-app.get("/", (req, res) => {
-	res.send('Scrapping Started...');
-});
 
-// if (process.env.NODE_ENV === "production") {
-// 	app.use(express.static(path.join(__dirname, "client-app/build")));
-// 	app.get("/*", (req, res) => {
-// 		res.sendFile(path.join(__dirname, "client-app/build", "index.html"));
-// 	});
-// }
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(path.join(__dirname, "client-app/build")));
+	app.get("/*", (req, res) => {
+		res.sendFile(path.join(__dirname, "client-app/build", "index.html"));
+	});
+}
+
 
 // Connect to MongoDB
 mongoose

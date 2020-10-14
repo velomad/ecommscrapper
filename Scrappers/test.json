@@ -1,0 +1,107 @@
+{
+	"numberOfWebsites": 4,
+	"websites": ["Myntra", "Flipkart", "Snapdeal", "Ajio"],
+	"Myntra": [
+		{
+			"men": {
+				"topwear": [
+					"topwear",
+					"tshirts",
+					"casual shirts",
+					"formal shirts",
+					"sweatshirts",
+					"sweaters",
+					"jackets",
+					"blazers",
+					"suits",
+					"rain-jacket"
+				],
+				"indianwear": ["kurtas", "sherwani", "nehru jackets", "dhoti"],
+				"bottomwear": [
+					"jeans",
+					"casual trousers",
+					"formal trousers",
+					"shorts",
+					"trackpants"
+				],
+				"innerwear": [
+					"innerwear",
+					"briefs-and-trunks",
+					"boxers",
+					"innerwear-vests",
+					"nightwear",
+					"thermals"
+				],
+				"footwear": [
+					"casual shoes",
+					"sports shoes",
+					"formal shoes",
+					"sneakers",
+					"sandals",
+					"flip flops",
+					"socks"
+				],
+				"sportswear": [
+					"sports wear",
+					"sports shoes",
+					"sports sandals",
+					"sports wear-tshirts",
+					"trackpants shorts",
+					"tracksuits",
+					"sports jackets",
+					"sports accessories"
+				],
+				"accessories": [
+					"sunglasses",
+					"wallets",
+					"belts",
+					"perfumes",
+					"trimmer",
+					"deodorant",
+					"belts-ties",
+					"accessory-gift-set",
+					"caps"
+				]
+			},
+			"women": {
+				"indianwear": [],
+				"westernwear": [],
+				"footwear": [],
+				"sportswear": [],
+				"sleepwear": [],
+				"personalcare": [],
+				"accessories": []
+			}
+		}
+	],
+	"Flipkart": {
+		"men": {
+			"topwear": [],
+			"bottomwear": []
+		},
+		"women": {
+			"topwear": [],
+			"bottomwear": []
+		}
+	},
+	"Snapdeal": {
+		"men": {
+			"topwear": [],
+			"bottomwear": []
+		},
+		"women": {
+			"topwear": [],
+			"bottomwear": []
+		}
+	},
+	"Ajio": {
+		"men": {
+			"topwear": [],
+			"bottomwear": []
+		},
+		"women": {
+			"topwear": [],
+			"bottomwear": []
+		}
+	}
+}

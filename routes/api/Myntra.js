@@ -69,10 +69,6 @@ router.get("/", (req, res) => {
 				}
 				run().catch(console.dir);
 				console.log(data);
-				console.log(currentLoop);
-				console.log(currentCategory);
-				console.log(currentPage);
-
 				console.log("Done.");
 			}
 		},
