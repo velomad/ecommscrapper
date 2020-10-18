@@ -5,7 +5,7 @@ module.exports.scraper = (url, callBack) => {
 
 	const getFyndData = (nextPageId) => {
 		Axios.get(
-			`${url}/api/platform/content/v1/products/?department=men&l2_category=polos-t-shirts&page_id=${nextPageId}&page_size=12&image_size=large&sort=min`,
+			`${url}/api/platform/content/v1/products/?department=men&l2_category=polos-t-s ,lo900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000lllllllllllllkhirts&page_id=${nextPageId}&page_size=12&image_size=large&sort=min`,
 			{
 				headers: {
 					accept: "application/json, text/plain, */*",

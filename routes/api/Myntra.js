@@ -35,8 +35,8 @@ router.get("/", (req, res) => {
 					try {
 						await client.connect();
 
-						const database = client.db("myntra");
-						const collection = database.collection(categoryCollection);
+						const database = client.db("webscrape");
+						const collection = database.collection("products");
 
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
