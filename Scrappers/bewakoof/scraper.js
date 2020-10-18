@@ -3,13 +3,13 @@ const userAgent = require('user-agents');
 var catgories = require('./categories.js');
 
 module.exports.scraper = async (url, callBack) => {
-	const browser = await puppeteer.launch({ 
+	const browser = await puppeteer.launch({
 		args: [
-		`--proxy-server=http=194.67.37.90:3128`,
-		'--no-sandbox',
-		'--disable-setuid-sandbox'
+			`--proxy-server=http=194.67.37.90:3128`,
+			'--no-sandbox',
+			'--disable-setuid-sandbox'
 		],
-		headless: false 
+		headless: false
 	});
 	const page = await browser.newPage();
 	await page.setUserAgent(userAgent.toString());
@@ -36,9 +36,10 @@ module.exports.scraper = async (url, callBack) => {
 					// let scrollHeight = document.body.scrollHeight;
 					window.scrollBy(0, distance);
 					// totalHeight += distance;
-					let getText = document.querySelector("#searchMessageContainer > div > span:nth-child(1)").textContent;
+					let getText = document.querySelector(".headingInner").childNodes[1].innerText;
+					let productLen = document.querySelector(".productGrid").childNodes.length - 1;
 					if (
-						document.querySelectorAll("#products > section > div").length > Number((getText.match(/(\d+)/)[0]/100*1).toFixed(0))
+						productLen > Number((Number(getText.replace(/[{()}]/g, ''))/100*2).toFixed(0))
 					) {
 						getText = '';
 						window.scrollTo(0, 0);
@@ -53,49 +54,45 @@ module.exports.scraper = async (url, callBack) => {
 	var loopArry;
 	for (var t of catgories) {
 		loopArry = [t.men, t.women];
-	}	
+	}
 	for (var i = 0; i < loopArry.length; i++) {
 		for (var text = 0; text < loopArry[i].length; text++) {
-			const input = await page.$("#inputValEnter");
+			const input = await page.$(".searchInput");
 			await input.click({ clickCount: 3 });
 			await input.press("Backspace");
 			await wait(2000);
-			await page.type("input[name=keyword]", loopArry[i][text], { delay: 20 });
+			await page.type("input[type=text]", loopArry[i][text], { delay: 20 });
 			await wait(2000);
 			await page.keyboard.press("Enter");
 			await page.waitForNavigation();
 			await wait(2000);
 			await autoScroll(page);
 			await wait(2000);
-			let data = await page.evaluate(async () => {
+			let data = await page.evaluate(() => {
+				window.scrollTo(0, 0);
 				let products = [];
-				let productElements = document.querySelectorAll(
-					"#products > section > div",
-				);
+				let productElements = document.querySelectorAll(".productCardBox");
 
 				productElements.forEach((el) => {
 					let productJson = {};
 					try {
-						productJson.website = "snapdeal",
-						productJson.productName = el.querySelector(".product-title")
-							? el.querySelector(".product-title").innerText
+						productJson.website = "bewaakoof",
+						productJson.imageUrl = el.querySelector(".productCardImg > div > img")
+							? el.querySelector(".productCardImg > div > img").src
 							: null;
-						productJson.imageUrl = el.querySelector(".product-image")
-							? el.querySelector(".product-image").srcset
+						productJson.productName = el.querySelector(".productCardDetail>h3")
+							? el.querySelector(".productCardDetail>h3").innerText
 							: null;
-						productJson.productPrice = el.querySelector(".lfloat.product-price")
-							? el.querySelector(".lfloat.product-price").innerText
+						productJson.discountedPrice = el.querySelector(".discountedPriceText")
+							? el.querySelector(".discountedPriceText").innerText
 							: null;
-						productJson.discountedPrice = el.querySelector(
-							".lfloat.product-desc-price.strike",
-						)	
-							? el.querySelector(".lfloat.product-desc-price.strike").innerText
+						productJson.actualPrice = el.querySelector(".actualPriceText")
+							? el.querySelector(".actualPriceText").innerText
 							: null;
-						productJson.discountPercentage = el.querySelector(
-							".product-discount",
-						)
-							? el.querySelector(".product-discount").innerText
-							: null;
+						productJson.isTrending = !!el.querySelector(
+							".productStatusBox>.promotionalTagBox",
+						);
+						productJson.isSellingFast = !!el.querySelector(".sellingFastWrapper");
 					} catch (e) {
 						console.log(e);
 					}
@@ -104,7 +101,7 @@ module.exports.scraper = async (url, callBack) => {
 				return products;
 			});
 			await wait(1000);
-			callBack(data, true,loopArry[i][text]);
+			callBack(data, true, loopArry[i][text]);
 		}
 	}
 
