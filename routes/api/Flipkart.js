@@ -9,11 +9,8 @@ const { flipkartBaseUrl } = require("../../config/keys");
 const uri = db;
 
 router.get("/", (req, res) => {
-	
-
-	const pagesToScrape  = 	1
+	const pagesToScrape = 1;
 	var totalProdctsInserted = 0;
-
 
 	console.log("starting to scrape...");
 	flipkartScrapper.scraper(
@@ -39,14 +36,16 @@ router.get("/", (req, res) => {
 					try {
 						await client.connect();
 
-						const database = client.db("flipkart");
-						const collection = database.collection(
-							JSON.stringify(categoryCollection).slice(2,-2).replace(/\s/g, ''),
-						);
+						const database = client.db("webscrape");
+						const collection = database.collection("products");
 
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
 						const result = await collection.insertMany(data, options);
+
+						// const autocompleteDb = client.db("autocomplete");
+						// const autocompleteCollection = autocompleteDb.collection("products");
+						// const autocompleteRes = await autocompleteCollection.insertMany(data, options);
 
 						totalProdctsInserted += data.length;
 
@@ -54,7 +53,7 @@ router.get("/", (req, res) => {
 							currentLoop === totalLoops &&
 							currentCategory === totalCategory &&
 							currentPage === pagesToScrape
-						)  {
+						) {
 							res.status(201).json({
 								message: "Data Insrted.",
 								results: totalProdctsInserted,

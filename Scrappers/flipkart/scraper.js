@@ -2,23 +2,18 @@ const puppeteer = require("puppeteer");
 const categories = require("./categories");
 const userAgent = require("user-agents");
 
-module.exports.scraper = async (
-	url,
-	pagesToScrape,
-	callBack,
-) => {
-	const browser = await puppeteer.launch({ 
+module.exports.scraper = async (url, pagesToScrape, callBack) => {
+	const browser = await puppeteer.launch({
 		args: [
-		`--proxy-server=http=194.67.37.90:3128`,
-		'--no-sandbox',
-		'--disable-setuid-sandbox'
+			`--proxy-server=http=194.67.37.90:3128`,
+			"--no-sandbox",
+			"--disable-setuid-sandbox",
 		],
-		headless: true 
+		headless: false,
 	});
 	const page = await browser.newPage();
 
 	await page.setUserAgent(userAgent.toString());
-
 
 	await page.setViewport({ width: 1200, height: 768 });
 
@@ -54,17 +49,23 @@ module.exports.scraper = async (
 					viewportIncr = viewportIncr + viewportHeight;
 				}
 
-				let data = await page.evaluate(() => {
+				let category = Object.keys(loopArry[i][j])[0].replace(/\s/g, "").toLowerCase();
+
+				let data = await page.evaluate((category) => {
 					window.scrollTo(0, 0);
 					let products = [];
 					let productElements = document.querySelectorAll("._3O0U0u");
 					// let productElements = document.querySelectorAll(".IIdQZO");
 					productElements.forEach((productElement) => {
 						let productJson = {};
+
 						try {
-							productJson.brandName = productElement.querySelector("._2B_pmu")
-								? productElement.querySelector("._2B_pmu").innerText
-								: null;
+							(productJson.website = "flipkart"),
+								(productJson.brandName = productElement.querySelector(
+									"._2B_pmu",
+								)
+									? productElement.querySelector("._2B_pmu").innerText
+									: null);
 							productJson.productName = productElement.querySelector("._2mylT6")
 								? productElement.querySelector("._2mylT6").title
 								: null;
@@ -89,16 +90,16 @@ module.exports.scraper = async (
 							)
 								? productElement.querySelector(".VGWI6T").innerText
 								: null;
+							productJson.category = category;
 						} catch (e) {
 							console.log(e);
 						}
 						products.push(productJson);
 					});
 					return products;
-				});
+				}, category);
 				await wait(100);
 
-				
 				// i = current index of  outermost loop
 				// loopArry.length - 1 : arrays within the array of loop and - 1 coz loop starts from index 0
 				// j : current index of categories loop
@@ -120,4 +121,4 @@ module.exports.scraper = async (
 		}
 	}
 	await browser.close();
-}
+};

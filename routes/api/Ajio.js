@@ -10,7 +10,7 @@ const uri = db;
 
 router.get("/", (req, res) => {
 
-	var pagesToScrape = 1;
+	var pagesToScrape = 2;
 	var totalProdctsInserted = 0;
 
 	console.log("starting to scrap...");
@@ -36,12 +36,13 @@ router.get("/", (req, res) => {
 					try {
 						await client.connect();
 
-						const database = client.db("ajio");
-						const collection = database.collection(
-							JSON.stringify(categoryCollection)
-								.slice(2, -2)
-								.replace(/\s/g, ""),
-						);
+						const database = client.db("webscrape");
+						// const collection = database.collection(
+						// 	JSON.stringify(categoryCollection)
+						// 		.slice(2, -2)
+						// 		.replace(/\s/g, ""),
+						// );
+						const collection = database.collection("products");
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
 
