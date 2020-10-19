@@ -1,7 +1,6 @@
 module.exports = [
 	{
 		men: [
-			"men-topwear",
 			"men-tshirts",
 			"men-casual-shirts",
 			"men-formal-shirts",

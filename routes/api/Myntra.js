@@ -8,7 +8,7 @@ const db = require("../../config/keys").mongoURI;
 const uri = db;
 
 router.get("/", (req, res) => {
-	const pagesToScrape = 1;
+	const pagesToScrape = 5;
 	var totalProdctsInserted = 0;
 
 	console.log("starting to scrap...");
@@ -23,9 +23,9 @@ router.get("/", (req, res) => {
 			currentCategory,
 			totalCategory,
 			currentPage,
-			categoryCollection,
+			lastPage,
 		) => {
-			if (response) {
+			if (response && lastPage > 5) {
 				const client = new MongoClient(uri, {
 					useUnifiedTopology: true,
 					useNewUrlParser: true,
@@ -70,6 +70,7 @@ router.get("/", (req, res) => {
 				run().catch(console.dir);
 				console.log(data);
 				console.log("Done.");
+				console.log(lastPage);
 			}
 		},
 	);

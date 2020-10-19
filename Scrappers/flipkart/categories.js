@@ -94,11 +94,11 @@ module.exports = [
 					"clothing-and-accessories/bottomwear/threefourths/men-threefourths/pr?sid=clo,vua,eum,4qq&otracker=categorytree&otracker=nmenu_sub_Men_0_Three%20Fourths",
 			},
 			{
-				"Suits, Blazers & Waistcoats":
+				"Suits Blazers Waistcoats":
 					"clothing-and-accessories/blazers-suits-waistcoat-coat/pr?sid=clo%2Cupk&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&otracker=nmenu_sub_Men_0_Suits%2C%20Blazers%20%26%20Waistcoats",
 			},
 			{
-				"Ties, Socks, Caps & More":
+				"Ties Socks Caps More":
 					"clothing-and-accessories/clothing-accessories/pr?sid=clo,qd8&p[]=facets.ideal_for%255B%255D%3DMen&p[]=facets.ideal_for%255B%255D%3Dmen&p[]=facets.ideal_for%255B%255D%3Dmen&otracker=categorytree&otracker=nmenu_sub_Men_0_Ties%2C%20Socks%2C%20Caps%20%26%20More",
 			},
 			{
@@ -139,11 +139,11 @@ module.exports = [
 			},
 
 			{
-				"Innerwear & Loungewear":
+				"Innerwear Loungewear":
 					"clothing-and-accessories/~cs-axj382hyd1/pr?sid=clo&collection-tab-name=Innerwear%20And%20Loungewear&otracker=nmenu_sub_Men_0_Innerwear%20%26%20Loungewear",
 			},
 			{
-				"Briefs & Trunks":
+				"Briefs Trunks":
 					"clothing-and-accessories/innerwear/brief-and-trunk/men-brief-and-trunk/pr?sid=clo,qfl,szr,3xl&otracker=categorytree&otracker=nmenu_sub_Men_0_Briefs%20%26%20Trunks",
 			},
 			{
@@ -159,7 +159,7 @@ module.exports = [
 					"clothing-and-accessories/sleepwear/night-suits/men-night-suits/pr?sid=clo,1hc,5d2,dos&otracker=categorytree&otracker=nmenu_sub_Men_0_Night%20Suits",
 			},
 			{
-				"Raincoats & Windcheaters":
+				"Raincoats Windcheaters":
 					"clothing-and-accessories/~cs-4ayq68p3ip/pr?sid=clo&collection-tab-name=Raincoats%20And%20Windcheaters&otracker=nmenu_sub_Men_0_Raincoats%20%26%20Windcheaters",
 			},
 			{
@@ -197,7 +197,7 @@ module.exports = [
 					"sunglasses/pr?p%5B%5D=facets.ideal_for%255B%255D%3DMen&sid=26x&otracker=nmenu_sub_Men_0_Sunglasses&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&otracker=nmenu_sub_Men_0_Sunglasses",
 			},
 			{
-				"Luggage & Travel":
+				"Luggage Travel":
 					"bags-wallets-belts/luggage-travel/pr?count=40&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2527s&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&sid=reh%2Fplk&otracker=nmenu_sub_Men_0_Luggage%20%26%20Travel",
 			},
 			{
@@ -284,15 +284,15 @@ module.exports = [
 					"clothing-and-accessories/bottomwear/skirts/women-skirts/pr?sid=clo,vua,iku,w5t&otracker=categorytree&otracker=nmenu_sub_Women_0_Skirts",
 			},
 			{
-				"Jeggings & Tights":
+				"Jeggings Tights":
 					"clothing-and-accessories/bottomwear/~cs-hdgz8fjfgm/pr?sid=clo%2Cvua&collection-tab-name=Tights%20And%20%20Legging&otracker=nmenu_sub_Women_0_Jeggings%20%26%20Tights",
 			},
 			{
-				"Trousers & Capris":
+				"Trousers Capris":
 					"clothing-and-accessories/bottomwear/~cs-g50m8job1g/pr?sid=clo%2Cvua&collection-tab-name=Trousers%20and%20Capris&otracker=nmenu_sub_Women_0_Trousers%20%26%20Capris",
 			},
 			{
-				"Lingerie & Sleepwear":
+				"Lingerie Sleepwear":
 					"clothing-and-accessories/~cs-1gqbhquqye/pr?sid=clo&collection-tab-name=Lingerie%20and%20Sleepwear&otracker=nmenu_sub_Women_0_Lingerie%20%26%20Sleepwear",
 			},
 			{
@@ -308,7 +308,7 @@ module.exports = [
 					"clothing-and-accessories/innerwear/lingerie-and-accessories/lingerie-sets/pr?sid=clo,qfl,w4j,53e&otracker=categorytree&otracker=nmenu_sub_Women_0_Lingerie%20Sets",
 			},
 			{
-				"Night Dresses & Nighties":
+				"Night Dresses Nighties":
 					"clothing-and-accessories/sleepwear/night-dresses-and-nighties/women-night-dresses-and-nighties/pr?sid=clo,1hc,kc4,nmu&otracker=categorytree&otracker=nmenu_sub_Women_0_Night%20Dresses%20%26%20Nighties",
 			},
 			{
@@ -316,11 +316,11 @@ module.exports = [
 					"clothing-and-accessories/innerwear/shapewears/women-shapewears/pr?sid=clo,qfl,uga,tpq&otracker=categorytree&otracker=nmenu_sub_Women_0_Shapewear",
 			},
 			{
-				"Camisoles & Slips":
+				"Camisoles Slips":
 					"clothing-and-accessories/innerwear/camisole-and-slips/women-camisole-and-slips/pr?sid=clo,qfl,pji,crb&otracker=categorytree&otracker=nmenu_sub_Women_0_Camisoles%20%26%20Slips",
 			},
 			{
-				"Swim & Beachwear":
+				"Swim Beachwear":
 					"clothing-and-accessories/~cs-slqko43dfo/pr?sid=clo&collection-tab-name=Swim%20and%20Beachwear&otracker=nmenu_sub_Women_0_Swim%20%26%20Beachwear",
 			},
 			{
@@ -340,7 +340,7 @@ module.exports = [
 					"clothing-and-accessories/saree-and-accessories/saree/women-saree/pr?sid=clo,8on,zpd,9og&otracker=categorytree&otracker=nmenu_sub_Women_0_Sarees",
 			},
 			{
-				"Kurtas & Kurtis":
+				"Kurtas Kurtis":
 					"clothing-and-accessories/ethnic-wear/kurtas/women-kurtas-and-kurtis/pr?sid=clo,cfv,cib,rkt&q=kurtas+kurtis&otracker=categorytree&otracker=nmenu_sub_Women_0_Kurtas%20%26%20Kurtis",
 			},
 			{
@@ -356,7 +356,7 @@ module.exports = [
 					"clothing-and-accessories/saree-and-accessories/blouse/women-blouse/pr?sid=clo,8on,5n9,hny&otracker=categorytree&otracker=nmenu_sub_Women_0_Blouse",
 			},
 			{
-				"Kurta Sets & Salwar Suits":
+				"Kurta Sets Salwar Suits":
 					"clothing-and-accessories/ethnic-wear/ethnic-sets/women-ethnic-sets-and-salwar-suits/pr?sid=clo,cfv,itg,tys&otracker=categorytree&otracker=nmenu_sub_Women_0_Kurta%20Sets%20%26%20Salwar%20Suits",
 			},
 			{
@@ -368,7 +368,7 @@ module.exports = [
 					"clothing-and-accessories/clothing-accessories/dupattas/women-dupattas/pr?sid=clo,qd8,t6b,pjy&otracker=categorytree&otracker=nmenu_sub_Women_0_Dupattas",
 			},
 			{
-				"Leggings & Churidars":
+				"Leggings Churidars":
 					"clothing-and-accessories/ethnic-wear/leggings-and-churidar/women-leggings-and-churidar/pr?sid=clo,cfv,ht7,cjo&otracker=categorytree&otracker=nmenu_sub_Women_0_Leggings%20%26%20Churidars",
 			},
 			{
@@ -380,7 +380,7 @@ module.exports = [
 					"clothing-and-accessories/ethnic-wear/sharara/pr?sid=clo,cfv,7po&otracker=categorytree&otracker=nmenu_sub_Women_0_Shararas",
 			},
 			{
-				"Salwars & Patiala":
+				"Salwars Patiala":
 					"clothing-and-accessories/ethnic-wear/salwar-and-patiala/women-salwar-and-patiala/pr?sid=clo,cfv,1n0,ops&otracker=categorytree&otracker=nmenu_sub_Women_0_Salwars%20%26%20Patiala",
 			},
 			{
@@ -392,7 +392,7 @@ module.exports = [
 					"clothing-and-accessories/bottomwear/trouser/women-trouser/pr?sid=clo%2Cvua%2Cmle%2C8ie&otracker=categorytree&p%5B%5D=facets.suitable_for%255B%255D%3DEthnic%2BWear&p%5B%5D=facets.suitable_for%255B%255D%3DFusion%2BWear&otracker=nmenu_sub_Women_0_Ethnic%20Trousers",
 			},
 			{
-				"Saree Shapewear & Petticoats":
+				"Saree Shapewear Petticoats":
 					"clothing-and-accessories/saree-and-accessories/petticoat/women-petticoat/pr?sid=clo,8on,tpo,tuw&otracker=categorytree&otracker=nmenu_sub_Women_0_Saree%20Shapewear%20%26%20Petticoats",
 			},
 			{
@@ -436,7 +436,7 @@ module.exports = [
 					"womens-footwear/ballerinas/pr?sid=osp,iko,974&otracker=nmenu_sub_Women_0_Ballerinas",
 			},
 			{
-				"Slippers & Flip- Flop's":
+				"Slippers Flip- Flop's":
 					"womens-footwear/slippers-flip-flops/pr?sid=osp,iko,iz7&otracker=nmenu_sub_Women_0_Slippers%20%26%20Flip-%20Flop%27s",
 			},
 			// { Watches: "womens-watches-store?otracker=nmenu_sub_Women_0_Watches" },
@@ -528,11 +528,11 @@ module.exports = [
 					"bags-wallets-belts/wallets-clutches/clutches/pr?sid=reh,cca,q6i&otracker=categorytree&otracker=nmenu_sub_Women_0_Clutches",
 			},
 			{
-				"Wallets & Belts":
+				"Wallets Belts":
 					"bags-wallets-belts/~wallets-belts/pr?p[]=facets.ideal_for%255B%255D=Women&p[]=sort=popularity&sid=reh&otracker=nmenu_sub_Women_0_Wallets%20%26%20Belts",
 			},
 			{
-				"Luggage & Travel":
+				"Luggage Travel":
 					"bags-wallets-belts/luggage-travel/pr?count=40&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&p%5B%5D=facets.ideal_for%255B%255D%3DWomen%2527s&p%5B%5D=facets.ideal_for%255B%255D%3DGirls&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2B%2526%2B,Women&sid=reh%2Fplk&otracker=nmenu_sub_Women_0_Luggage%20%26%20Travel",
 			},
 			{

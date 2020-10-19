@@ -28,7 +28,7 @@ const snapdealScrapper = require("./routes/api/Snapdeal");
 
 // const fyndScrapper = require("./routes/api/Fynd");
 const bewakoofScrapper = require("./routes/api/Bewakoof");
-// const amazonScrapper = require("./routes/api/Amazon");
+const amazonScrapper = require("./routes/api/Amazon");
 
 // Api's
 
@@ -39,7 +39,7 @@ app.use("/api/ajio", ajioScrapper);
 app.use("/api/tata", tataScrapper);
 app.use("/api/snapdeal", snapdealScrapper);
 
-// app.use("/api/amazon", amazonScrapper);
+app.use("/api/amazon", amazonScrapper);
 app.use("/api/bewakoof", bewakoofScrapper);
 
 if (process.env.NODE_ENV === "production") {

@@ -1,7 +1,7 @@
 const express = require("express");
 // const { MongoClient } = require("mongodb");
 const router = express.Router();
-const amazonScrapper = require("../../Scrappers/amazonScrapper");
+const amazonScrapper = require("../../Scrappers/amazon/scraper");
 // const db = require("../../config/keys").mongoURI;
 
 const { amazonBaseUrl } = require("../../config/keys");
