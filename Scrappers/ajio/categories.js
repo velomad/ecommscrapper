@@ -20,50 +20,50 @@ module.exports = [
 			{ Briefs: 830211002 },
 			{ "Trunks & Boxers": 830211006 },
 			{ Vests: 830211006 },
-			// { Backpacks: 830201001 },
-			// { "Bags & Wallets": 830201 },
-			// { Belts: 830201007 },
-			// { "Caps & Hats": 830202001 },
-			// { "Fashion Accessories": 830205 },
-			// { Socks: 830202002 },
-			// { Sunglasses: 830204003 },
-			// { Wallets: 830201 },
+			{ Backpacks: 830201001 },
+			{ "Bags & Wallets": 830201 },
+			{ Belts: 830201007 },
+			{ "Caps & Hats": 830202001 },
+			{ "Fashion Accessories": 830205 },
+			{ Socks: 830202002 },
+			{ Sunglasses: 830204003 },
+			{ Wallets: 830201 },
 		],
 		women: [
-			{"Tops" : 830316017},
-			{"T-shirts" : 830316017},
-			{"Jeans & Jeggings" : 830316017}
-			// "Dresses"
-			// "Trousers & Pants"
-			// "Shirts
-			// "Track Pants"
-			// "Jackets & Coats"
-			// "Jumpsuits & Playsuits"
-			// "Shrugs & Boleros"
-			// "Sweatshirts & Hoodies"
-			// "Sweaters & Cardigans"
-			// "Kurtas"
-			// "Salwars & Churidars"
-			// "Kurtis & Tunics"
-			// "Sarees"
-			// "Dress Material"
-			// "Kurta Suit Sets"
-			// "Blouses"
-			// "Leggings"
-			// "Skirts & Ghagras"
-			// "Bras"
-			// "Panties"
-			// "Camisoles & Slips"
-			// "Dresses & Gowns"
-			// "Pants & Shorts"
-			// "Jackets & Shrugs"
-			// "Shirts, Tops & Tunics"
-			// "Casual Shoes"
-			// "Sports Shoes"
-			// "Heeled Sandals"
-			// "Heeled Shoes"
-			// "Boots"
-			
+			{ Tops: 830316017 },
+			{ "T-shirts": 830316018 },
+			{ "Jeans & Jeggings": 830316001 },
+			{"Dresses": "830316007",}
+			{"Trousers & Pants" : 830316006}
+			{"Shirts":830216013}
+			{"Track Pants":830216003}
+			{"Jackets Coats" : 830216010}
+			{"Jumpsuits Playsuits" : 830316008}
+			{"Shrugs & Boleros":830316011}
+			{"Sweatshirts & Hoodies" : 830216011}
+			{"Sweaters & Cardigans" : 830316019}
+			{"Kurtas"}
+			{"Salwars & Churidars"}
+			{"Kurtis & Tunics"}
+			{"Sarees"}
+			{"Dress Material"}
+			{"Kurta Suit Sets"}
+			{"Blouses"}
+			{"Leggings"}
+			{"Skirts & Ghagras"}
+			{"Bras"}
+			"Panties"
+			"Camisoles & Slips"
+			"Dresses & Gowns"
+			"Pants & Shorts"
+			"Jackets & Shrugs"
+			"Shirts, Tops & Tunics"
+			"Casual Shoes"
+			"Sports Shoes"
+			"Heeled Sandals"
+			"Heeled Shoes"
+			"Boots"
+
 			//     830316018"
 			//     830316001"
 			//     830316007"
@@ -98,9 +98,3 @@ module.exports = [
 		],
 	},
 ];
-
-
-
-
-
-

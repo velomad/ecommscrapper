@@ -84,7 +84,8 @@ module.exports.scraper = async (url, callBack) => {
 			await autoScroll(page);
 			await wait(2000);
 			for (var p = 0; p < 4; p++) {
-				let data = await page.evaluate(() => {
+				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
+				let data = await page.evaluate((category) => {
 					window.scrollTo(0, 0);
 					let products = [];
 					// let productElements = document.querySelectorAll(".celwidget");
@@ -103,6 +104,8 @@ module.exports.scraper = async (url, callBack) => {
 						console.log(productStrikedPrice);
 
 						try {
+							productJson.website = "amazon";
+							productJson.category = category;
 							productJson.brandName = productElement.querySelector(
 								".s-line-clamp-1>span",
 							)
@@ -142,18 +145,17 @@ module.exports.scraper = async (url, callBack) => {
 										.querySelector(".a-price.a-text-price>span")
 										.innerText.slice(1)
 								: null;
-							// productJson.discountPercentage = productElement.querySelector(
-							// 	".VGWI6T",
-							// ).innerText;
+							// productJson.discountPercentage =
 						} catch (e) {
 							console.log(e);
 						}
 						products.push(productJson);
 					});
 					return products;
-				});
+				}, category);
 				await wait(100);
 				callBack(data, true);
+
 				await page.click(".a-selected + .a-normal");
 				await wait(2000);
 			}
@@ -161,7 +163,3 @@ module.exports.scraper = async (url, callBack) => {
 	}
 	await browser.close();
 };
-
-// https://www.amazon.in/s?rh=n%3A1571271031%2Cn%3A%211571272031%2Cn%3A1968024031%2Cn%3A1968120031&page=1&qid=1602005045&ref=lp_1968120031_pg_1
-// https://www.amazon.in/s?rh=n%3A1571271031%2Cn%3A%211571272031%2Cn%3A1968024031%2Cn%3A1968120031&page=2&qid=1602005045&ref=lp_1968120031_pg_2
-// https://www.amazon.in/s?rh=n%3A1571271031%2Cn%3A%211571272031%2Cn%3A1968024031%2Cn%3A1968120031&page=3&qid=1602005045&ref=lp_1968120031_pg_3
