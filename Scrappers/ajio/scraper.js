@@ -22,6 +22,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 						data.push({
 							website: "ajio",
 							category: Object.keys(loopArry[i][j])[0].replace(/\s/g, "-").toLowerCase(),
+							displayCategory : Object.keys(loopArry[i][j])[0].replace(/\s/g, " ").toLowerCase(),
 							productName: el.name ? el.name : null,
 							brandName: el.fnlColorVariantData.brandName
 								? el.fnlColorVariantData.brandName
