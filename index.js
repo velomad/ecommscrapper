@@ -24,6 +24,7 @@ const flipkartScrapper = require("./routes/api/Flipkart");
 const ajioScrapper = require("./routes/api/Ajio");
 const tataScrapper = require("./routes/api/Tata");
 const snapdealScrapper = require("./routes/api/Snapdeal");
+const autocompleteCategory = require("./routes/api/autocomplete");
 
 
 // const fyndScrapper = require("./routes/api/Fynd");
@@ -31,6 +32,7 @@ const bewakoofScrapper = require("./routes/api/Bewakoof");
 const amazonScrapper = require("./routes/api/Amazon");
 
 // Api's
+app.use("/api/autocomplete", autocompleteCategory);
 
 app.use("/api/myntra", myntraScrapper);
 app.use("/api/flipkart", flipkartScrapper);
