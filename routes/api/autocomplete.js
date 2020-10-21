@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
 			await client.connect();
 
 			const database = client.db("webscrape");
-			const collection = database.collection("category");
+			const collection = database.collection("autocomplete");
 
 			// this option prevents additional documents from being inserted if one fails
 			const options = { ordered: true };

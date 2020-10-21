@@ -42,10 +42,6 @@ module.exports = [
 					"mens-footwear/casual-shoes/sneakers~type/pr?sid=osp%2Ccil%2Ce1f&otracker=nmenu_sub_Men_0_Sneakers",
 			},
 			{
-				Clothing:
-					"clothing-and-accessories/pr?sid=clo&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&otracker=nmenu_sub_Men_0_Clothing",
-			},
-			{
 				"Top wear":
 					"clothing-and-accessories/topwear/pr?sid=clo%2Cash&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&otracker=nmenu_sub_Men_0_Top%20wear",
 			},
@@ -102,10 +98,6 @@ module.exports = [
 					"clothing-and-accessories/clothing-accessories/pr?sid=clo,qd8&p[]=facets.ideal_for%255B%255D%3DMen&p[]=facets.ideal_for%255B%255D%3Dmen&p[]=facets.ideal_for%255B%255D%3Dmen&otracker=categorytree&otracker=nmenu_sub_Men_0_Ties%2C%20Socks%2C%20Caps%20%26%20More",
 			},
 			{
-				"Winter Wear":
-					"clothing-and-accessories/winter-wear/pr?sid=clo%2Cqvw&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&otracker=nmenu_sub_Men_0_Winter%20Wear",
-			},
-			{
 				Sweatshirts:
 					"clothing-and-accessories/winter-wear/sweatshirt/men-sweatshirt/pr?sid=clo,qvw,64a,vui&otracker=categorytree&otracker=nmenu_sub_Men_0_Sweatshirts",
 			},
@@ -120,10 +112,6 @@ module.exports = [
 			{
 				Tracksuits:
 					"clothing-and-accessories/tracksuit/men-tracksuit/pr?sid=clo,nyk,zp4&otracker=categorytree&otracker=nmenu_sub_Men_0_Tracksuits",
-			},
-			{
-				"Ethnic wear":
-					"clothing-and-accessories/ethnic-wear/pr?sid=clo%2Ccfv&otracker=categorytree&p%5B%5D=facets.ideal_for%255B%255D%3DMen&otracker=nmenu_sub_Men_0_Ethnic%20wear",
 			},
 			{
 				Kurta:
@@ -248,7 +236,6 @@ module.exports = [
 			// 		"mens-footwear/reebok~brand/pr?sid=osp,cil&otracker=nmenu_sub_Men_0_Reebok",
 			// },
 
-
 			{
 				Skechers:
 					"mens-footwear/skechers~brand/pr?sid=osp,cil&otracker=nmenu_sub_Men_0_Skechers",
@@ -259,10 +246,6 @@ module.exports = [
 		],
 
 		women: [
-			{
-				Clothing:
-					"clothing-and-accessories/pr?sid=clo&marketplace=FLIPKART&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&otracker=nmenu_sub_Women_0_Clothing",
-			},
 			{
 				Topwear:
 					"clothing-and-accessories/topwear/pr?sid=clo,ash&p[]=facets.ideal_for%255B%255D%3DWomen&p[]=facets.ideal_for%255B%255D%3Dwomen&otracker=categorytree&otracker=nmenu_sub_Women_0_Topwear",

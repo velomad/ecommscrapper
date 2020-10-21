@@ -1,11 +1,13 @@
+autocomplete search index
+
 {
   "mappings": {
     "dynamic": false,
     "fields": {
-      "productName": [
+      "category": [
         {
           "foldDiacritics": false,
-          "maxGrams": 7,
+          "maxGrams": 8,
           "minGrams": 3,
           "tokenization": "edgeGram",
           "type": "autocomplete"

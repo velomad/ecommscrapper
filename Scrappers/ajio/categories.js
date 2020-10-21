@@ -1,5 +1,5 @@
-module.exports = [
-	{
+// module.exports = [
+	var test = {
 		men: [
 			{ "Jackets Coats": 830216010 },
 			{ Jeans: 830216001 },
@@ -64,5 +64,10 @@ module.exports = [
 			{ "Heeled Shoes": 830307009 },
 			{ Boots: 830307006 },
 		],
-	},
-];
+	}
+// ];
+
+
+
+
+

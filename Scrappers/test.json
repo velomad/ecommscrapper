@@ -1,6 +1,6 @@
 {
-	"numberOfWebsites": 4,
-	"websites": ["Myntra", "Flipkart", "Snapdeal", "Ajio"],
+	"numberOfWebsites": 5,
+	"websites": ["Myntra", "Flipkart", "Snapdeal", "Ajio", "Bewakoof"],
 	"Myntra": [
 		{
 			"men": {
@@ -64,44 +64,436 @@
 				]
 			},
 			"women": {
-				"indianwear": [],
-				"westernwear": [],
-				"footwear": [],
-				"sportswear": [],
-				"sleepwear": [],
-				"personalcare": [],
-				"accessories": []
+				"indianwear": [
+					"women-kurtas-kurtis-suits",
+					"ethnic-tops",
+					"ethnic-wear-dresses-menu",
+					"women-ethnic-bottomwear",
+					"skirts-palazzos",
+					"saree",
+					"dress-material",
+					"lehenga-choli",
+					"dupatta-shawl",
+					"women-ethnic-wear-jackets"
+				],
+				"westernwear": [
+					"women-shirts-tops-tees",
+					"women-jeans-jeggings",
+					"women-trousers",
+					"women-shorts-skirts",
+					"women-shrugs",
+					"women-sweaters-sweatshirts",
+					"women-jackets-coats",
+					"women-blazers-waistcoats"
+				],
+				"footwear": ["flats", "women-casual-shoes", "women-heels"],
+				"sportswear": [
+					"women-swimwear",
+					"women-sports-shoes",
+					"women-sportswear-clothing",
+					"women-sports-shoes",
+					"women-sports-accessories",
+					"women-sports-equipments"
+				],
+				"sleepwear": [
+					"bra",
+					"women-briefs",
+					"women-clothing-shapewear",
+					"women-loungewear-and-nightwear",
+					"camisoles-and-thermals"
+				],
+				"personalcare": [
+					"makeup",
+					"skin-care",
+					"women-personal-care",
+					"lipstick"
+				],
+				"accessories": [
+					"women-perfumes",
+					"smart-wearables",
+					"fashion-jewellery",
+					"fine-jewellery"
+				]
 			}
 		}
 	],
 	"Flipkart": {
 		"men": {
-			"topwear": [],
-			"bottomwear": []
+			"topwear": [
+				"Top wear",
+				"T-Shirts",
+				"Formal Shirts",
+				"Casual Shirts",
+				"Winter Wear",
+				"Sweatshirts",
+				"Jackets",
+				"Sweater",
+				"Raincoats Windcheaters"
+			],
+			"bottomwear": [
+				"Bottom wear",
+				"Jeans",
+				"Casual Trousers",
+				"Formal Trousers",
+				"Track pants",
+				"Shorts",
+				"Cargos",
+				"Three Fourths",
+				"Suits Blazers Waistcoats",
+				"Tracksuits"
+			],
+			"footwear": [
+				"mens-footwear",
+				"Sports Shoes",
+				"Casual Shoes",
+				"Formal Shoes",
+				"Sandals Floaters",
+				"Flip Flops",
+				"Loafers",
+				"Boots",
+				"Running Shoes",
+				"Sneakers"
+			],
+			"ethnicwear": ["Kurta", "Ethnic Sets", "Ethnic Pyjama"],
+			"innerwear": [
+				"Innerwear Loungewear",
+				"Briefs Trunks",
+				"Boxers",
+				"Pyjamas and Lounge Pants",
+				"Night Suits"
+			],
+			"accessories": [
+				"Ties Socks Caps More",
+				"Fastrack",
+				"Casio",
+				"Titan",
+				"Fossil",
+				"Sonata",
+				"Backpacks",
+				"Wallets",
+				"Belts",
+				"Sunglasses",
+				"Luggage Travel",
+				"Frames",
+				"Jewellery",
+				"Skechers",
+				"Nike"
+			]
 		},
 		"women": {
-			"topwear": [],
-			"bottomwear": []
+			"topwear": [
+				"Topwear",
+				"Dresses",
+				"Party Dresses",
+				"Winter Wear",
+				"Sarees",
+				"Kurtas Kurtis",
+				"Dress Material",
+				"Lehenga Choli",
+				"Blouse",
+				"Kurta Sets Salwar Suits",
+				"Gowns",
+				"Dupattas"
+			],
+			"bottomwear": [
+				"Jeans",
+				"Shorts",
+				"Skirts",
+				"Jeggings Tights",
+				"Trousers Capris",
+				"Leggings Churidars",
+				"Palazzos",
+				"Shararas",
+				"Salwars Patiala",
+				"Dhoti Pants",
+				"Ethnic Trousers"
+			],
+			"innerwear": [
+				"Bras",
+				"Panties",
+				"Lingerie Sets",
+				"Night Dresses Nighties",
+				"Shapewear",
+				"Camisoles Slips",
+				"Lingerie Sleepwear",
+				"Saree Shapewear Petticoats"
+			],
+			"sportswear": ["Swim Beachwear", "Sports Wear", "Sports Shoes"],
+			"accessories": [
+				"Clutches",
+				"Wallets Belts",
+				"Luggage Travel",
+				"Sunglasses",
+				"Frames",
+				"Jewellery",
+				"Silver Jewellery",
+				"Precious Jewellery",
+				"Coins and Bars"
+			],
+			"bags": ["Shoulder Bags", "Totes", "Sling bags"],
+			"footwear": [
+				"Footwear",
+				"Sandals",
+				"Flats",
+				"Heels",
+				"Wedges",
+				"Shoes",
+				"Casual Shoes",
+				"Boots",
+				"Ballerinas",
+				"Slippers Flip- Flop's"
+			]
 		}
 	},
 	"Snapdeal": {
 		"men": {
-			"topwear": [],
-			"bottomwear": []
+			"topwear": [
+				"jacket men",
+				"T - Shirts Polos men",
+				"Shirts men",
+				"Jackets men",
+				"Sweatshirts men",
+				"Sweater men",
+				"Thermals men",
+				"T-Shirts Polos men"
+			],
+			"bottomwear": [
+				"Trackpants Tracksuits men",
+
+				"Jeans men",
+				"Trousers Chinos men"
+			],
+			"footwear": [
+				"socks men",
+				"Sports Shoes men",
+				"Casual Shoes men",
+				"Slippers Flip Flops men",
+				"Sandals Floaters men",
+				"Formal Shoes men",
+				"Loafers men",
+				"Sneakers men",
+				"Ethnic Footwear men",
+				"Shoe Combos men",
+				"Shoe Accessories men"
+			],
+			"innerwear": ["Innerwear Sleepwear men"],
+			"accessories": [
+				"Wallets men",
+				"Belts men",
+				"Hats Caps men",
+				"Gift Sets men",
+				"Neckties Cravats men",
+				"Card Holders men",
+				"Keychains men",
+				"Suspenders men",
+				"Backpacks men",
+				"Laptop Bags men",
+				"Hiking Bags men",
+				"Luggage Suitcases men",
+				"Shaving Creams Gels men",
+				"Perfumes men",
+				"Deodorants men"
+			]
 		},
 		"women": {
-			"topwear": [],
-			"bottomwear": []
+			"indianwear": [
+				"Sarees women",
+				"Kurtas Kurtis women",
+				"Salwar Suits women",
+				"Lehengas women",
+				"Saree Combo women",
+				"Salwars Leggings women",
+				"Blouses Petticoats women",
+				"Dresses women",
+				"Tops Tunics women"
+			],
+			"westernwear": [
+				"T-Shirts women",
+				"Shirts women",
+				"Denims Trousers women",
+				"Pants Palazzos women",
+				"Outerwear Jackets women",
+				"Sweatshirts women",
+				"Cardigans Pullovers women",
+				"Shrugs Waistcoats women"
+			],
+			"innerwear": ["Innerwear women", "Nightwear women"],
+			"sportswear": ["Sportswear women"],
+			"accessories": [
+				"Sunglasses women",
+				"Spectacle Frames women",
+				"Contact Lenses women",
+				"Rings women",
+				"Earrings women",
+				"Silver Jewellery women",
+				"Handbags women",
+				"Wallets women",
+				"Clutches women",
+				"Utility bags women",
+				"Perfumes women",
+				"Deodorants women",
+				"Hair Accessories women",
+				"Stoles Scarves women",
+				"Socks Stockings women"
+			],
+			"footwear": [
+				"Heels women",
+				"Flats Sandals women",
+				"Slippers Flip Flops women",
+				"Ballerinas women",
+				"Casual Shoes women",
+				"Sports Shoes women",
+				"Ethnic Footwear women",
+				"Floater Sandal women"
+			]
 		}
 	},
 	"Ajio": {
 		"men": {
-			"topwear": [],
-			"bottomwear": []
+			"topwear": ["Jackets Coats", "Shirts", "Sweatshirts Hoodies", "T-Shirts"],
+			"bottomwear": ["Jeans", "Shorts 3/4ths", "Track Pants", "Trousers Pants"],
+			"footwear": [
+				"Casual Shoes",
+				"Flip-Flops Slippers",
+				"Formal Shoes",
+				"Sneakers",
+				"Sports Shoes"
+			],
+			"innerwear": ["Briefs", "Trunks Boxers", "Vests"],
+			"accessories": [
+				"Backpacks",
+				"Bags Wallets",
+				"Belts",
+				"Caps Hats",
+				"Fashion Accessories",
+				"Socks",
+				"Sunglasses",
+				"Wallets"
+			]
 		},
 		"women": {
-			"topwear": [],
-			"bottomwear": []
+			"topwear": [
+				"Tops",
+				"T-shirts",
+				"Dresses",
+				"Shirts",
+				"Jackets Coats",
+				"Jumpsuits Playsuits",
+				"Shrugs Boleros",
+				"Sweatshirts Hoodies",
+				"Sweaters Cardigans",
+				"Kurtas",
+				"Salwars Churidars",
+				"Kurtis Tunics",
+				"Sarees",
+				"Dress Material",
+				"Kurta Suit Sets",
+				"Blouses",
+				"Jackets Shrugs",
+				"Shirts Tops Tunics"
+			],
+			"bottomwear": [
+				"Jeans Jeggings",
+				"Trousers Pants",
+				"Track Pants",
+				"Leggings",
+				"Skirts Ghagras",
+				"Pants Shorts"
+			],
+			"innerwear": ["Bras", "Panties", "Camisoles Slips", "Dresses Gowns"],
+			"footwear": [
+				"Casual Shoes",
+				"Sports Shoes",
+				"Heeled Sandals",
+				"Heeled Shoes",
+				"Boots"
+			]
+		}
+	},
+	"Beakoof": {
+		"men": {
+			"topwear": [
+				"T-Shirts men",
+				"Kurta men",
+				"Vest men",
+				"Polo T-Shirts men",
+				"V-Neck T-Shirts men",
+				"Henley T-Shirts men",
+				"Color Block T-Shirts men",
+				"Hoodies men",
+				"Sweatshirt men",
+				"Jackets men"
+			],
+			"bottomwear": [
+				"Denims men",
+				"Shorts men",
+				"Joggers men",
+				"Pyjamas men",
+				"Boxers men"
+			],
+			"accessories": [
+				"Mobile Accessories men",
+				"Mobile Covers men",
+				"Laptop Bags men",
+				"Small Backpacks men",
+				"Notebooks men",
+				"Designer Wall Frames men"
+			],
+			"footwear": ["Flip Flops men", "Sliders men", "Socks men"],
+			"covidkit": [
+				"Protective Masks men",
+				"Multipurpose Sanitizers men",
+				"Protective Eyewear men",
+				"Essentials Combo Kits men",
+				"Hand Wash men",
+				"Face Shield men",
+				"PPE Kit men",
+				"Thermometer men",
+				"Shoe Covers men",
+				"Hand Sanitizers men"
+			]
+		},
+		"women": {
+			"topwear": [
+				"T-Shirts women",
+				"Fashion Tops women",
+				"V-Neck T-Shirts women",
+				"Crop Tops women",
+				"Dresses women",
+				"Jackets women",
+				"Hoodies women",
+				"Sweatshirt women",
+				"Sunactive T-Shirts women"
+			],
+			"bottomwear": [
+				"Palazzos",
+				"Leggings women",
+				"Denims women",
+				"Joggers women",
+				"Pyjamas women",
+				"Boxers women"
+			],
+			"footwear": ["Flip Flops women", "Sliders women", "Socks women"],
+			"accessories": [
+				"Mobile Accessories women",
+				"Mobile Covers women",
+				"Laptop Bags women",
+				"Small Backpacks women",
+				"Notebooks women",
+				"Designer Wall Frames women"
+			],
+			"covidkit": [
+				"Protective Masks women",
+				"Multipurpose Sanitizers women",
+				"Protective Eyewear women",
+				"Essentials Combo Kits women",
+				"Hand Wash women",
+				"Face Shield women",
+				"PPE Kit women",
+				"Thermometer women",
+				"Shoe Covers women",
+				"Hand Sanitizers women"
+			]
 		}
 	}
 }
