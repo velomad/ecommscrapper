@@ -1,6 +1,8 @@
 const { default: Axios } = require("axios");
 const categories = require("./categories");
 
+// test
+
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	var loopArry;
 	for (var t of categories) {
