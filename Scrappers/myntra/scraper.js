@@ -3,6 +3,7 @@ const categories = require("./categories");
 const userAgent = require("user-agents");
 
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
+	console.log("in scrapping file")
 	const browser = await puppeteer.launch({
 		headless: true,
 		args: [
