@@ -88,6 +88,7 @@ module.exports.scraper = async (url, callBack) => {
 			await page.waitForNavigation();
 			await wait(2000);
 			await autoScroll(page);
+			
 			await wait(2000);
 			for (var p = 0; p < 4; p++) {
 				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
