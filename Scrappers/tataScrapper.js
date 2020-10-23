@@ -63,6 +63,7 @@ module.exports.scraper = async (url, callBack) => {
 			} catch (e) {
 				console.log(e);
 			}
+			
 			products.push(productJson);
 		});
 		return products;

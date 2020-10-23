@@ -16,3 +16,22 @@ autocomplete search index
     }
   }
 }
+
+products search index
+
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "displayCategory": [
+        {
+          "foldDiacritics": false,
+          "maxGrams": 7,
+          "minGrams": 5,
+          "tokenization": "edgeGram",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  }
+}

@@ -85,78 +85,90 @@ module.exports.scraper = async (url, callBack) => {
 			await wait(2000);
 			for (var p = 0; p < 4; p++) {
 				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
-				let data = await page.evaluate((category) => {
-					window.scrollTo(0, 0);
-					let products = [];
-					// let productElements = document.querySelectorAll(".celwidget");
-					let productElements = document.querySelectorAll(
-						".sg-col-4-of-12.sg-col-4-of-36.s-result-item",
-					);
+				var displayCategory = loopArry[i][text].toLowerCase();
+				let data = await page.evaluate(
+					(category, displayCategory) => {
+						window.scrollTo(0, 0);
+						let products = [];
+						// let productElements = document.querySelectorAll(".celwidget");
+						let productElements = document.querySelectorAll(
+							".sg-col-4-of-12.sg-col-4-of-36.s-result-item",
+						);
 
-					productElements.forEach((productElement) => {
-						let productJson = {};
+						productElements.forEach((productElement) => {
+							let productJson = {};
 
-						var productStrikedPrice = document.querySelector(
-							".a-row.a-size-small>span",
-						).innerText;
-
-						// var sliced = productStrikedPrice.slice
-						console.log(productStrikedPrice);
-
-						try {
-							productJson.website = "amazon";
-							productJson.category = category;
-							productJson.brandName = productElement.querySelector(
-								".s-line-clamp-1>span",
-							)
-								? productElement.querySelector(".s-line-clamp-1>span").innerText
-								: null;
-							productJson.productName = productElement.querySelector(
-								".s-line-clamp-2>a",
-							)
-								? productElement.querySelector(".s-line-clamp-2>a").innerText
-								: null;
-							productJson.productLink = productElement.querySelector(
-								".s-line-clamp-2>a",
-							)
-								? productElement.querySelector(".s-line-clamp-2>a").href
-								: null;
-							productJson.imageUrl = productElement.querySelector(
-								".aok-relative>img",
-							)
-								? productElement.querySelector(".aok-relative>img").src
-								: null;
-							productJson.productPrice = productElement.querySelector(
-								".a-price-whole",
-							)
-								? productElement.querySelector(".a-price-whole").innerText
-								: null;
-							productJson.productRating = productElement.querySelector(
+							var productStrikedPrice = document.querySelector(
 								".a-row.a-size-small>span",
-							)
-								? productElement
-										.querySelector(".a-row.a-size-small>span")
-										.innerText.split(" ")[0]
-								: null;
-							productJson.productStrike = productElement.querySelector(
-								".a-price.a-text-price>span",
-							)
-								? productElement
-										.querySelector(".a-price.a-text-price>span")
-										.innerText.slice(1)
-								: null;
-							// productJson.discountPercentage =
-						} catch (e) {
-							console.log(e);
-						}
-						products.push(productJson);
-					});
-					return products;
-				}, category);
+							).innerText;
+
+							// var sliced = productStrikedPrice.slice
+							console.log(productStrikedPrice);
+
+							try {
+								productJson.website = "amazon";
+								productJson.category = category;
+								productJson.displayCategory = displayCategory;
+								productJson.brandName = productElement.querySelector(
+									".s-line-clamp-1>span",
+								)
+									? productElement.querySelector(".s-line-clamp-1>span")
+											.innerText
+									: null(
+											(productJson.productName = productElement.querySelector(
+												".s-line-clamp-2>a",
+											)
+												? productElement.querySelector(".s-line-clamp-2>a")
+														.innerText
+												: null),
+									  );
+								productJson.productLink = productElement.querySelector(
+									".s-line-clamp-2>a",
+								)
+									? productElement.querySelector(".s-line-clamp-2>a").href
+									: null;
+								productJson.imageUrl = productElement.querySelector(
+									".aok-relative>img",
+								)
+									? productElement.querySelector(".aok-relative>img").src
+									: null;
+								productJson.productPrice = productElement.querySelector(
+									".a-price-whole",
+								)
+									? productElement.querySelector(".a-price-whole").innerText
+									: null;
+								productJson.productRating = productElement.querySelector(
+									".a-row.a-size-small>span",
+								)
+									? productElement
+											.querySelector(".a-row.a-size-small>span")
+											.innerText.split(" ")[0]
+									: null;
+								productJson.productStrike = productElement.querySelector(
+									".a-price.a-text-price>span",
+								)
+									? productElement
+											.querySelector(".a-price.a-text-price>span")
+											.innerText.slice(1)
+									: null;
+								// productJson.discountPercentage =
+							} catch (e) {
+								console.log(e);
+							}
+							products.push(productJson);
+						});
+						return products;
+					},
+					category,
+					displayCategory,
+				);
 				await wait(100);
 				callBack(data, true);
-
-				await page.click(".a-selected + .a-normal");
+				if ((await page.$(".a-selected + .a-normal")) !== null) {
+					await page.click(".a-selected + .a-normal");
+				} else {
+					break;
+				}
 				await wait(2000);
 			}
 		}
