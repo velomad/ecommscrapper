@@ -4,12 +4,11 @@ const userAgent = require("user-agents");
 
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({
+		headless: true,
 		args: [
-			`--proxy-server=http=194.67.37.90:3128`,
-			"--no-sandbox",
-			"--disable-setuid-sandbox",
+			'--no-sandbox',
+			'--disable-setuid-sandbox',
 		],
-		headless: false,
 	});
 	const page = await browser.newPage();
 
