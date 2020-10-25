@@ -3,13 +3,10 @@ const categories = require("./categories");
 const userAgent = require("user-agents");
 
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
-	console.log("in scrapping file")
+	console.log("in scrapping file");
 	const browser = await puppeteer.launch({
-		headless: true,
-		args: [
-			'--no-sandbox',
-			'--disable-setuid-sandbox',
-		],
+		headless: false,
+		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
 
@@ -49,6 +46,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 				}
 
 				let category = loopArry[i][j].replace(/\s/g, "").toLowerCase();
+				let displayCategory = loopArry[i][j].toLowerCase();
 
 				let lastPage = await page.evaluate(() => {
 					if (document.querySelector(".pagination-paginationMeta")) {
@@ -60,12 +58,11 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					return data;
 				});
 
-				let data = await page.evaluate((category) => {
+				let data = await page.evaluate((category, displayCategory) => {
 					window.scrollTo(0, 0);
 					let products = [];
 					let productElements = document.querySelectorAll(".product-base");
 
-				
 					productElements.forEach((productElement) => {
 						let productJson = {};
 						let productSizeText = document.querySelector(".product-sizes")
@@ -77,7 +74,8 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 
 						try {
 							(productJson.website = "myntra"),
-								(productJson.category = category);
+							productJson.category = category;
+							productJson.displayCategory = displayCategory;
 							productJson.imageUrl = productElement.querySelector(
 								"picture .img-responsive",
 							)
@@ -89,12 +87,12 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 								? productElement.querySelector(".product-discountedPrice")
 										.innerText
 								: null;
-							productJson.productStrike = productElement.querySelector(
+							productJson.productPriceStrike = productElement.querySelector(
 								".product-strike",
 							)
 								? productElement.querySelector(".product-strike").innerText
 								: null;
-							productJson.productDiscount = productElement.querySelector(
+							productJson.discountPercent = productElement.querySelector(
 								".product-discountPercentage",
 							)
 								? productElement.querySelector(".product-discountPercentage")
@@ -123,7 +121,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					});
 
 					return products;
-				}, category);
+				}, category, displayCategory);
 				await wait(100);
 
 				// i = current index of  outermost loop

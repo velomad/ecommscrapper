@@ -1,14 +1,11 @@
 const puppeteer = require("puppeteer");
-const userAgent = require('user-agents');
-var catgories = require('./categories.js');
+const userAgent = require("user-agents");
+var catgories = require("./categories.js");
 
 module.exports.scraper = async (url, callBack) => {
-	const browser = await puppeteer.launch({ 
-		headless: true,
-		args: [
-			'--no-sandbox',
-			'--disable-setuid-sandbox',
-		], 
+	const browser = await puppeteer.launch({
+		headless: false,
+		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
 	await page.setUserAgent(userAgent.toString());
@@ -32,11 +29,14 @@ module.exports.scraper = async (url, callBack) => {
 					// let scrollHeight = document.body.scrollHeight;
 					window.scrollBy(0, distance);
 					// totalHeight += distance;
-					let getText = document.querySelector("#searchMessageContainer > div > span:nth-child(1)").textContent;
+					let getText = document.querySelector(
+						"#searchMessageContainer > div > span:nth-child(1)",
+					).textContent;
 					if (
-						document.querySelectorAll("#products > section > div").length > Number((getText.match(/(\d+)/)[0]/100*1).toFixed(0))
+						document.querySelectorAll("#products > section > div").length >
+						Number(((getText.match(/(\d+)/)[0] / 100) * 1).toFixed(0))
 					) {
-						getText = '';
+						getText = "";
 						window.scrollTo(0, 0);
 						clearInterval(timer);
 						resolve();
@@ -49,7 +49,7 @@ module.exports.scraper = async (url, callBack) => {
 	var loopArry;
 	for (var t of catgories) {
 		loopArry = [t.men, t.women];
-	}	
+	}
 	for (var i = 0; i < loopArry.length; i++) {
 		for (var text = 0; text < loopArry[i].length; text++) {
 			const input = await page.$("#inputValEnter");
@@ -72,25 +72,28 @@ module.exports.scraper = async (url, callBack) => {
 				productElements.forEach((el) => {
 					let productJson = {};
 					try {
-						productJson.website = "snapdeal",
-						productJson.productName = el.querySelector(".product-title")
-							? el.querySelector(".product-title").innerText
-							: null;
+						(productJson.website = "snapdeal"),
+							(productJson.productName = el.querySelector(".product-title")
+								? el.querySelector(".product-title").innerText
+								: null);
 						productJson.imageUrl = el.querySelector(".product-image")
 							? el.querySelector(".product-image").srcset
 							: null;
-						productJson.productPrice = el.querySelector(".lfloat.product-price")
+						productJson.productPriceStrike = el.querySelector(
+							".lfloat.product-price",
+						)
 							? el.querySelector(".lfloat.product-price").innerText
 							: null;
-						productJson.discountedPrice = el.querySelector(
+						productJson.productPrice = el.querySelector(
 							".lfloat.product-desc-price.strike",
-						)	
+						)
 							? el.querySelector(".lfloat.product-desc-price.strike").innerText
 							: null;
-						productJson.discountPercentage = el.querySelector(
-							".product-discount",
-						)
+						productJson.discountPercent = el.querySelector(".product-discount")
 							? el.querySelector(".product-discount").innerText
+							: null;
+						productJson.productLink = el.querySelector(".product-tuple-image > a")
+							? el.querySelector(".product-tuple-image > a").href
 							: null;
 					} catch (e) {
 						console.log(e);
@@ -100,7 +103,7 @@ module.exports.scraper = async (url, callBack) => {
 				return products;
 			});
 			await wait(1000);
-			callBack(data, true,loopArry[i][text]);
+			callBack(data, true, loopArry[i][text]);
 		}
 	}
 

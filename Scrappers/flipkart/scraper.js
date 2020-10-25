@@ -5,10 +5,7 @@ const userAgent = require("user-agents");
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({
 		headless: true,
-		args: [
-			'--no-sandbox',
-			'--disable-setuid-sandbox',
-		],
+		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
 
@@ -48,55 +45,69 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					viewportIncr = viewportIncr + viewportHeight;
 				}
 
-				let category = Object.keys(loopArry[i][j])[0].replace(/\s/g, "").toLowerCase();
+				let category = Object.keys(loopArry[i][j])[0]
+					.replace(/\s/g, "")
+					.toLowerCase();
+				let displayCategory = Object.keys(loopArry[i][j])[0].toLowerCase();
 
-				let data = await page.evaluate((category) => {
-					window.scrollTo(0, 0);
-					let products = [];
-					let productElements = document.querySelectorAll("._3O0U0u");
-					// let productElements = document.querySelectorAll(".IIdQZO");
-					productElements.forEach((productElement) => {
-						let productJson = {};
+				let data = await page.evaluate(
+					(category, displayCategory) => {
+						window.scrollTo(0, 0);
+						let products = [];
+						let productElements = document.querySelectorAll("._3O0U0u");
+						// let productElements = document.querySelectorAll(".IIdQZO");
+						productElements.forEach((productElement) => {
+							let productJson = {};
 
-						try {
-							(productJson.website = "flipkart"),
-								(productJson.brandName = productElement.querySelector(
-									"._2B_pmu",
+							try {
+								(productJson.website = "flipkart"),
+									(productJson.brandName = productElement.querySelector(
+										"._2B_pmu",
+									)
+										? productElement.querySelector("._2B_pmu").innerText
+										: null);
+								productJson.category = category;
+								productJson.displayCategory = displayCategory;
+								productJson.productName = productElement.querySelector(
+									"._2mylT6",
 								)
-									? productElement.querySelector("._2B_pmu").innerText
-									: null);
-							productJson.productName = productElement.querySelector("._2mylT6")
-								? productElement.querySelector("._2mylT6").title
-								: null;
-							productJson.productLink = productElement.querySelector("._3dqZjq")
-								? productElement.querySelector("._3dqZjq").href
-								: null;
-							productJson.imageUrl = productElement.querySelector("img._3togXc")
-								? productElement.querySelector("img._3togXc").src
-								: null;
-							productJson.productPrice = productElement.querySelector(
-								"._1vC4OE",
-							)
-								? productElement.querySelector("._1vC4OE").innerText
-								: null;
-							productJson.productStrike = productElement.querySelector(
-								"._3auQ3N",
-							)
-								? productElement.querySelector("._3auQ3N").innerText
-								: null;
-							productJson.discountPercentage = productElement.querySelector(
-								".VGWI6T",
-							)
-								? productElement.querySelector(".VGWI6T").innerText
-								: null;
-							productJson.category = category;
-						} catch (e) {
-							console.log(e);
-						}
-						products.push(productJson);
-					});
-					return products;
-				}, category);
+									? productElement.querySelector("._2mylT6").title
+									: null;
+								productJson.productLink = productElement.querySelector(
+									"._3dqZjq",
+								)
+									? productElement.querySelector("._3dqZjq").href
+									: null;
+								productJson.imageUrl = productElement.querySelector(
+									"img._3togXc",
+								)
+									? productElement.querySelector("img._3togXc").src
+									: null;
+								productJson.productPrice = productElement.querySelector(
+									"._1vC4OE",
+								)
+									? productElement.querySelector("._1vC4OE").innerText
+									: null;
+								productJson.productPriceStrike = productElement.querySelector(
+									"._3auQ3N",
+								)
+									? productElement.querySelector("._3auQ3N").innerText
+									: null;
+								productJson.discountPercent = productElement.querySelector(
+									".VGWI6T",
+								)
+									? productElement.querySelector(".VGWI6T").innerText
+									: null;
+							} catch (e) {
+								console.log(e);
+							}
+							products.push(productJson);
+						});
+						return products;
+					},
+					category,
+					displayCategory,
+				);
 				await wait(100);
 
 				// i = current index of  outermost loop

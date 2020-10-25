@@ -111,12 +111,12 @@ module.exports.scraper = async (url, callBack) => {
 								? el.querySelector(".productCardDetail>h3").innerText
 								: null;
 
-							productJson.discountedPrice = el.querySelector(
+							productJson.productPrice = el.querySelector(
 								".discountedPriceText",
 							)
 								? el.querySelector(".discountedPriceText").innerText
 								: null;
-							productJson.actualPrice = el.querySelector(".actualPriceText")
+							productJson.productPriceStrike = el.querySelector(".actualPriceText")
 								? el.querySelector(".actualPriceText").innerText
 								: null;
 							productJson.isTrending = !!el.querySelector(

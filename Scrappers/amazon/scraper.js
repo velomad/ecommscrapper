@@ -151,7 +151,7 @@ module.exports.scraper = async (url, callBack) => {
 											.querySelector(".a-row.a-size-small>span")
 											.innerText.split(" ")[0]
 									: null;
-								productJson.productStrike = productElement.querySelector(
+								productJson.productPriceStrike = productElement.querySelector(
 									".a-price.a-text-price>span",
 								)
 									? productElement
