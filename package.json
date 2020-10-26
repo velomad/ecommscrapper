@@ -24,6 +24,8 @@
 		"node-cron": "^2.0.3",
 		"nodemon": "^2.0.4",
 		"puppeteer": "^5.3.1",
+		"puppeteer-extra": "^3.1.15",
+		"puppeteer-extra-plugin-stealth": "^2.6.2",
 		"user-agents": "^1.0.559"
 	}
 }
