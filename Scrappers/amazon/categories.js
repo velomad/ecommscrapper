@@ -1,8 +1,8 @@
 module.exports = [
 	{
 		men: [
-			"jacket men",
-			"Sports Shoes men",
+			// "jacket men",
+			// "Sports Shoes men",
 			"Casual Shoes men",
 			"Slippers Flip Flops men",
 			"Sandals Floaters men",
