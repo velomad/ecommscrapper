@@ -6,6 +6,7 @@ const path = require("path")
 const mongoose = require("mongoose");
 const port = process.env.PORT || 5000;
 require("./cronjobs/flipkart");
+require("./Scrappers/converter");
 
 // DB Config
 const db = require("./config/keys").mongoURI;

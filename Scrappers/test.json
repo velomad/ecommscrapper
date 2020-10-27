@@ -4,62 +4,61 @@
 	"Myntra": {
 		"men": {
 			"topwear": [
-				"topwear",
-				"tshirts",
-				"casual shirts",
-				"formal shirts",
-				"sweatshirts",
-				"sweaters",
-				"jackets",
-				"blazers",
-				"suits",
+				"men-tshirts",
+				"men-casual-shirts",
+				"men-formal-shirts",
+				"men-sweatshirts",
+				"men-sweaters",
+				"men-jackets",
+				"men-blazers",
+				"men-suits",
 				"rain-jacket"
 			],
-			"indianwear": ["kurtas", "sherwani", "nehru jackets", "dhoti"],
+			"indianwear": ["men-kurtas", "sherwani", "nehru-jackets", "dhoti"],
 			"bottomwear": [
-				"jeans",
-				"casual trousers",
-				"formal trousers",
-				"shorts",
-				"trackpants"
+				"men-jeans",
+				"men-casual-trousers",
+				"men-formal-trousers",
+				"mens-shorts",
+				"men-trackpants"
 			],
 			"innerwear": [
-				"innerwear",
-				"briefs-and-trunks",
-				"boxers",
-				"innerwear-vests",
-				"nightwear",
-				"thermals"
+				"men-innerwear",
+				"men-briefs-and-trunks",
+				"men-boxers",
+				"men-innerwear-vests",
+				"men-nightwear",
+				"men-thermals"
 			],
 			"footwear": [
-				"casual shoes",
-				"sports shoes",
-				"formal shoes",
-				"sneakers",
-				"sandals",
-				"flip flops",
-				"socks"
+				"men-casual-shoes",
+				"men-sports-shoes",
+				"men-formal-shoes",
+				"men-sneakers",
+				"men-sandals",
+				"men-flip-flops",
+				"men-socks"
 			],
 			"sportswear": [
-				"sports wear",
-				"sports shoes",
-				"sports sandals",
-				"sports wear-tshirts",
-				"trackpants shorts",
-				"tracksuits",
-				"sports jackets",
-				"sports accessories"
+				"men-sports-wear",
+				"men-sports-shoes",
+				"men-sports-sandals",
+				"men-sports-wear-tshirts",
+				"men-trackpants-shorts",
+				"men-tracksuits",
+				"men-sports-jackets",
+				"men-sports-accessories"
 			],
 			"accessories": [
-				"sunglasses",
-				"wallets",
-				"belts",
+				"men-sunglasses",
+				"men-wallets",
+				"men-belts",
 				"perfumes",
 				"trimmer",
 				"deodorant",
-				"belts-ties",
-				"accessory-gift-set",
-				"caps"
+				"men-belts-ties",
+				"men-accessory-gift-set",
+				"men-caps"
 			]
 		},
 		"women": {
