@@ -46,7 +46,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 				}
 
 				let category = Object.keys(loopArry[i][j])[0]
-					.replace(/\s/g, "")
+					.replace(/\s/g, "-")
 					.toLowerCase();
 				let displayCategory = Object.keys(loopArry[i][j])[0].toLowerCase();
 

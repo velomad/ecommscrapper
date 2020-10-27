@@ -2,7 +2,7 @@ module.exports = [
 	{
 		men: [
 			{
-				"mens-footwear":
+				"mens footwear":
 					"mens-footwear/pr?sid=osp,cil&otracker=nmenu_sub_Men_0_Footwear",
 			},
 			{
