@@ -7,7 +7,7 @@ module.exports.scraper = async (url, callBack) => {
 	puppeteer.use(StealthPlugin());
 
 	const browser = await puppeteer.launch({
-		headless: true,
+		headless: false,
 		args: [
 			"--no-sandbox",
 			"--disable-setuid-sandbox",
@@ -36,7 +36,7 @@ module.exports.scraper = async (url, callBack) => {
 		await page.evaluate(async () => {
 			await new Promise((resolve, reject) => {
 				// let totalHeight = 0;
-				let distance = 100;
+				let distance = 300;
 				let timer = setInterval(() => {
 					// let scrollHeight = document.body.scrollHeight;
 					window.scrollBy(0, distance);
@@ -58,7 +58,7 @@ module.exports.scraper = async (url, callBack) => {
 						clearInterval(timer);
 						resolve();
 					}
-				}, 300);
+				}, 100);
 			});
 		});
 	}
@@ -92,7 +92,7 @@ module.exports.scraper = async (url, callBack) => {
 				await page.evaluate((_viewportHeight) => {
 					window.scrollBy(0, _viewportHeight);
 				}, viewportHeight);
-				await wait(500);
+				await wait(600);
 				viewportIncr = viewportIncr + viewportHeight;
 			}
 

@@ -1,7 +1,7 @@
 module.exports = [
     {
         men: [
-            // "T-Shirts men",
+            "T-Shirts men",
             "Kurta men",
             "Vest men",
             "Polo T-Shirts men",

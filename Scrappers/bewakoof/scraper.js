@@ -5,7 +5,7 @@ var catgories = require("./categories.js");
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({
 		headless: true,
-		// args: ["--no-sandbox", "--disable-setuid-sandbox"],
+		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
 	await page.setUserAgent(userAgent.toString());
@@ -25,7 +25,7 @@ module.exports.scraper = async (url, callBack) => {
 		await page.evaluate(async () => {
 			await new Promise((resolve, reject) => {
 				// let totalHeight = 0;
-				let distance = 100;
+				let distance = 300;
 				let timer = setInterval(() => {
 					// let scrollHeight = document.body.scrollHeight;
 					window.scrollBy(0, distance);
@@ -45,7 +45,7 @@ module.exports.scraper = async (url, callBack) => {
 						clearInterval(timer);
 						resolve();
 					}
-				}, 300);
+				}, 70);
 			});
 		});
 	}
