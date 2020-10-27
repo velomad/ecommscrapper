@@ -5,7 +5,7 @@ const userAgent = require("user-agents");
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	console.log("in scrapping file");
 	const browser = await puppeteer.launch({
-		headless: false,
+		headless: true,
 		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
