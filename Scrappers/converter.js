@@ -8,8 +8,8 @@ const tet = require("./test.json");
 // 	});
 // })();
 
-console.log(tet.Tatacliq.men.accessories);
+// console.log(tet.Tatacliq.men.bottomwear);
 
-tet.Tatacliq.men.accessories.map(el => {
+tet.Amazon.women.footwear.map(el => {
     console.log(el.replace(/\s/g, "-").toLowerCase())
 })
