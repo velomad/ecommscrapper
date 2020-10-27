@@ -47,8 +47,6 @@ module.exports = [
     { category: "men belts ties" },
     { category: "men accessory gift set" },
     { category: "men caps" },
-
-
     { category: "women kurtas kurtis suits" },
     { category: "ethnic wear dresses menu" },
     { category: "ethnic tops" },

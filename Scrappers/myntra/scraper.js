@@ -113,7 +113,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 							)
 								? productElement.querySelector(".product-product").innerText
 								: null;
-							productJson.productSizes = productSizeArr ? productSizeArr : null;
+							productJson.size = productSizeArr ? productSizeArr : null;
 						} catch (e) {
 							console.log(e);
 						}
