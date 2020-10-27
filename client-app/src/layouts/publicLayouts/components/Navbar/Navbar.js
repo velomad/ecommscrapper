@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, CssBaseline } from "@material-ui/core";
-import { primary } from "../constants/colors";
+import { primary } from "../../../../constants/colors";
 
 const Navbar = () => {
 	return (

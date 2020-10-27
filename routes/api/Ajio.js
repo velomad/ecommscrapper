@@ -10,7 +10,7 @@ const uri = db;
 
 router.get("/", (req, res) => {
 
-	var pagesToScrape = 2;
+	var pagesToScrape = 3;
 	var totalProdctsInserted = 0;
 
 	console.log("starting to scrap...");

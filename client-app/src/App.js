@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Navbar from "./layouts/Navbar";
+import Routes from "./Routes";
 
 function App() {
 	return (
 		<div className="App">
-			<Navbar />
+			<Routes/>
 		</div>
 	);
 }

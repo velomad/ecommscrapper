@@ -50,7 +50,7 @@ module.exports.scraper = async (url, callBack) => {
 					if (
 						productLen >
 						Number(
-							((Number(getText.replace(/[{()}]/g, "")) / 100) * 0.2).toFixed(0),
+							((Number(getText.replace(/[{()}]/g, "")) / 100) * 50).toFixed(0),
 						)
 					) {
 						getText = "";
