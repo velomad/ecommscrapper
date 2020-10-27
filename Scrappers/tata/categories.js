@@ -1,6 +1,9 @@
 module.exports = [
 	{
 		men: [
+			"Flip Flop men",
+			"Kurta men",
+			"Kurta sets men",
 			"Casual Shoes men",
 			"Sneakers men",
 			"Formal Shoes men",
@@ -8,9 +11,6 @@ module.exports = [
 			"Training Shoes men",
 			"Sports Shoes men",
 			"Boots men",
-			"Flip Flop men",
-			"Kurta men",
-			"Kurta sets men",
 			"T-shirtss Polos men",
 			"Casual Shirts men",
 			"Jeans men",
@@ -21,7 +21,6 @@ module.exports = [
 			"Formal Shirts men",
 			"Formal Trousers men",
 			"T-shirtss Jerseys men",
-			"Shorts men",
 			"Sports Jackets men",
 			"Joggers men",
 			"Trunks men",
@@ -44,7 +43,7 @@ module.exports = [
 			"Men's Gift Sets",
 		],
 		women: [
-			"Kurtass Kurtis  women",
+			"Kurtass Kurtis women",
 			"Suit Sets women",
 			"Sareess Lehenga sets women",
 			"Bottoms women",
@@ -63,7 +62,6 @@ module.exports = [
 			"Leggings women",
 			"Jumpsuits women",
 			"Skirts women",
-			" women",
 			"Jackets Blazers women",
 			"Shrugs women",
 			"Sweatshirts women",

@@ -8,21 +8,13 @@ module.exports.scraper = async (url, callBack) => {
 
 	const browser = await puppeteer.launch({
 		headless: false,
-		args: [
-			"--no-sandbox",
-			"--disable-setuid-sandbox",
-			"--disable-infobars",
-			"--window-position=0,0",
-			"--ignore-certifcate-errors",
-			"--ignore-certifcate-errors-spki-list",
-			'--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3312.0 Safari/537.36"',
-		],
+		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
 	await page.setUserAgent(userAgent.toString());
-	// await page.setUserAgent(
-	// 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-	// );
+	await page.setUserAgent(
+		"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+	);
 
 	await page.setViewport({ width: 1200, height: 768 });
 
@@ -71,14 +63,14 @@ module.exports.scraper = async (url, callBack) => {
 			const input = await page.$(
 				"._26te1Kp4kxwtlBGHe9K-j1.uRnUoWUuRtEeKI0UJ4fVl > input",
 			);
-			await input.click({ clickCount: 3 });
-			await input.press("Backspace");
-			await wait(1000);
+			// await input.click({ clickCount: 3 });
+			// await input.press("Backspace");
+			// await wait(1000);
 			await page.type("input[type=search]", loopArry[i][text], { delay: 20 });
 			await wait(1000);
 			await page.keyboard.press("Enter");
-			await page.waitForNavigation();
-			await wait(1000);
+			// await page.waitForNavigation();
+			await wait(3000);
 
 			// Get the height of the rendered page
 			const bodyHandle = await page.$("body");
@@ -97,7 +89,7 @@ module.exports.scraper = async (url, callBack) => {
 			}
 
 			// await autoScroll(page);
-			await wait(1000);
+			// await wait(1000);
 
 			var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
 			var displayCategory = loopArry[i][text].toLowerCase();
@@ -166,7 +158,7 @@ module.exports.scraper = async (url, callBack) => {
 				category,
 				displayCategory,
 			);
-			await wait(1000);
+			await wait(2000);
 			callBack(data, true);
 		}
 	}

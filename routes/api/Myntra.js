@@ -8,7 +8,7 @@ const db = require("../../config/keys").mongoURI;
 const uri = db;
 
 router.get("/", (req, res) => {
-	const pagesToScrape = 3;
+	const pagesToScrape = 5;
 	var totalProdctsInserted = 0;
 
 	console.log("starting to scrap...");
