@@ -1,15 +1,16 @@
-import React, { Children } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import { ButtonSize, ButtonType } from "../../themes/buttonTheme";
 
-const Button = () =>{
-  const { className, outlined, squared, children, ...rest } = props;
+const Button = ({ size, type, children, transition }) => {
+	return (
+		<button
+			className={`${ButtonType[type]} ${ButtonSize[size]}  ${
+				transition && `transition duration-500 ease-in-out rounded-lg`
+			}  `}
+		>
+			{children}
+		</button>
+	);
+};
 
-    return(
-            <button >
-                {children}
-            </button>
-    )
-}
-
-export default Button
+export default Button;

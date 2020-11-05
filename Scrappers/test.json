@@ -1,5 +1,5 @@
 {
-	"numberOfWebsites": 5,
+	"numberOfWebsites": 6,
 	"websites": ["Myntra", "Flipkart", "Tatacliq", "Ajio", "Bewakoof", "Amazon"],
 	"Myntra": {
 		"men": {

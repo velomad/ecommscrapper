@@ -1,5 +1,6 @@
 const { default: Axios } = require("axios");
 const categories = require("./categories");
+const {convertStringToNumber} = require("../../utils/utils");
 
 // test
 
@@ -20,11 +21,17 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 				try {
 					let fetchApi = await Axios.get(URL);
 					let rawData = fetchApi.data.products;
+
 					rawData.forEach((el) => {
 						data.push({
 							website: "ajio",
-							category: Object.keys(loopArry[i][j])[0].replace(/\s/g, "-").toLowerCase(),
-							displayCategory : Object.keys(loopArry[i][j])[0].replace(/\s/g, " ").toLowerCase(),
+							category: Object.keys(loopArry[i][j])[0]
+								.replace(/\s/g, "-")
+								.toLowerCase(),
+							displayCategory: Object.keys(loopArry[i][j])[0]
+								.replace(/\s/g, " ")
+								.toLowerCase(),
+							gender: i === 0 ? "men" : "women",
 							productName: el.name ? el.name : null,
 							brandName: el.fnlColorVariantData.brandName
 								? el.fnlColorVariantData.brandName
@@ -32,16 +39,18 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 							imageUrl: el.fnlColorVariantData.outfitPictureURL
 								? el.fnlColorVariantData.outfitPictureURL
 								: null,
-							discountPercent: el.discountPercent ? el.discountPercent : null,
-							couponStatus: el.couponStatus ? el.couponStatus : null,
+							discountPercent: el.discountPercent
+								? Number(el.discountPercent.match(/(\d+)/)[0])
+								: null,
 							productPrice: el.price.displayformattedValue
-								? el.price.displayformattedValue
+								? Number(el.price.displayformattedValue.match(/(\d+)/)[0])
 								: null,
 							productPriceStrike: el.wasPriceData.displayformattedValue
-								? el.wasPriceData.displayformattedValue
+								? convertStringToNumber(el.wasPriceData.displayformattedValue.split(".")[1])
 								: null,
 							productLink: `https://ajio.com${el.url}`,
 							size: el.productSizeData ? el.productSizeData.sizeVariants : null,
+							productRating: null,
 						});
 					});
 				} catch (e) {

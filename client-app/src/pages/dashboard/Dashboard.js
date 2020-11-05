@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import axios from "axios";
+import { Button } from "../../components";
 
 const Dashboard = () => {
 	const handleClick = async (url) => {
@@ -59,6 +60,12 @@ const Dashboard = () => {
 					>
 						TataCliq
 					</button>
+				</Grid>
+
+				<Grid item>
+					<Button size="sm" type="primary" transition={true}>
+						test button
+					</Button>
 				</Grid>
 			</Grid>
 		</div>

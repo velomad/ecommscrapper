@@ -1,9 +1,11 @@
 const puppeteer = require("puppeteer");
 var catgories = require("./categories.js");
+const {convertStringToNumber} = require("../../utils/utils");
+
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({ 
-		headless: true,
+		headless: false,
 		args: [
 			'--no-sandbox',
 			'--disable-setuid-sandbox',
@@ -94,7 +96,7 @@ module.exports.scraper = async (url, callBack) => {
 				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
 				var displayCategory = loopArry[i][text].toLowerCase();
 				let data = await page.evaluate(
-					(category, displayCategory) => {
+					(category, displayCategory, i, convertStringToNumber) => {
 						window.scrollTo(0, 0);
 						let products = [];
 						// let productElements = document.querySelectorAll(".celwidget");
@@ -129,6 +131,7 @@ module.exports.scraper = async (url, callBack) => {
 														.innerText
 												: null),
 									  );
+									  productJson.gender =  i === 0 ? "men" : "women"
 								productJson.productLink = productElement.querySelector(
 									".s-line-clamp-2>a",
 								)
@@ -142,7 +145,8 @@ module.exports.scraper = async (url, callBack) => {
 								productJson.productPrice = productElement.querySelector(
 									".a-price-whole",
 								)
-									? productElement.querySelector(".a-price-whole").innerText
+									// ? convertStringToNumber(productElement.querySelector(".a-price-whole").innerText)
+									? convertStringToNumber("1,545")
 									: null;
 								productJson.productRating = productElement.querySelector(
 									".a-row.a-size-small>span",
@@ -154,7 +158,7 @@ module.exports.scraper = async (url, callBack) => {
 								productJson.productPriceStrike = productElement.querySelector(
 									".a-price.a-text-price>span",
 								)
-									? productElement
+									?  productElement
 											.querySelector(".a-price.a-text-price>span")
 											.innerText.slice(1)
 									: null;
@@ -168,6 +172,8 @@ module.exports.scraper = async (url, callBack) => {
 					},
 					category,
 					displayCategory,
+					i,
+					convertStringToNumber
 				);
 				await wait(100);
 				callBack(data, true);
