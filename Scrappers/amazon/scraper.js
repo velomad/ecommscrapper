@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 var catgories = require("./categories.js");
-const {convertStringToNumber} = require("../../utils/utils");
+// const {convertStringToNumber} = require("../../utils/utils");
 
 
 module.exports.scraper = async (url, callBack) => {
@@ -96,13 +96,19 @@ module.exports.scraper = async (url, callBack) => {
 				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
 				var displayCategory = loopArry[i][text].toLowerCase();
 				let data = await page.evaluate(
-					(category, displayCategory, i, convertStringToNumber) => {
+					(category, displayCategory, i) => {
 						window.scrollTo(0, 0);
 						let products = [];
 						// let productElements = document.querySelectorAll(".celwidget");
 						let productElements = document.querySelectorAll(
 							".sg-col-4-of-12.sg-col-4-of-36.s-result-item",
 						);
+						const convertStringToNumber = (number) => {
+							var regExpr = /[^0-9.]/g;
+							if (typeof number == "number") number = number.toString();
+							if (typeof number == "string") number = number.replace(regExpr, "");
+							return number ? Math.round(number * 100) / 100 : "";
+						}
 
 						productElements.forEach((productElement) => {
 							let productJson = {};
@@ -110,6 +116,7 @@ module.exports.scraper = async (url, callBack) => {
 							var productStrikedPrice = document.querySelector(
 								".a-row.a-size-small>span",
 							).innerText;
+							
 
 							// var sliced = productStrikedPrice.slice
 							console.log(productStrikedPrice);
@@ -145,8 +152,7 @@ module.exports.scraper = async (url, callBack) => {
 								productJson.productPrice = productElement.querySelector(
 									".a-price-whole",
 								)
-									// ? convertStringToNumber(productElement.querySelector(".a-price-whole").innerText)
-									? convertStringToNumber("1,545")
+									? convertStringToNumber(productElement.querySelector(".a-price-whole").innerText)
 									: null;
 								productJson.productRating = productElement.querySelector(
 									".a-row.a-size-small>span",
@@ -158,11 +164,22 @@ module.exports.scraper = async (url, callBack) => {
 								productJson.productPriceStrike = productElement.querySelector(
 									".a-price.a-text-price>span",
 								)
-									?  productElement
+									?  convertStringToNumber(productElement
 											.querySelector(".a-price.a-text-price>span")
-											.innerText.slice(1)
+											.innerText.slice(1))
 									: null;
-								// productJson.discountPercentage =
+								productJson.discountPercentage = 100 *  convertStringToNumber(productElement
+									.querySelector(".a-price.a-text-price>span")
+									.innerText.slice(1)) - convertStringToNumber(productElement.querySelector(".a-price-whole").innerText) / convertStringToNumber(productElement
+										.querySelector(".a-price.a-text-price>span")
+										.innerText.slice(1))
+
+								// 100 * convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1)) -
+								// convertStringToNumber(productElement.querySelector(".a-price-whole").innerText) / convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1))
+								
+
+
+								// (convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1)) - convertStringToNumber(productElement.querySelector(".a-price-whole").innerText) * 100 / convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1)))
 							} catch (e) {
 								console.log(e);
 							}
@@ -172,8 +189,7 @@ module.exports.scraper = async (url, callBack) => {
 					},
 					category,
 					displayCategory,
-					i,
-					convertStringToNumber
+					i
 				);
 				await wait(100);
 				callBack(data, true);
