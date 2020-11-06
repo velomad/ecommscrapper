@@ -4,12 +4,12 @@ var catgories = require("./categories.js");
 
 
 module.exports.scraper = async (url, callBack) => {
-	const browser = await puppeteer.launch({ 
+	const browser = await puppeteer.launch({
 		headless: false,
 		args: [
 			'--no-sandbox',
 			'--disable-setuid-sandbox',
-		], 
+		],
 	});
 	const page = await browser.newPage();
 
@@ -90,7 +90,7 @@ module.exports.scraper = async (url, callBack) => {
 			await page.waitForNavigation();
 			await wait(2000);
 			await autoScroll(page);
-			
+
 			await wait(2000);
 			for (var p = 0; p < 2; p++) {
 				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
@@ -116,7 +116,7 @@ module.exports.scraper = async (url, callBack) => {
 							var productStrikedPrice = document.querySelector(
 								".a-row.a-size-small>span",
 							).innerText;
-							
+
 
 							// var sliced = productStrikedPrice.slice
 							console.log(productStrikedPrice);
@@ -129,16 +129,16 @@ module.exports.scraper = async (url, callBack) => {
 									".s-line-clamp-1>span",
 								)
 									? productElement.querySelector(".s-line-clamp-1>span")
-											.innerText
+										.innerText
 									: null(
-											(productJson.productName = productElement.querySelector(
-												".s-line-clamp-2>a",
-											)
-												? productElement.querySelector(".s-line-clamp-2>a")
-														.innerText
-												: null),
-									  );
-									  productJson.gender =  i === 0 ? "men" : "women"
+										(productJson.productName = productElement.querySelector(
+											".s-line-clamp-2>a",
+										)
+											? productElement.querySelector(".s-line-clamp-2>a")
+												.innerText
+											: null),
+									);
+								productJson.gender = i === 0 ? "men" : "women"
 								productJson.productLink = productElement.querySelector(
 									".s-line-clamp-2>a",
 								)
@@ -158,28 +158,24 @@ module.exports.scraper = async (url, callBack) => {
 									".a-row.a-size-small>span",
 								)
 									? productElement
-											.querySelector(".a-row.a-size-small>span")
-											.innerText.split(" ")[0]
+										.querySelector(".a-row.a-size-small>span")
+										.innerText.split(" ")[0]
 									: null;
 								productJson.productPriceStrike = productElement.querySelector(
 									".a-price.a-text-price>span",
 								)
-									?  convertStringToNumber(productElement
-											.querySelector(".a-price.a-text-price>span")
-											.innerText.slice(1))
-									: null;
-								productJson.discountPercentage = 100 *  convertStringToNumber(productElement
-									.querySelector(".a-price.a-text-price>span")
-									.innerText.slice(1)) - convertStringToNumber(productElement.querySelector(".a-price-whole").innerText) / convertStringToNumber(productElement
+									? convertStringToNumber(productElement
 										.querySelector(".a-price.a-text-price>span")
 										.innerText.slice(1))
+									: null;
 
-								// 100 * convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1)) -
-								// convertStringToNumber(productElement.querySelector(".a-price-whole").innerText) / convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1))
-								
-
-
-								// (convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1)) - convertStringToNumber(productElement.querySelector(".a-price-whole").innerText) * 100 / convertStringToNumber(productElement.querySelector(".a-price.a-text-price>span").innerText.slice(1)))
+								productJson.discountPercentage = productElement
+									.querySelector(".a-price.a-text-price>span")
+									&& productElement.querySelector(".a-price-whole") ? Number(((convertStringToNumber(productElement
+										.querySelector(".a-price.a-text-price>span")
+										.innerText.slice(1)) - convertStringToNumber(productElement.querySelector(".a-price-whole").innerText)) / convertStringToNumber(productElement
+											.querySelector(".a-price.a-text-price>span")
+											.innerText.slice(1)) * 100).toFixed(0)) : null
 							} catch (e) {
 								console.log(e);
 							}
