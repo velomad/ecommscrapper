@@ -95,7 +95,7 @@ module.exports.scraper = async (url, callBack) => {
 			var displayCategory = loopArry[i][text].toLowerCase();
 
 			let data = await page.evaluate(
-				(category, displayCategory) => {
+				(category, displayCategory, i) => {
 					window.scrollTo(0, 0);
 					let products = [];
 					let productElements = document.querySelectorAll(
@@ -108,6 +108,7 @@ module.exports.scraper = async (url, callBack) => {
 							(productJson.website = "tatacliq"),
 								(productJson.category = category);
 							productJson.displayCategory = displayCategory;
+							productJson.gender = i;
 							productJson.productLink = productElement.querySelector(
 								"._1XmcWVFxUIyULCyoe8qGDQ",
 							)
@@ -157,6 +158,7 @@ module.exports.scraper = async (url, callBack) => {
 				},
 				category,
 				displayCategory,
+				i
 			);
 			await wait(2000);
 			callBack(data, true);

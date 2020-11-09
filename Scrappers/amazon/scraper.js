@@ -92,7 +92,7 @@ module.exports.scraper = async (url, callBack) => {
 			await autoScroll(page);
 
 			await wait(2000);
-			for (var p = 0; p < 2; p++) {
+			for (var p = 0; p < 5; p++) {
 				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
 				var displayCategory = loopArry[i][text].toLowerCase();
 				let data = await page.evaluate(
@@ -103,12 +103,6 @@ module.exports.scraper = async (url, callBack) => {
 						let productElements = document.querySelectorAll(
 							".sg-col-4-of-12.sg-col-4-of-36.s-result-item",
 						);
-						const convertStringToNumber = (number) => {
-							var regExpr = /[^0-9.]/g;
-							if (typeof number == "number") number = number.toString();
-							if (typeof number == "string") number = number.replace(regExpr, "");
-							return number ? Math.round(number * 100) / 100 : "";
-						}
 
 						productElements.forEach((productElement) => {
 							let productJson = {};
@@ -152,7 +146,7 @@ module.exports.scraper = async (url, callBack) => {
 								productJson.productPrice = productElement.querySelector(
 									".a-price-whole",
 								)
-									? convertStringToNumber(productElement.querySelector(".a-price-whole").innerText)
+									? (productElement.querySelector(".a-price-whole").innerText).split(',').join('')
 									: null;
 								productJson.productRating = productElement.querySelector(
 									".a-row.a-size-small>span",
@@ -164,18 +158,21 @@ module.exports.scraper = async (url, callBack) => {
 								productJson.productPriceStrike = productElement.querySelector(
 									".a-price.a-text-price>span",
 								)
-									? convertStringToNumber(productElement
+									? (productElement
 										.querySelector(".a-price.a-text-price>span")
-										.innerText.slice(1))
+										.innerText.slice(1)).split(',').join('')
 									: null;
 
 								productJson.discountPercentage = productElement
 									.querySelector(".a-price.a-text-price>span")
-									&& productElement.querySelector(".a-price-whole") ? Number(((convertStringToNumber(productElement
+									&& productElement.querySelector(".a-price-whole") ? ((parseInt(productElement
+									.querySelector(".a-price.a-text-price>span")
+									.innerText.slice(1).split(',').join('')) - parseInt(productElement.querySelector(".a-price-whole").innerText.split(',').join(''))) /  parseInt(productElement
 										.querySelector(".a-price.a-text-price>span")
-										.innerText.slice(1)) - convertStringToNumber(productElement.querySelector(".a-price-whole").innerText)) / convertStringToNumber(productElement
-											.querySelector(".a-price.a-text-price>span")
-											.innerText.slice(1)) * 100).toFixed(0)) : null
+										.innerText.slice(1).split(',').join('')) * 100).toFixed(0) : null
+
+
+
 							} catch (e) {
 								console.log(e);
 							}

@@ -1,6 +1,5 @@
 const { default: Axios } = require("axios");
 const categories = require("./categories");
-const {convertStringToNumber} = require("../../utils/utils");
 
 // test
 
@@ -39,14 +38,12 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 							imageUrl: el.fnlColorVariantData.outfitPictureURL
 								? el.fnlColorVariantData.outfitPictureURL
 								: null,
-							discountPercent: el.discountPercent
-								? Number(el.discountPercent.match(/(\d+)/)[0])
-								: null,
+							discountPercent: el.discountPercent ? el.discountPercent.match(/(\d+)/)[0] : null,
 							productPrice: el.price.displayformattedValue
-								? Number(el.price.displayformattedValue.match(/(\d+)/)[0])
+								? el.price.displayformattedValue.split(".")[1].substring(1,el.price.displayformattedValue.split(".")[1].length).split(',').join('')
 								: null,
 							productPriceStrike: el.wasPriceData.displayformattedValue
-								? convertStringToNumber(el.wasPriceData.displayformattedValue.split(".")[1])
+								? el.wasPriceData.displayformattedValue.split(".")[1].substring(1,el.wasPriceData.displayformattedValue.split(".")[1].length).split(',').join('')
 								: null,
 							productLink: `https://ajio.com${el.url}`,
 							size: el.productSizeData ? el.productSizeData.sizeVariants : null,

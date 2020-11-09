@@ -4,7 +4,7 @@ var catgories = require("./categories.js");
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({
-		headless: true,
+		headless: false,
 		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
@@ -35,7 +35,7 @@ module.exports.scraper = async (url, callBack) => {
 					let productLen =
 						document.querySelector(".productGrid").childNodes.length - 1;
 					if (
-						productLen  >
+						productLen >
 						Number(
 							((Number(getText.replace(/[{()}]/g, "")) / 100) * 30).toFixed(0),
 						)
@@ -45,7 +45,7 @@ module.exports.scraper = async (url, callBack) => {
 						clearInterval(timer);
 						resolve();
 					}
-				}, 70);
+				}, 120);
 			});
 		});
 	}
@@ -89,7 +89,7 @@ module.exports.scraper = async (url, callBack) => {
 			var displayCategory = loopArry[i][text].toLowerCase();
 
 			let data = await page.evaluate(
-				(category, displayCategory) => {
+				(category, displayCategory, i) => {
 					window.scrollTo(0, 0);
 					let products = [];
 					let productElements = document.querySelectorAll(".productCardBox");
@@ -100,6 +100,7 @@ module.exports.scraper = async (url, callBack) => {
 							productJson.website = "bewakoof";
 							productJson.category = category;
 							productJson.displayCategory = displayCategory;
+							productJson.gender = i;
 							productJson.imageUrl = el.querySelector(
 								".productCardImg > div > img",
 							)
@@ -114,17 +115,29 @@ module.exports.scraper = async (url, callBack) => {
 							productJson.productPrice = el.querySelector(
 								".discountedPriceText",
 							)
-								? el.querySelector(".discountedPriceText").innerText
+								? el
+										.querySelector(".discountedPriceText")
+										.innerText.split(" ")[1]
 								: null;
-							productJson.productPriceStrike = el.querySelector(".actualPriceText")
+							productJson.productPriceStrike = el.querySelector(
+								".actualPriceText",
+							)
 								? el.querySelector(".actualPriceText").innerText
 								: null;
-							productJson.isTrending = !!el.querySelector(
-								".productStatusBox>.promotionalTagBox",
-							);
-							productJson.isSellingFast = !!el.querySelector(
-								".sellingFastWrapper",
-							);
+							productJson.discountPercent =
+								el.querySelector(".actualPriceText") &&
+								el.querySelector(".discountedPriceText")
+									?  ((parseInt(el.querySelector(".actualPriceText").innerText) - parseInt(el
+									.querySelector(".discountedPriceText")
+									.innerText.split(" ")[1])) /  parseInt(el.querySelector(".actualPriceText").innerText) * 100).toFixed(0) : null
+											
+
+							// productJson.isTrending = !!el.querySelector(
+							// 	".productStatusBox>.promotionalTagBox",
+							// );
+							// productJson.isSellingFast = !!el.querySelector(
+							// 	".sellingFastWrapper",
+							// );
 						} catch (e) {
 							console.log(e);
 						}
@@ -134,6 +147,7 @@ module.exports.scraper = async (url, callBack) => {
 				},
 				category,
 				displayCategory,
+				i
 			);
 			await wait(1000);
 			callBack(data, true, loopArry[i][text]);

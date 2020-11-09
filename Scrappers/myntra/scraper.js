@@ -58,7 +58,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					return data;
 				});
 
-				let data = await page.evaluate((category, displayCategory) => {
+				let data = await page.evaluate((category, displayCategory, i) => {
 					window.scrollTo(0, 0);
 					let products = [];
 					let productElements = document.querySelectorAll(".product-base");
@@ -76,6 +76,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 							(productJson.website = "myntra"),
 							productJson.category = category;
 							productJson.displayCategory = displayCategory;
+							productJson.gender = i;
 							productJson.imageUrl = productElement.querySelector(
 								"picture .img-responsive",
 							)
@@ -121,7 +122,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					});
 
 					return products;
-				}, category, displayCategory);
+				}, category, displayCategory,i);
 				await wait(100);
 
 				// i = current index of  outermost loop

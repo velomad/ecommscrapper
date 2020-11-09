@@ -10,7 +10,7 @@ const uri = db;
 
 router.get("/", (req, res) => {
 
-	var pagesToScrape = 1;
+	var pagesToScrape = 5;
 	var totalProdctsInserted = 0;
 
 	console.log("starting to scrap...");
@@ -46,7 +46,7 @@ router.get("/", (req, res) => {
 						// this option prevents additional documents from being inserted if one fails
 						const options = { ordered: true };
 
-						// const result = await collection.insertMany(data, options);
+						const result = await collection.insertMany(data, options);
 						if (
 							currentLoop === totalLoops &&
 							currentCategory === totalCategory &&
@@ -57,7 +57,7 @@ router.get("/", (req, res) => {
 								results: totalProdctsInserted,
 							});
 						}
-						// console.log(`${result.insertedCount} documents were inserted`);
+						console.log(`${result.insertedCount} documents were inserted`);
 					} finally {
 						await client.close();
 					}

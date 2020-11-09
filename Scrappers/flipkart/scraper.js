@@ -51,7 +51,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 				let displayCategory = Object.keys(loopArry[i][j])[0].toLowerCase();
 
 				let data = await page.evaluate(
-					(category, displayCategory) => {
+					(category, displayCategory, i) => {
 						window.scrollTo(0, 0);
 						let products = [];
 						let productElements = document.querySelectorAll("._3O0U0u");
@@ -68,6 +68,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 										: null);
 								productJson.category = category;
 								productJson.displayCategory = displayCategory;
+								productJson.gender = i;
 								productJson.productName = productElement.querySelector(
 									"._2mylT6",
 								)
@@ -107,6 +108,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					},
 					category,
 					displayCategory,
+					i
 				);
 				await wait(100);
 

@@ -9,7 +9,7 @@ const { flipkartBaseUrl } = require("../../config/keys");
 const uri = db;
 
 router.get("/", (req, res) => {
-	const pagesToScrape = 2;
+	const pagesToScrape = 5;
 	var totalProdctsInserted = 0;
 
 	console.log("starting to scrape...");

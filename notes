@@ -26,8 +26,8 @@ products search index
       "displayCategory": [
         {
           "foldDiacritics": false,
-          "maxGrams": 7,
-          "minGrams": 5,
+          "maxGrams": 19,
+          "minGrams": 14,
           "tokenization": "edgeGram",
           "type": "autocomplete"
         }
