@@ -4,7 +4,7 @@ var catgories = require("./categories.js");
 
 module.exports.scraper = async (url, callBack) => {
 	const browser = await puppeteer.launch({
-		headless: false,
+		headless: true,
 		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
