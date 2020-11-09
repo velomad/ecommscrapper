@@ -43,10 +43,6 @@ router.get("/", (req, res) => {
 						const options = { ordered: true };
 						const result = await collection.insertMany(data, options);
 
-						// const autocompleteDb = client.db("autocomplete");
-						// const autocompleteCollection = autocompleteDb.collection("products");
-						// const autocompleteRes = await autocompleteCollection.insertMany(data, options);
-
 						totalProdctsInserted += data.length;
 
 						if (

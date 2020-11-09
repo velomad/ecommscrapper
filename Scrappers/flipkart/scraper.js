@@ -68,7 +68,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 										: null);
 								productJson.category = category;
 								productJson.displayCategory = displayCategory;
-								productJson.gender = i;
+								productJson.gender = i === 0 ? "men" : "women";
 								productJson.productName = productElement.querySelector(
 									"._2mylT6",
 								)
@@ -87,17 +87,17 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 								productJson.productPrice = productElement.querySelector(
 									"._1vC4OE",
 								)
-									? productElement.querySelector("._1vC4OE").innerText
+									? productElement.querySelector("._1vC4OE").innerText.slice(1).split(",").join("")
 									: null;
 								productJson.productPriceStrike = productElement.querySelector(
 									"._3auQ3N",
 								)
-									? productElement.querySelector("._3auQ3N").innerText
+									? productElement.querySelector("._3auQ3N").innerText.slice(1).split(",").join("")
 									: null;
 								productJson.discountPercent = productElement.querySelector(
 									".VGWI6T",
 								)
-									? productElement.querySelector(".VGWI6T").innerText
+									? productElement.querySelector(".VGWI6T").innerText.split(" ")[0].slice(0,-1)
 									: null;
 							} catch (e) {
 								console.log(e);

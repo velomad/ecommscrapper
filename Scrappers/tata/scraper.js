@@ -108,7 +108,7 @@ module.exports.scraper = async (url, callBack) => {
 							(productJson.website = "tatacliq"),
 								(productJson.category = category);
 							productJson.displayCategory = displayCategory;
-							productJson.gender = i;
+							productJson.gender = i === 0 ? "men" : "women";
 							productJson.productLink = productElement.querySelector(
 								"._1XmcWVFxUIyULCyoe8qGDQ",
 							)
@@ -134,20 +134,20 @@ module.exports.scraper = async (url, callBack) => {
 							productJson.productPriceStrike = productElement.querySelector(
 								"._1shOb7_K6buhJQdpA10hpT",
 							)
-								? productElement.querySelector("._1shOb7_K6buhJQdpA10hpT")
-										.innerText
+								? (productElement.querySelector("._1shOb7_K6buhJQdpA10hpT")
+										.innerText).slice(1)
 								: null;
 							productJson.productPrice = productElement.querySelector(
 								".MZydWWaSr0xQud-F-Jwfa",
 							)
-								? productElement.querySelector(".MZydWWaSr0xQud-F-Jwfa")
-										.innerText
+								? (productElement.querySelector(".MZydWWaSr0xQud-F-Jwfa")
+										.innerText).slice(1)
 								: null;
 							productJson.discountPercent = productElement.querySelector(
 								"._1IxIox0fPQHTc_jS_sokZD",
 							)
-								? productElement.querySelector("._1IxIox0fPQHTc_jS_sokZD")
-										.innerText
+								? (productElement.querySelector("._1IxIox0fPQHTc_jS_sokZD")
+										.innerText).split(" ")[0].slice(0, -1)
 								: null;
 						} catch (e) {
 							console.log(e);

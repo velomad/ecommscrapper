@@ -58,71 +58,95 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					return data;
 				});
 
-				let data = await page.evaluate((category, displayCategory, i) => {
-					window.scrollTo(0, 0);
-					let products = [];
-					let productElements = document.querySelectorAll(".product-base");
+				let data = await page.evaluate(
+					(category, displayCategory, i) => {
+						window.scrollTo(0, 0);
+						let products = [];
+						let productElements = document.querySelectorAll(".product-base");
 
-					productElements.forEach((productElement) => {
-						let productJson = {};
-						let productSizeText = document.querySelector(".product-sizes")
-							.innerText;
-						let productSizeArr = productSizeText
-							.replace("Sizes:", "")
-							.trim()
-							.split(",");
+						productElements.forEach((productElement) => {
+							let productJson = {};
+							let productSizeText = document.querySelector(".product-sizes")
+								.innerText;
+							let productSizeArr = productSizeText
+								.replace("Sizes:", "")
+								.trim()
+								.split(",");
 
-						try {
-							(productJson.website = "myntra"),
-							productJson.category = category;
-							productJson.displayCategory = displayCategory;
-							productJson.gender = i;
-							productJson.imageUrl = productElement.querySelector(
-								"picture .img-responsive",
-							)
-								? productElement.querySelector("picture .img-responsive").src
-								: null;
-							productJson.productPrice = productElement.querySelector(
-								".product-discountedPrice",
-							)
-								? productElement.querySelector(".product-discountedPrice")
-										.innerText
-								: null;
-							productJson.productPriceStrike = productElement.querySelector(
-								".product-strike",
-							)
-								? productElement.querySelector(".product-strike").innerText
-								: null;
-							productJson.discountPercent = productElement.querySelector(
-								".product-discountPercentage",
-							)
-								? productElement.querySelector(".product-discountPercentage")
-										.innerText
-								: null;
-							productJson.productLink = productElement.querySelector(
-								".product-base > a",
-							)
-								? productElement.querySelector(".product-base > a").href
-								: null;
-							productJson.brandName = productElement.querySelector(
-								".product-brand",
-							)
-								? productElement.querySelector(".product-brand").innerText
-								: null;
-							productJson.productName = productElement.querySelector(
-								".product-product",
-							)
-								? productElement.querySelector(".product-product").innerText
-								: null;
-							productJson.size = productSizeArr ? productSizeArr : null;
-						} catch (e) {
-							console.log(e);
-						}
-						products.push(productJson);
-					});
+							try {
+								(productJson.website = "myntra"),
+									(productJson.category = category);
+								productJson.displayCategory = displayCategory;
+								productJson.gender = i === 0 ? "men" : "women";
+								productJson.imageUrl = productElement.querySelector(
+									"picture .img-responsive",
+								)
+									? productElement.querySelector("picture .img-responsive").src
+									: null;
+								productJson.productPrice = productElement.querySelector(
+									".product-discountedPrice",
+								)
+									? productElement
+											.querySelector(".product-discountedPrice")
+											.innerText.split(" ")[1]
+									: null;
+								productJson.productPriceStrike = productElement.querySelector(
+									".product-strike",
+								)
+									? productElement
+											.querySelector(".product-strike")
+											.innerText.split(" ")[1]
+									: null;
+								productJson.discountPercent =
+									productElement.querySelector(".product-strike") &&
+									productElement.querySelector(".product-discountedPrice")
+										? (
+												((parseInt(
+													productElement
+														.querySelector(".product-strike")
+														.innerText.split(" ")[1],
+												) -
+													parseInt(
+														productElement
+															.querySelector(".product-discountedPrice")
+															.innerText.split(" ")[1],
+													)) /
+													parseInt(
+														productElement
+															.querySelector(".product-strike")
+															.innerText.split(" ")[1],
+													) * 100) 
+										  ).toFixed(0)
+										: null;
 
-					return products;
-				}, category, displayCategory,i);
+								productJson.productLink = productElement.querySelector(
+									".product-base > a",
+								)
+									? productElement.querySelector(".product-base > a").href
+									: null;
+								productJson.brandName = productElement.querySelector(
+									".product-brand",
+								)
+									? productElement.querySelector(".product-brand").innerText
+									: null;
+								productJson.productName = productElement.querySelector(
+									".product-product",
+								)
+									? productElement.querySelector(".product-product").innerText
+									: null;
+								productJson.size = productSizeArr ? productSizeArr : null;
+							} catch (e) {
+								console.log(e);
+							}
+							products.push(productJson);
+						});
+
+						return products;
+					},
+					category,
+					displayCategory,
+					i,
+				);
 				await wait(100);
 
 				// i = current index of  outermost loop

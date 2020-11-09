@@ -100,7 +100,7 @@ module.exports.scraper = async (url, callBack) => {
 							productJson.website = "bewakoof";
 							productJson.category = category;
 							productJson.displayCategory = displayCategory;
-							productJson.gender = i;
+							productJson.gender = i === 0 ? "men" : "women";
 							productJson.imageUrl = el.querySelector(
 								".productCardImg > div > img",
 							)
