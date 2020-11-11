@@ -163,7 +163,7 @@ module.exports.scraper = async (url, callBack) => {
 										.innerText.slice(1)).split(',').join('')
 									: null;
 
-								productJson.discountPercentage = productElement
+								productJson.discountPercent = productElement
 									.querySelector(".a-price.a-text-price>span")
 									&& productElement.querySelector(".a-price-whole") ? ((parseInt(productElement
 									.querySelector(".a-price.a-text-price>span")
