@@ -122,7 +122,6 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					i,
 				);
 				await wait(100);
-
 				// i = current index of  outermost loop
 				// loopArry.length - 1 : arrays within the array of loop and - 1 coz loop starts from index 0
 				// j : current index of categories loop
