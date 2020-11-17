@@ -4,7 +4,7 @@ const userAgent = require("user-agents");
 
 module.exports.scraper = async (url, pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({
-		headless: true,
+		headless: false,
 		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 	const page = await browser.newPage();
@@ -54,50 +54,61 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					(category, displayCategory, i) => {
 						window.scrollTo(0, 0);
 						let products = [];
-						let productElements = document.querySelectorAll("._3O0U0u");
-						// let productElements = document.querySelectorAll(".IIdQZO");
+						// let productElements = document.querySelectorAll("._3O0U0u");
+						let productElements = document.querySelectorAll("._13oc-S");
 						productElements.forEach((productElement) => {
 							let productJson = {};
 
 							try {
 								(productJson.website = "flipkart"),
 									(productJson.brandName = productElement.querySelector(
-										"._2B_pmu",
+										"._2WkVRV",
 									)
-										? productElement.querySelector("._2B_pmu").innerText
+										? productElement.querySelector("._2WkVRV").innerText
 										: null);
 								productJson.category = category;
 								productJson.displayCategory = displayCategory;
 								productJson.gender = i === 0 ? "men" : "women";
 								productJson.productName = productElement.querySelector(
-									"._2mylT6",
+									".IRpwTa",
 								)
-									? productElement.querySelector("._2mylT6").title
+									? productElement.querySelector(".IRpwTa").title
 									: null;
 								productJson.productLink = productElement.querySelector(
-									"._3dqZjq",
+									"._2UzuFa",
 								)
-									? productElement.querySelector("._3dqZjq").href
+									? productElement.querySelector("._2UzuFa").href
 									: null;
 								productJson.imageUrl = productElement.querySelector(
-									"img._3togXc",
+									"img._2r_T1I",
 								)
-									? productElement.querySelector("img._3togXc").src
+									? productElement.querySelector("img._2r_T1I").src
 									: null;
 								productJson.productPrice = productElement.querySelector(
-									"._1vC4OE",
+									"._30jeq3",
 								)
-									? productElement.querySelector("._1vC4OE").innerText.slice(1).split(",").join("")
+									? productElement
+											.querySelector("._30jeq3")
+											.innerText.slice(1)
+											.split(",")
+											.join("")
 									: null;
 								productJson.productPriceStrike = productElement.querySelector(
-									"._3auQ3N",
+									"._3I9_wc",
 								)
-									? productElement.querySelector("._3auQ3N").innerText.slice(1).split(",").join("")
+									? productElement
+											.querySelector("._3I9_wc")
+											.innerText.slice(1)
+											.split(",")
+											.join("")
 									: null;
 								productJson.discountPercent = productElement.querySelector(
-									".VGWI6T",
+									"._3Ay6Sb",
 								)
-									? productElement.querySelector(".VGWI6T").innerText.split(" ")[0].slice(0,-1)
+									? productElement
+											.querySelector("._3Ay6Sb")
+											.innerText.split(" ")[0]
+											.slice(0, -1)
 									: null;
 							} catch (e) {
 								console.log(e);
@@ -108,7 +119,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 					},
 					category,
 					displayCategory,
-					i
+					i,
 				);
 				await wait(100);
 
@@ -118,7 +129,7 @@ module.exports.scraper = async (url, pagesToScrape, callBack) => {
 				// loopArry[i].length - 1 : categories within the array and - 1 coz loop starts from index 0
 				// p : current page in the loop
 				// loopArry[i][j] : category name too be added in collection
-
+				console.log(data);
 				callBack(
 					data,
 					true,

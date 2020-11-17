@@ -34,7 +34,7 @@ module.exports.scraper = async (url, callBack) => {
 					).textContent;
 					if (
 						document.querySelectorAll("#products > section > div").length >
-						Number(((getText.match(/(\d+)/)[0] / 100) * 2).toFixed(0))
+						Number(((getText.match(/(\d+)/)[0] / 100) * 1.5).toFixed(0))
 					) {
 						getText = "";
 						window.scrollTo(0, 0);
