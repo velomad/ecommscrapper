@@ -34,14 +34,14 @@ module.exports.scraper = async (url, callBack) => {
 					).textContent;
 					if (
 						document.querySelectorAll("#products > section > div").length >
-						Number(((getText.match(/(\d+)/)[0] / 100) * 1).toFixed(0))
+						Number(((getText.match(/(\d+)/)[0] / 100) * 2).toFixed(0))
 					) {
 						getText = "";
 						window.scrollTo(0, 0);
 						clearInterval(timer);
 						resolve();
 					}
-				}, 300);
+				}, 50);
 			});
 		});
 	}
@@ -63,45 +63,63 @@ module.exports.scraper = async (url, callBack) => {
 			await wait(2000);
 			await autoScroll(page);
 			await wait(2000);
-			let data = await page.evaluate(async () => {
-				let products = [];
-				let productElements = document.querySelectorAll(
-					"#products > section > div",
-				);
 
-				productElements.forEach((el) => {
-					let productJson = {};
-					try {
-						(productJson.website = "snapdeal"),
-							(productJson.productName = el.querySelector(".product-title")
+			var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
+			var displayCategory = loopArry[i][text].toLowerCase();
+
+			let data = await page.evaluate(
+				async (category, displayCategory, i) => {
+					let products = [];
+					let productElements = document.querySelectorAll(
+						"#products > section > div",
+					);
+
+					productElements.forEach((el) => {
+						let productJson = {};
+						try {
+							(productJson.website = "snapdeal"),
+								(productJson.category = category),
+								(productJson.displayCategory = displayCategory),
+								(productJson.gender = i === 0 ? "men" : "women");
+
+							productJson.productName = el.querySelector(".product-title")
 								? el.querySelector(".product-title").innerText
-								: null);
-						productJson.imageUrl = el.querySelector(".product-image")
-							? el.querySelector(".product-image").srcset
-							: null;
-						productJson.productPriceStrike = el.querySelector(
-							".lfloat.product-price",
-						)
-							? el.querySelector(".lfloat.product-price").innerText
-							: null;
-						productJson.productPrice = el.querySelector(
-							".lfloat.product-desc-price.strike",
-						)
-							? el.querySelector(".lfloat.product-desc-price.strike").innerText
-							: null;
-						productJson.discountPercent = el.querySelector(".product-discount")
-							? el.querySelector(".product-discount").innerText
-							: null;
-						productJson.productLink = el.querySelector(".product-tuple-image > a")
-							? el.querySelector(".product-tuple-image > a").href
-							: null;
-					} catch (e) {
-						console.log(e);
-					}
-					products.push(productJson);
-				});
-				return products;
-			});
+								: null;
+							productJson.imageUrl = el.querySelector(".product-image")
+								? el.querySelector(".product-image").srcset
+								: null;
+							productJson.productPriceStrike = el.querySelector(
+								".lfloat.product-price",
+							)
+								? el.querySelector(".lfloat.product-price").innerText.split(" ")[1].split(",").join("")
+								: null;
+							productJson.productPrice = el.querySelector(
+								".lfloat.product-desc-price.strike",
+							)
+								? el.querySelector(".lfloat.product-desc-price.strike")
+										.innerText.split(" ")[1].split(",").join("")
+								: null;
+							productJson.discountPercent = el.querySelector(
+								".product-discount",
+							)
+								? el.querySelector(".product-discount").innerText.split(" ")[0].slice(0,-1)
+								: null;
+							productJson.productLink = el.querySelector(
+								".product-tuple-image > a",
+							)
+								? el.querySelector(".product-tuple-image > a").href
+								: null;
+						} catch (e) {
+							console.log(e);
+						}
+						products.push(productJson);
+					});
+					return products;
+				},
+				category,
+				displayCategory,
+				i,
+			);
 			await wait(1000);
 			callBack(data, true, loopArry[i][text]);
 		}
