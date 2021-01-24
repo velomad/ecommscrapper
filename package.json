@@ -6,7 +6,6 @@
 	"scripts": {
 		"server": "nodemon index.js",
 		"start": "node index.js",
-		
 		"client-app": "npm start --prefix client-app",
 		"dev": "concurrently \"npm run server\" \"npm run client-app\"",
 		"heroku-postbuild": "cd client-app && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
@@ -23,6 +22,7 @@
 		"express": "^4.17.1",
 		"mongodb": "^3.6.2",
 		"mongoose": "^5.10.8",
+		"mysql": "^2.18.1",
 		"node-cron": "^2.0.3",
 		"nodemon": "^2.0.4",
 		"puppeteer": "^5.3.1",

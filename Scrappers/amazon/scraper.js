@@ -3,7 +3,7 @@ var catgories = require("./categories.js");
 // const {convertStringToNumber} = require("../../utils/utils");
 
 
-module.exports.scraper = async (url, callBack) => {
+module.exports.scraper = async (url,pagesToScrape, callBack) => {
 	const browser = await puppeteer.launch({
 		headless: true,
 		args: [
@@ -92,7 +92,7 @@ module.exports.scraper = async (url, callBack) => {
 			await autoScroll(page);
 
 			await wait(2000);
-			for (var p = 0; p < 5; p++) {
+			for (var p = 0; p < pagesToScrape; p++) {
 				var category = loopArry[i][text].replace(/\s/g, "-").toLowerCase();
 				var displayCategory = loopArry[i][text].toLowerCase();
 				let data = await page.evaluate(

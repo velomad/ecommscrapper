@@ -4,9 +4,9 @@ const cors = require("cors");
 const app = express();
 const path = require("path")
 const mongoose = require("mongoose");
-const port = process.env.PORT || 5000;
-require("./cronjobs/flipkart");
-require("./Scrappers/converter");
+const port = process.env.PORT || 8080;
+// require("./cronjobs/flipkart");
+// require("./Scrappers/converter");
 
 // DB Config
 const db = require("./config/keys").mongoURI;
@@ -49,10 +49,10 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to MongoDB
-mongoose
-	.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
-	.then(() => console.log("MongoDB successfully connected"))
-	.catch((err) => console.log(err));
+// mongoose
+// 	.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+// 	.then(() => console.log("MongoDB successfully connected"))
+// 	.catch((err) => console.log(err));
 
 app.listen(port, () => {
 	console.log(`Server Running at ${port}`);

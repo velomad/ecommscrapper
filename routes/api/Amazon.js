@@ -10,7 +10,7 @@ const uri = db;
 
 router.get("/", (req, res) => {
 	console.log("starting to scrap...");
-	amazonScrapper.scraper(amazonBaseUrl, (data, response) => {
+	amazonScrapper.scraper(amazonBaseUrl, 2, (data, response) => {
 		if (response) {
 			const client = new MongoClient(uri, {
 				useUnifiedTopology: true,
